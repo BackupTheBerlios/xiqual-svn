@@ -3,6 +3,14 @@ $Date: 2003/12/11 08:36:36 $
 $Id: Changes,v 1.6 2003/12/11 08:36:36 nny Exp $
 
 
+---- Version 0.10.0: Out with the old, in with the new ----
+	- Bye, bye CVS; hello SVN! Project moved to BerliOS, where it 
+	  now resides in a Subversion repository. Things will be less 
+	  ugly each time I break something.
+	- Trimming crap I won't be using
+	- Working on making all sub-libraries work nicely on 64-bit 
+	  memory architectures.
+
 ---- Version 0.9.1: I want my..I want my C.V.S.. ----
 	general:
 	- Changed names of some makefile targets, added Debian package
