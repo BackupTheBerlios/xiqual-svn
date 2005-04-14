@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>typedef struct  xiopts</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file ../xitools/opts.c:<H2>typedef struct  <A HREF="#DOC.DOCU">xiopts</A></H2></H2><BLOCKQUOTE> User-supplied structure for xi_getopts().</BLOCKQUOTE>
+
+<HR>
+<P><DL>
+ <DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>char* <B><A HREF="#DOC.120.6.1">name</A></B>
+<DD><I> Name of option.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>ulong <B><A HREF="#DOC.120.6.2">type</A></B>
+<DD><I> Type of argument.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>char* <B><A HREF="#DOC.120.6.3">description</A></B>
+<DD><I> A description of the option.</I>
+</DL></P>
+
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+User-supplied structure for xi_getopts().
+You fill in any number of these in an array.
+</BLOCKQUOTE>
+<DL>
+
+<A NAME="name"></A>
+<A NAME="DOC.120.6.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>char* name</B></TT>
+<DD>
+Name of option.
+One character for single-dash options,
+a keyword for double-dash. For example,
+'h' for '-h' or 'help' for '--help'.
+<DL><DT><DD></DL><P>
+<A NAME="type"></A>
+<A NAME="DOC.120.6.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>ulong type</B></TT>
+<DD>
+Type of argument.
+LOT_FLAG, LOT_KEYWORD, LOT_VALUE or LOT_FLOAT.
+<DL><DT><DD></DL><P>
+<A NAME="description"></A>
+<A NAME="DOC.120.6.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>char* description</B></TT>
+<DD>
+A description of the option.
+Shown when no arguments are given to the program.
+<DL><DT><DD></DL><P></DL>
+<DL><DT><DT><B>See Also:</B><DD><!1><A HREF="xi_getopts.html">xi_getopts</A>(), testopts.c<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

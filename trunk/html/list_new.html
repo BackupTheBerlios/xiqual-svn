@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>List* list_new</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file xitools/list_new.c:<H2><!1><A HREF="List.html">List</A>* <A HREF="#DOC.DOCU">list_new</A></H2><H2>(void (*destructor)())</H2><BLOCKQUOTE> Create a new List and set the destructor.</BLOCKQUOTE>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Create a new List and set the destructor.
+If no destructor is specified, a simple free() will be called on items
+in list_delete().
+</BLOCKQUOTE>
+<DL><DT><DT><B>Parameters:</B><DD><B>destructor</B> -  A function used to delete each Node. The only parameter is a <!1><A HREF="Node.html">Node</A> pointer.
+<BR><DT><B>Returns:</B><DD>  If all is well, a pointer to a List
+<BR><DT><B>Author:</B><DD>Ronny Bangsund
+
+<DT><B>See Also:</B><DD><!1><A HREF="List.html">List</A>, <!1><A HREF="Node.html">Node</A>, <!1><A HREF="list_newitem.html">list_newitem</A>(), <!1><A HREF="list_add.html">list_add</A>(), <!1><A HREF="list_remove.html">list_remove</A>(), <!1><A HREF="list_delete.html">list_delete</A>(), <!1><A HREF="list_free.html">list_free</A>()<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

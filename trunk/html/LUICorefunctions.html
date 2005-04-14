@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> LUI: Core functions</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+<H2> <A HREF="#DOC.DOCU">LUI: Core functions</A></H2></H2>
+<HR>
+<DL>
+<DT>
+
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="lui_init"></A>
+<A HREF=lui_init.html><B>lui_init</B></A><DD><I> Initialise the Lame User Interface.</I>
+<DT>
+
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="lui_quit"></A>
+<A HREF=lui_quit.html><B>lui_quit</B></A><DD><I> Finish using the Lame User Interface.</I>
+<DT>
+
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="lui_ghost"></A>
+<A HREF=lui_ghost.html><B>lui_ghost</B></A><DD><I> Toggle "ghosted" pattern over a gadget.</I>
+<DT>
+
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="lui_addgadget"></A>
+<A HREF=lui_addgadget.html><B>lui_addgadget</B></A><DD><I> Add a gadget to the global lists.</I>
+<DT>
+
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="lui_remgadget"></A>
+<A HREF=lui_remgadget.html><B>lui_remgadget</B></A><DD><I> Remove a gadget from the global lists.</I>
+<DT>
+
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="lui_newgadget"></A>
+<A HREF=lui_newgadget.html><B>lui_newgadget</B></A><DD><I> Create gadget, and automatically set certain tags.</I>
+</DL>
+<A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE><h1>LUI:the Lame User Interface</h1>
+
+<P><p>To use LUI gadgets, you should pass the XI_LUI tag to xi_init()
+when starting your program. Only buttons and lists are
+possible to create yet, but more is to come in a few days.</p>
+
+<P><p>All gadgets created can be added to the global lists for
+automatic handling with lui_addgadget(). lui_remgadget()
+can be used if you want to remove anything before exit
+(LUI frees all gadgets automatically, though). All the
+gadgets have several "methods" that can be called for
+various effects, but these are mostly internal. Of most
+interest are the destroy() and draw() methods.</p>
+
+<P><h2>Common tags</h2>
+<p>When creating a gadget, you need to pass many settings
+to get it rendered properly. Here's the list of tags
+which all gadgets support:</p>
+
+<P><ul>
+<li>LUI_ACTIVATEHOOK</li>
+<p>Function to call upon click activation (normally left mousebutton).</p>
+
+<P><li>LUI_PASSHOOK</li>
+<p>Function called when the cursor hovers above a gadget.
+The hook will already have its highlighting done around
+the time this hook is called.</p>
+
+<P><li>LUI_NAME</li>
+<p>Optional name for searching, grouping gadgets or whatever you need.</p>
+
+<P><li>LUI_TITLE</li>
+<p>Usable by controls to display a title, if it has any.</p>
+
+<P><li>LUI_XPOS, LUI_YPOS, LUI_WIDTH, LUI_HEIGHT</li>
+<p>Position and size of gadget. Size is optional, as it is
+usually derived from the images that make up the gadget.</p>
+
+<P><li>LUI_SCREEN</li>
+<p>SDL surface to display to. This may be any valid SDL surface
+that can display the images you've passed in to create
+the gadgets previously. It's sometimes useful to render
+to a view for gadgets that may not always be visible.
+(Special controls will be made available to make disabling
+groups of gadgets easier)</p>
+</ul>
+
+<P></BLOCKQUOTE>
+<DL><DT><DT><B>Author:</B><DD>Ronny Bangsund
+
+<DT><B>See Also:</B><DD><!1><A HREF="bt_new.html">bt_new</A>(), <!1><A HREF="lst_new.html">lst_new</A>()<BR><DD></DL><P> </body>
+</html>
+<HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>gadget* lui_newgadget</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file lui/lui.c:<H2><!1><A HREF="gadget.html">gadget</A>* <A HREF="#DOC.DOCU">lui_newgadget</A></H2><H2>(ulong <!1><A HREF="xmltag.2.html#DOC.129.5">type</A>,<BR>&nbsp; ulong tag1,<BR>&nbsp; ... )</H2><BLOCKQUOTE> Create gadget, and automatically set certain tags.</BLOCKQUOTE>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Create gadget, and automatically set certain tags.
+The LBT_TOGGLE tag is set if type is GAD_TOGGLE.
+LUI_SCREEN is also automatically set to xig->screen,
+but any LUI_SCREEN tags you supply will override this.
+
+<P><h3>Known button types</h3>
+<ul>
+<li>GAD_BUTTON</li>
+Ordinary clickable button, with optional highlight images.
+The highlight image for the pressed-in state doesn't really
+make much sense, but it would make you able to change a
+button to toggle state on the fly.
+
+<P><li>GAD_TOGGLE</li>
+Like a clickable button, except the button stays pressed
+until you click again. The pressed-in highlight image is
+useful for these.
+
+<P><li>GAD_LIST</li>
+A very simple list with a field above and below that
+scrolls its contents up and down, respectively.
+It relies on hooks from the up/down buttons to tell
+what item to show as the first one (just a number),
+the its ondraw() hook gets his number and must update
+the list contents.
+
+<P><li>GAD_MENU</li>
+Creates a menu header (walks like a button, quacks like
+a button) which pops up a list of further buttons when
+clicked. No layout management is done yet, so the items
+will just appear below eachother. The menu itself handles
+highlighting of the menuitems. Its inputarea changes size
+temporarily while the menuitems are displayed.
+
+<P><li>GAD_MESSAGE</li>
+This is a modal message box with one (confirm) button.
+For those who don't speak GUI, modal means all other
+gadgets are unavailable while this box awaits input.
+It handles its own highlighting of items, and may
+possibly have a scrolling list of text, if the text
+is too large for its displayable area.
+
+<P><li>GAD_CONFIRM</li>
+This is another modal message box, but with both a
+confirm and cancel button.
+</ul></BLOCKQUOTE>
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

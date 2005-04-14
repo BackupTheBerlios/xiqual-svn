@@ -1,0 +1,35 @@
+All:
+Some functions are incomplete (IFF was reduced to simple FORMs,
+preferences code could do with some extra functions and CGI functions
+aren't all fully written..)
+
+Linux:
+Compiles without errors. No other suspicious activity spotted.
+
+Win32:
+Had to make a custom strndup(), as this is missing. This internal
+function is also used in place of strndup() on Linux, as there are some
+issues with it. Various typedefs had to be made just for this platform;
+the code compiled fine on VC++ 5, but had lost some definitions in the
+v6 headerfiles.
+
+xinet:
+Not sure about the handling of resolved hostnames yet. Needs some
+testing of most functions to be 100% sure it's working. Read/write
+functions are being tested, with automatic handling of command strings
+also being added now.
+
+xixml:
+Writing to file isn't entirely perfect. Drops some symbols occasionally.
+Will be fixed when I find the bug.
+
+lui:
+Message boxes are randomly crashing.
+Tilesets are not always working for buttons.
+
+
+
+
+
+
+

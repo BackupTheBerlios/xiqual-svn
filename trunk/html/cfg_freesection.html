@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>void cfg_freesection</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file xitools/cfg_freesection.c:<H2>void <A HREF="#DOC.DOCU">cfg_freesection</A></H2><H2>(<!1><A HREF="preferences.html">preferences</A>* prefs)</H2><BLOCKQUOTE> Free a preferences section and its variables.</BLOCKQUOTE>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Free a preferences section and its variables.
+If you used cfg_loadprefs() to load the structures from a file,
+this function will be called as a destructor on each section.
+A simple list_free() on the List will deallocate all resources.
+</BLOCKQUOTE>
+<DL><DT><DT><B>Parameters:</B><DD><B>prefs</B> -  Preferences structure (section), as created by <!1><A HREF="cfg_newsection.html">cfg_newsection</A>().
+<BR><DT><B>Author:</B><DD>Ronny Bangsund
+
+<DT><B>See Also:</B><DD><!1><A HREF="preferences.html">preferences</A>, <!1><A HREF="cfg_loadprefs.html">cfg_loadprefs</A>(), <!1><A HREF="cfg_newsection.html">cfg_newsection</A>()<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

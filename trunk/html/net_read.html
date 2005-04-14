@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>void* net_read</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file xinet/net_read.c:<H2>void* <A HREF="#DOC.DOCU">net_read</A></H2><H2>(int sock)</H2><BLOCKQUOTE> Read an incoming xinet package.</BLOCKQUOTE>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Read an incoming xinet package.
+A new buffer is allocated to hold an entire message
+conforming to the xipacket structure. On little-endian
+platforms, the header data is converted to local format.
+
+<P>The buffer must be freed after use.
+</BLOCKQUOTE>
+<DL><DT><DT><B>Parameters:</B><DD><B>sock</B> -  Socket filedescriptor to <!1><A HREF="autofile.html#DOC.94.3">read</A> from
+<BR><DT><B>Returns:</B><DD>  A pointer to the buffer
+<BR><DT><B>See Also:</B><DD>xipacket, <!1><A HREF="net_writeh.html">net_writeh</A>(), <!1><A HREF="IFFHandle.html#DOC.101.9">write</A>()<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

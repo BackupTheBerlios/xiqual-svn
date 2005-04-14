@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> Setting up graphics</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+<H2> <A HREF="#DOC.DOCU">Setting up graphics</A></H2></H2>
+<HR>
+<DL>
+<DT>
+
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="xi_init"></A>
+<A HREF=xi_init.html><B>xi_init</B></A><DD><I> Initialise Xiqual and all SDL subsystems.</I>
+<DT>
+
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="xi_inittag"></A>
+<A HREF=xi_inittag.html><B>xi_inittag</B></A><DD><I> This function gets called by xi_init() when initialising.</I>
+<DT>
+
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="xi_quit"></A>
+<A HREF=xi_quit.html><B>xi_quit</B></A><DD><I> Free the xiglob structure and all its related data, then release all SDL resources.</I>
+</DL>
+<A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE>When using Xiqual to initialise SDL, several subsystems can be
+started at once, including a few external libraries.
+
+<P>The default initialisation start sound, graphics and input.
+If SDL_mixer and SDL_ttf are available, they are also opened.
+When xi_init() returns successfully, you can start straight away
+to draw on the screen in the global structure, make noise with
+Mix_* functions and open TTF fonts (plus other formats supported
+by this library).
+
+<P>The global structure holds the actual audio format specs.
+
+<P>If you want to use the LUI interface subsystem, pass the
+tag XI_LUI to xi_init() with any data. If XIF_USE_LUI is
+set in the global structure's flags, full use of LUI is
+available. It is very unlikely to fail, as all lui_init()
+does is to allocate a surface for a 4x4 pixmap.
+
+<P>Unlike kicking a heroin or tobacco addiction, quitting Xiqual
+is very easy. Just call xi_quit() to have SDL, SDL_ttf, SDL_mixer
+and LUI subsystems deallocate their resources. All gadgets
+and other resources created with Xiqual are freed.
+</BLOCKQUOTE>
+<DL><DT><DT><B>See Also:</B><DD><!1><A HREF="xiglob.html">xiglob</A>, <!1><A HREF="lui_init.html">lui_init</A>()<BR><DD></DL><P> </body>
+</html>
+<HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

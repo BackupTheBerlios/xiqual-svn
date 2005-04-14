@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>void xi_seterror</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file xitools/errors.c:<H2>void <A HREF="#DOC.DOCU">xi_seterror</A></H2><H2>(char* text)</H2><BLOCKQUOTE> A generic way of setting error strings.</BLOCKQUOTE>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+A generic way of setting error strings.
+Sets the xi_lasterror variable to a user-specified string.
+The string is not duplicated, so it must stay alive for
+as long as the program exists (preferably), or at least
+until a new error string is set.
+
+<P>A near-future version of this call will check for a user-
+supplied hook (passed to xi_init() on startup) to call
+whenever a new error message is passed to it. This hook
+could be used to display error-message boxes or a way to
+solve problems.
+
+<P>Using GNU gettext() etc. for internationalised, or even
+just English, text strings is of course recommended.
+</BLOCKQUOTE>
+<DL><DT><DT><B>Author:</B><DD>Ronny Bangsund
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

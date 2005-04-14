@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> Input handling</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+<H2> <A HREF="#DOC.DOCU">Input handling</A></H2></H2>
+<HR>
+<DL>
+<DT>
+
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="xi_main"></A>
+<A HREF=xi_main.html><B>xi_main</B></A><DD><I> Handle input and GUI.</I>
+</DL>
+<A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE><h2>Input handling</h2>
+Xiqual has an input loop readymade for your perusal.
+It might not be the best loop in the world, but it
+does save me some work when creating a new SDL application.
+
+<P>To make use of this, you must pass a main loop of your own
+which merely tests the arguments passed. Xiqual does all
+the dreary work of grabbing mouse, keyboard and joystick state.
+
+<P>The actual input arguments are documented in the xiglob
+structure (click the link below). They are just the usual
+ones you expect from an SDL application.
+
+<P>Any LUI gadgets added with lui_addgadget() will also be
+automatically handled in the same thread as xi_main().
+That means highlighting, togglestate, calling activation
+hooks and whatnot.
+
+<P>Finally, the mouse cursor is handled via xi_main().
+Its view is hidden while processing the mainloop, so
+there is no danger of overlapping anything that way.
+
+<P>Updates: The current system simply uses SDL_Flip() at the
+end of the loop. I'm not sure how fast this is in the
+average case, but profiling so far has been encouraging.
+
+<P>Overlapping gadgets: Gadgets are redrawn very rarely.
+If a gadget's alternate (clicked/highlighted) state has
+a very different shape and size from the regular state,
+there is no guarantee the gadget will update if you
+happen to overwrite some of it. The current gadgets
+redraw when switching state, but may try to be more
+"intelligent" in the future.
+
+<P>So if adding LUI to an application, it's best to keep
+the gui on its own side of the screen, or even draw
+it to a view. The ability to make any SDL surface a
+gadget's main output is part of the reason why no
+updates are happening via SDL_UpdateRect(). At least
+I can brag about how object-oriented this interface
+is.
+
+<P></BLOCKQUOTE>
+<DL><DT><DT><B>Author:</B><DD>Ronny Bangsund
+
+<DT><B>See Also:</B><DD><!1><A HREF="xi_init.html">xi_init</A>(), <!1><A HREF="xi_quit.html">xi_quit</A>(), <!1><A HREF="lui_init.html">lui_init</A>(), <!1><A HREF="lui_quit.html">lui_quit</A>(), <!1><A HREF="xiglob.html">xiglob</A><BR><DD></DL><P> </body>
+</html>
+<HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

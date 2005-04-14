@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>IFFHandle* iff_new</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file xitools/iff_new.c:<H2><!1><A HREF="IFFHandle.html">IFFHandle</A>* <A HREF="#DOC.DOCU">iff_new</A></H2><H2>(char* <!1><A HREF="xmltag.2.html#DOC.129.1">name</A>,<BR>&nbsp; ulong <!1><A HREF="xmltag.2.html#DOC.129.5">type</A>)</H2><BLOCKQUOTE> Creates a new IFF.</BLOCKQUOTE>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Creates a new IFF.
+Any existing file with the same name will be deleted.
+Note that header information is written in big-endian format.
+It's recommended to convert all numeric data to big-endian
+before saving if the data will be available on several
+different platforms. Intel x86 is little-endian, and PPC is
+big-endian.
+</BLOCKQUOTE>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="xmltag.2.html#DOC.129.1">name</A> Name of file to create.
+<BR><B></B> - <!1><A HREF="xmltag.2.html#DOC.129.5">type</A> IFF type.
+<BR><DT><B>Author:</B><DD>Ronny Bangsund
+
+<DT><B>See Also:</B><DD><!1><A HREF="iff_newchunk.html">iff_newchunk</A>(), iff_writechunk(), <!1><A HREF="iff_endchunk.html">iff_endchunk</A>(),
+<!1><A HREF="iff_close.html">iff_close</A>(), iff_goodtype(), <!1><A HREF="IFFHandle.html">IFFHandle</A>, _SwapBE32()<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

@@ -1,0 +1,257 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>typedef struct  gadget</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file include/lui.h:<H2>typedef struct  <A HREF="#DOC.DOCU">gadget</A></H2></H2><BLOCKQUOTE> Generic gadget.</BLOCKQUOTE>
+
+<HR>
+<P><DL>
+ <DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>struct  <!1><A HREF="gadget.html">gadget</A> <B><A HREF="#DOC.107.1">*next</A></B>
+<DD><I> Next gadget in List</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>struct  <!1><A HREF="gadget.html">gadget</A> <B><A HREF="#DOC.107.2">*prev</A></B>
+<DD><I> Previous gadget in List</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>char* <B><A HREF="#DOC.107.3">name</A></B>
+<DD><I> Optional string for searching</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.107.4">(*add)</A></B>(<!1><A HREF="List.html">List</A>* <!1><A HREF="xiglob.html#DOC.122.20">inputs</A>, <!1><A HREF="List.html">List</A>* <!1><A HREF="xiglob.html#DOC.122.19">gadgets</A>, struct <!1><A HREF="gadget.html">gadget</A>* )
+<DD><I> Add gadget to lists.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.107.5">(*rem)</A></B>(<!1><A HREF="List.html">List</A>* <!1><A HREF="xiglob.html#DOC.122.20">inputs</A>, <!1><A HREF="List.html">List</A>* <!1><A HREF="xiglob.html#DOC.122.19">gadgets</A>, struct <!1><A HREF="gadget.html">gadget</A>* )
+<DD><I> Remove gadget from lists.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.107.6">(*destroy)</A></B>(struct <!1><A HREF="gadget.html">gadget</A>* )
+<DD><I> LUI destructor.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.107.7">(*activate)</A></B>(struct <!1><A HREF="gadget.html">gadget</A>* )
+<DD><I> LUI activation method.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.107.8">(*draw)</A></B>(struct <!1><A HREF="gadget.html">gadget</A>* )
+<DD><I> LUI draw method.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.107.9">(*highlight)</A></B>(struct <!1><A HREF="gadget.html">gadget</A>* )
+<DD><I> LUI highlight method.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.107.10">(*ghost)</A></B>(struct <!1><A HREF="gadget.html">gadget</A>* )
+<DD><I> Ghosting method.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void* <B><A HREF="#DOC.107.11">data</A></B>
+<DD><I> User-definable data.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>ulong <B><A HREF="#DOC.107.12">id</A></B>
+<DD><I> Optional identifier.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>ulong <B><A HREF="#DOC.107.13">type</A></B>
+<DD><I> Type of gadget.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>ulong <B><A HREF="#DOC.107.14">flags</A></B>
+<DD><I> LUI flags.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.107.15">w</A></B>
+<DD><I> Width.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.107.16">h</A></B>
+<DD><I> Height.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.107.17">x</A></B>
+<DD><I> X position in screen.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.107.18">y</A></B>
+<DD><I> Y position in screen.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="inputarea.html">inputarea</A>* <B><A HREF="#DOC.107.19">ia</A></B>
+<DD><I> Main input area.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>SDL_Surface* <B><A HREF="#DOC.107.20">screen</A></B>
+<DD><I> Screen.</I>
+</DL></P>
+
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Generic gadget.
+Every button, checkbox, listview etc. in LUI has this structure,
+with its own private data in an extended part of the structure.
+</BLOCKQUOTE>
+<DL>
+
+<A NAME="*next"></A>
+<A NAME="DOC.107.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>struct  <!1><A HREF="gadget.html">gadget</A> *next</B></TT>
+<DD>
+Next gadget in List
+<DL><DT><DD></DL><P>
+<A NAME="*prev"></A>
+<A NAME="DOC.107.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>struct  <!1><A HREF="gadget.html">gadget</A> *prev</B></TT>
+<DD>
+Previous gadget in List
+<DL><DT><DD></DL><P>
+<A NAME="name"></A>
+<A NAME="DOC.107.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>char* name</B></TT>
+<DD>
+Optional string for searching
+<DL><DT><DD></DL><P>
+<A NAME="(*add)"></A>
+<A NAME="DOC.107.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void (*add)(<!1><A HREF="List.html">List</A>* <!1><A HREF="xiglob.html#DOC.122.20">inputs</A>, <!1><A HREF="List.html">List</A>* <!1><A HREF="xiglob.html#DOC.122.19">gadgets</A>, struct <!1><A HREF="gadget.html">gadget</A>* )</B></TT>
+<DD>
+Add gadget to lists.
+Gadgets which require addition of more inputareas
+than the default at creation time use this method.
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="xiglob.html#DOC.122.20">inputs</A> Pointer to list of inputareas.
+<BR><B></B> - <!1><A HREF="xiglob.html#DOC.122.19">gadgets</A> Pointer to list of gadgets.
+<BR><B></B> - <!1><A HREF="gadget.html">gadget</A> This gadget.<BR><DD></DL><P>
+<A NAME="(*rem)"></A>
+<A NAME="DOC.107.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void (*rem)(<!1><A HREF="List.html">List</A>* <!1><A HREF="xiglob.html#DOC.122.20">inputs</A>, <!1><A HREF="List.html">List</A>* <!1><A HREF="xiglob.html#DOC.122.19">gadgets</A>, struct <!1><A HREF="gadget.html">gadget</A>* )</B></TT>
+<DD>
+Remove gadget from lists.
+Gadgets which added more inputareas than
+the default at creation time use this method.
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="xiglob.html#DOC.122.20">inputs</A> Pointer to list of inputareas.
+<BR><B></B> - <!1><A HREF="xiglob.html#DOC.122.19">gadgets</A> Pointer to list of gadgets.
+<BR><B></B> - <!1><A HREF="gadget.html">gadget</A> This gadget.<BR><DD></DL><P>
+<A NAME="(*destroy)"></A>
+<A NAME="DOC.107.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void (*destroy)(struct <!1><A HREF="gadget.html">gadget</A>* )</B></TT>
+<DD>
+LUI destructor.
+This frees the gadget and all child gadgets (if any),
+along with all their data. The gadget must already
+have been removed from any lists before this is called.
+<DL><DT><DD></DL><P>
+<A NAME="(*activate)"></A>
+<A NAME="DOC.107.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void (*activate)(struct <!1><A HREF="gadget.html">gadget</A>* )</B></TT>
+<DD>
+LUI activation method.
+This draws a gadget's active state,
+and calls any onactivate() hooks it may have installed.
+<DL><DT><DD></DL><P>
+<A NAME="(*draw)"></A>
+<A NAME="DOC.107.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void (*draw)(struct <!1><A HREF="gadget.html">gadget</A>* )</B></TT>
+<DD>
+LUI draw method.
+Used internally by LUI to call upon the correct method(s)
+to draw a gadget and also perform any cleanup related
+to highlight state, hiding and showing other gadgets etc.
+<DL><DT><DD></DL><P>
+<A NAME="(*highlight)"></A>
+<A NAME="DOC.107.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void (*highlight)(struct <!1><A HREF="gadget.html">gadget</A>* )</B></TT>
+<DD>
+LUI highlight method.
+If a gadget has installed a hook for mouseover actions,
+it will be called from this. This function is normally
+handled from within LUI when the cursor passes over
+the related gadget.
+<DL><DT><DD></DL><P>
+<A NAME="(*ghost)"></A>
+<A NAME="DOC.107.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void (*ghost)(struct <!1><A HREF="gadget.html">gadget</A>* )</B></TT>
+<DD>
+Ghosting method.
+If a gadget has special requirements for making itself
+look disabled, this method gets installed here.
+Used by gadgets that change size (menus).
+<DL><DT><DD></DL><P>
+<A NAME="data"></A>
+<A NAME="DOC.107.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void* data</B></TT>
+<DD>
+User-definable data.
+This pointer is passed along to user-defined hooks.
+<DL><DT><DD></DL><P>
+<A NAME="id"></A>
+<A NAME="DOC.107.12"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>ulong id</B></TT>
+<DD>
+Optional identifier.
+Returned by iarea_check(), so you can check for activation in other ways
+than a callback hook, or for other forms of record keeping.
+Defaults to -1; iarea_check() returns 0 when a check fails!
+<DL><DT><DD></DL><P>
+<A NAME="type"></A>
+<A NAME="DOC.107.13"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>ulong type</B></TT>
+<DD>
+Type of gadget.
+See lui.h for a list of types.
+<DL><DT><DD></DL><P>
+<A NAME="flags"></A>
+<A NAME="DOC.107.14"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>ulong flags</B></TT>
+<DD>
+LUI flags.
+User-readable flags go here. None are implemented yet.
+<DL><DT><DD></DL><P>
+<A NAME="w"></A>
+<A NAME="DOC.107.15"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int w</B></TT>
+<DD>
+Width.
+Read-only size of entire gadget.
+<DL><DT><DD></DL><P>
+<A NAME="h"></A>
+<A NAME="DOC.107.16"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int h</B></TT>
+<DD>
+Height.
+Read-only size of entire gadget.
+<DL><DT><DD></DL><P>
+<A NAME="x"></A>
+<A NAME="DOC.107.17"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int x</B></TT>
+<DD>
+X position in screen.
+Read-only position of entire gadget.
+<DL><DT><DD></DL><P>
+<A NAME="y"></A>
+<A NAME="DOC.107.18"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int y</B></TT>
+<DD>
+Y position in screen.
+Read-only size of entire gadget.
+<DL><DT><DD></DL><P>
+<A NAME="ia"></A>
+<A NAME="DOC.107.19"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="inputarea.html">inputarea</A>* ia</B></TT>
+<DD>
+Main input area.
+This may or may not cover the entire surface
+of the gadget. Some gadgets create more input areas
+for sub-components, and some may even have some
+of these areas within its own ia's borders.
+<DL><DT><DD></DL><P>
+<A NAME="screen"></A>
+<A NAME="DOC.107.20"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>SDL_Surface* screen</B></TT>
+<DD>
+Screen.
+This is the SDL surface this gadget is drawn on
+when its draw() method is called.
+<DL><DT><DD></DL><P></DL>
+<DL><DT><DT><B>See Also:</B><DD><!1><A HREF="iarea_check.html">iarea_check</A>()<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

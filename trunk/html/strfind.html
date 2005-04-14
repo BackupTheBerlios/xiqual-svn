@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>char* strfind</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file xitools/strfind.c:<H2>char* <A HREF="#DOC.DOCU">strfind</A></H2><H2>(char* haystack,  char* needle,  int sense)</H2><BLOCKQUOTE> Looks for a string within another string.</BLOCKQUOTE>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Looks for a string within another string.
+This is both a case-insensitive version of, and a wrapper around, strstr().
+If sense is non-zero, strstr() will be called. If zero, an insensitive search
+will be used.
+</BLOCKQUOTE>
+<DL><DT><DT><B>Parameters:</B><DD><B>haystack</B> -  A <!1><A HREF="variable.html#DOC.113.5">string</A> to look inside
+<BR><B>needle</B> -  The <!1><A HREF="variable.html#DOC.113.5">string</A> to look for in haystack
+<BR><B>sense</B> -  Case-sensitivity (TRUE or FALSE)
+<BR><DT><B>Returns:</B><DD>  A pointer to the position in haystack where needle was found, or NULL
+<BR><DT><B>Author:</B><DD>Ronny Bangsund
+
+<DT><B>See Also:</B><DD>strstr()<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

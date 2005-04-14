@@ -1,0 +1,1 @@
+shlibs:Depends=libc6 (>= 2.3.2.ds1-4), libsdl-image1.2 (>= 1.2.3), libsdl1.2debian (>> 1.2.6-0), zlib1g (>= 1:1.1.4)

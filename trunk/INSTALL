@@ -1,0 +1,34 @@
+Xiqual is only available as a static library. There are several reasons for this,
+but mostly because users shouldn't be burdened with another library that
+will break a program when you upgrade it. The API *will* mutate enough to
+break things, as there are quite sloppy coding practices in action here.
+
+
+Requirements:
+SDL 1.2.4 or newer must be installed, as well as the matching SDL_image.
+Both are available at http://libsdl.org, in the Libraries section.
+Xiqual is built with 1.2.5 now, and will follow the more updated versions
+as they are released.
+
+GCC compilers up to 3.3 have been tried on Linux, and VC++ up to 6 on 
+Win32. GNU Make is the only make utility recommended by Autoconf.
+
+Some Unix-oid system is preferred - development happens in Linux, with
+an occasional full compile in Windows. FreeBSD/NetBSD etc. has worked in
+the past, and should still compile and run the test programs as long as
+SDL is supported. Any processor achitecture should work, unless it works
+off some endianness unheard of till now.
+
+
+Nice to have:
+SDL_mixer availability will let you initialise it from Xiqual's startup code.
+
+
+Quick install tip:
+At your command line, type:
+	./autogen.sh
+from the Xiqual directory to generate proper makefiles for your system.
+
+If you need a different GNU C compiler, or even non-GNU, try:
+	CC=gcc-x.y ./autogen.sh
+or something like it. Replace 'gcc-x.y' with a valid binary.

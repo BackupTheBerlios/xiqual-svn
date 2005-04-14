@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>int* xml_addprocessinghook</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file ../xitools/xmlread.c:<H2>int* <A HREF="#DOC.DOCU">xml_addprocessinghook</A></H2><H2>(<!1><A HREF="xmldoc.2.html">xmldoc</A>* doc,  char* <!1><A HREF="xmltag.2.html#DOC.129.1">name</A>,  int* func)</H2><BLOCKQUOTE> Add a hook for a processing instruction.</BLOCKQUOTE>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Add a hook for a processing instruction.
+Processing instructions are tags starting with <?. You are forbidden to
+use xml in any combination of case (xml, xMl, Xml etc.), but other basic
+tags such as xml-stylesheet are possible. If you try registering "xml" in
+any case combination, this function returns an error.
+
+<P>The hook will get a pointer to the relevant xmltag instruction
+(without the question mark) as its first argument.
+</BLOCKQUOTE>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="xmltag.2.html#DOC.129.1">name</A> The processing instruction to add a hook for.
+<BR><B>func</B> -  Your hook function.
+<BR><DT><B>Returns:</B><DD>  0 if no error occurred allocating a node to hold your function
+<BR><DT><B>Author:</B><DD>Ronny Bangsund
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

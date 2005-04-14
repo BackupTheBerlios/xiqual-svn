@@ -1,0 +1,22 @@
+Source: xiqual
+Section: devel
+Priority: optional
+Maintainer: Nny <nny@purehatred.org>
+Standards-Version: 3.5.8
+Build-Depends: debmake
+
+Package: xiqual
+Architecture: any
+Depends: ${shlibs:Depends}
+Recommends: gcc-3.3
+Description: Tilebased and networked game development library
+ Static libraries for use in simple 2D games, with code to handle
+ various configuration files, input, GUIs and more. Also contains
+ some simple bonus functions for basic data structures.
+ Based on SDL, SDL_mixer, SDL_ttf and SDL_image.
+
+Package: xiqual-doc
+Architecture: all
+Description: Documentation for the Xiqual game development library
+ HTML documentation for Xiqual. Contains both minimal quickstart
+ guides and references to most functions in the sub-libraries.

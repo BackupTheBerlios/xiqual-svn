@@ -1,0 +1,125 @@
+Priorities
+==========
+Narya (or Lords of Mumble or..): Wizards summoning critters to attack eachother.
+Would be first complete production based on Xiqual. Turn to Shane for the full
+lowdown - I've volunteered him to do the scripting :)
+
+A roguelike of some sort. This would allow further testing of the tile engine and
+some other parts that Narya might not touch upon. Also a good program to use in
+developing more fun Lua scripts and fleshing out some sort of generic scripting
+API for use in strategy games and more.
+
+Wanna
+=====
+
+Zombielord:It's real blood! Dig up the dead and re-animate them, either through
+magic or technology. Make the fresher specimens jog their memories and be a little
+more than just cannon-fodder - perhaps even leading your braindead minions.
+Will you become a lich, existing forever as an unpleasant-smelling, animated corpse?
+Or will you find relatives and companions to pass on your work to, living on through
+them and their particular abilities?
+
+It would be an RTS/RPG cross-over somewhat unlike any other. Keep your main minion,
+yourself, alive, or make sure you've arranged for your work to continue. This could
+be done by having loyal apprentices to keep up the "scientific" work, or simply
+making sure you cannot be killed.
+
+Lichdom - pros:
+"Living" forever, regenerating over time from any injury. No upper limit on
+magical ability. Magic can be developed to ensure the undead do not turn against
+their master. Besides, they're more likely to listen to their own.
+
+The scientific method - pros:
+You're alive, so you won't attract much attention. Except for being a recluse.
+Technology can be used to replace parts that break on minions. No corpse is too
+old for combat. Physical condition will be better than most undead; a lich couldn't
+take much of a beating before bits start to drop off, but a real, live scientist
+isn't necessarily a skinny little geek. Of course, those are the apprentices you'll
+get for the most part..until you train them. Science has better methods to store
+dead/undead for longer periods of time, meaning a quick escape from an angry mob
+doesn't mean you have to start all over. You just need to get to those barrels you
+hid in some mortuary..
+
+Lichdom - cons:
+You smell. You can't move amongst common people at all without attracting any
+attention. While you regenerate from complete breakdown, much time passes -
+perhaps even years. In that time, your laboratory could be smashed to bits and
+your minions run rampant, meaning you have to start from scratch.
+You tend to empty cemeteries rather fast, since natural decomposition can't be
+stopped fully, and you don't have any new-fangled science to replace limbs.
+
+Science - cons:
+Once you're dead, you're dead. If you have an apprentice, you restart at his
+skillevels (so train them well, perhaps even having them surpass you in ways).
+Your only control over disobedient undead would be to disable them or lock them
+down with mechanic contraptions. Certain types of undead, like any hungry dead,
+would be out of the question for control. They'd rather eat you than wait for
+the meals you might promise. Carry a big stick.
+
+Goals with the game: Single-player - mission-based over different territories,
+with many different landscapes. Battlefields being the yummiest, of course.
+Hunt down that extra bit of knowledge for each new type of undead, ally yourself
+with the more upwardly mobile types (vampires and the like), but watch out for
+werewolves looking for a bone.
+
+On the magical path, lichdom is only half the struggle. Ruling a country could
+be a nice bonus. Developing unbeatable armies is of course an advantage..
+The most important point would be that it's training for the multiplayer side.
+
+Multiplayer - pick a few advantages and disadvantages related to either the magical
+or scientific way of doing, then fight over territories with any number of players.
+Develop the minds of certain undead and make them into champions that can lead
+your troops without your direct guidance, or if you're a scientist and can't quite
+make them do what you want, store them in barrels to unleash upon your foes whenever
+you need something done. Pack 'em up after sedating them and repair the damage
+while waiting for the next battle. In most cases, a battle won is a new set of
+corpses won. Fresh meat for the operating table!
+
+You'd start the game as a lich if picking the magical path, and the scientific
+path would get similar advantages.
+
+Gimmicks: All the blood in the game should be textured from real bleeding
+done by the developers. Keep that camera handy :>
+
+*****
+
+Whorecraft:
+Silly idea from a slashdotter, but it might work as a management game of sorts.
+Build an empire of brothels, or specialise in take-out! I shut up now.
+
+*****
+
+A Master of Magic clone:
+The original game is a DOS-only game, which is a shame. It is vaguely Civilisation-
+like, but with a simple economic model. You picked one of many personalities, or
+created your own custom set of magical skills from several typical branches (chaos,
+fire, nature, spirit, death, water etc.) and started with control over one city of
+one race (lizardmen, humans, elves, halflings, dark-elves and more). Then you just
+expanded, civ-style, while developing more effective magic, both spells and items.
+Heroes showed up for hire (remember their upkeep!), and could use these items.
+You could summon permanent minions, including some incredibly strong heroes (at a
+large daily cost of mana), or enchant the ones you had. It was all a race to either
+beat the crap out of the enemies, or develop the Spell of Mastery, which made you
+the controller of all magic forces. Or maybe it was the equivalent of a scout's
+badge in magic. Or something. Anyway, that was usually The End.
+
+The game was divided into two worldmaps, darkside and lightside. You entered each
+through portal towers scattered about the landscape. A spell could be researched
+to allow the same effect as a satellite in Civ, other spells existed to improve
+sea movement. There were also sources of mana of different types that you could
+control. To ensure you kept it, you'd need to summon guardian spirits. They cost
+upkeep until they merged with a node, after which they'd show up in battles to
+defend it.
+
+Battle-mode was a turnbased affair seen from the side (sorta; a tad of Heroes of
+Might and Magic's semi-isometric style there). You could cast spells from that mode,
+either of your own available spells, or through heroes, if they had the ability.
+Some heroes might have useful spells you didn't have, which could make a battle
+real easy.
+
+Flyers units were almost always an advantage, except walls around cities still
+deterred them. Some units were also immune to non-magic damage, so kitting the
+heroes out with a full set of magical weapons, even puny +1 pig-stickers of
+eye-poking, helped a lot.
+
+*****

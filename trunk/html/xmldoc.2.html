@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>typedef struct  xmldoc</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file include/xixml.h:<H2>typedef struct  <A HREF="#DOC.DOCU">xmldoc</A></H2></H2><BLOCKQUOTE> The XML document structure.</BLOCKQUOTE>
+
+<HR>
+<P><DL>
+ <DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>char* <B><A HREF="#DOC.130.1">name</A></B>
+<DD><I> Document name passed at create time.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>char* <B><A HREF="#DOC.130.2">encoding</A></B>
+<DD><I> Document encoding used.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>ulong <B><A HREF="#DOC.130.3">flags</A></B>
+<DD><I> Document flags.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="List.html">List</A> <B><A HREF="#DOC.130.4">hooks</A></B>
+<DD><I> List of function hooks.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>struct  <!1><A HREF="xmltag.2.html">xmltag</A> <B><A HREF="#DOC.130.5">*root</A></B>
+<DD><I> Pointer to the root element.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>struct  <!1><A HREF="xmltag.2.html">xmltag</A> <B><A HREF="#DOC.130.6">*current</A></B>
+<DD><I> Internal use</I>
+</DL></P>
+
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+The XML document structure.
+All parsing starts here.</BLOCKQUOTE>
+<DL>
+
+<A NAME="name"></A>
+<A NAME="DOC.130.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>char* name</B></TT>
+<DD>
+Document name passed at create time.
+If created via xml_loaddoc(), this contains its full path.
+<DL><DT><DD></DL><P>
+<A NAME="encoding"></A>
+<A NAME="DOC.130.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>char* encoding</B></TT>
+<DD>
+Document encoding used.
+Not actually implemented yet, but will contain ISO8859-1
+or similar keywords for use whenever the parser supports
+different encodings.
+<DL><DT><DD></DL><P>
+<A NAME="flags"></A>
+<A NAME="DOC.130.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>ulong flags</B></TT>
+<DD>
+Document flags.
+For future use.
+<DL><DT><DD></DL><P>
+<A NAME="hooks"></A>
+<A NAME="DOC.130.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="List.html">List</A> hooks</B></TT>
+<DD>
+List of function hooks.
+hook->name is the name sorted by, which is the tagname.
+
+<DL><DT><DT><B>See Also:</B><DD>hook<BR><DD></DL><P>
+<A NAME="*root"></A>
+<A NAME="DOC.130.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>struct  <!1><A HREF="xmltag.2.html">xmltag</A> *root</B></TT>
+<DD>
+Pointer to the root element.
+XML allows only one tag at the root.
+This is it. All other tags must be
+nested within this.
+<DL><DT><DD></DL><P>
+<A NAME="*current"></A>
+<A NAME="DOC.130.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>struct  <!1><A HREF="xmltag.2.html">xmltag</A> *current</B></TT>
+<DD>
+Internal use
+<DL><DT><DD></DL><P></DL>
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

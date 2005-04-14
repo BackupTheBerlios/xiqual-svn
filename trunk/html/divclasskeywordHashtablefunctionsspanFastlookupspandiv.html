@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> <div class="keyword">Hash table functions<span>Fast lookup</span></div></TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+<H2> <A HREF="#DOC.DOCU"><div class="keyword">Hash table functions<span>Fast lookup</span></div></A></H2></H2>
+<HR>
+<DL>
+<DT>
+
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="hash_new"></A>
+<A HREF=hash_new.html><B>hash_new</B></A><DD><I> Create a fixed-size hash table.</I>
+<DT>
+
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="hash_free"></A>
+<A HREF=hash_free.html><B>hash_free</B></A><DD><I> Free a hash table.</I>
+<DT>
+
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="hash_newnode"></A>
+<A HREF=hash_newnode.html><B>hash_newnode</B></A><DD><I> Creates a new node with specified name and data.</I>
+<DT>
+
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="hash_freenode"></A>
+<A HREF=hash_freenode.html><B>hash_freenode</B></A><DD><I> Deallocate a node.</I>
+<DT>
+
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="hash_addnode"></A>
+<A HREF=hash_addnode.html><B>hash_addnode</B></A><DD><I> Ignorantly add a node to a hash table.</I>
+<DT>
+
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="hash_add"></A>
+<A HREF=hash_add.html><B>hash_add</B></A><DD><I> Create node with specified data and add to a hash table.</I>
+<DT>
+
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="hash_find"></A>
+<A HREF=hash_find.html><B>hash_find</B></A><DD><I> Look up a node in a hash table.</I>
+</DL>
+<A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE>Fast string lookup.
+<p>When you have many (tens of thousands or millions) of uniquely
+named entries, hash tables are good. In the optimal case, every
+string lookup takes the same amount of (minimal) time. For hash
+tables to be any good, every entry should have a different name
+to be sorted by. The current implementation only allows entries
+to have strings as base for their key.<p>
+
+<P><p>When you create a table with hash_new(), you supply a number of
+tags (keyword and data pairs) which define the number of entries
+you expect to top out at.</p>
+
+<P><p>If your table reaches this hard limit, the regular node adding
+function, hash_add(), refuses to add anymore nodes. You can
+circumvent this by using the ignorant function hash_add() at the
+cost of performance, or you could allocate a bigger table and
+start shuffling the old data over to this.</p>
+</BLOCKQUOTE>
+<DL><DT><DD></DL><P> </body>
+</html>
+<HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> tileset</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+<H2> <A HREF="#DOC.DOCU">tileset</A></H2></H2><A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE>
+Create a tileset from a tileset definition and images.
+
+<P>Usage:
+
+<P><em>tileset</em> name.t
+
+<P>The definition file can have any name, but .t is the
+postfix I'll be using. A tileset definition refers
+to one or more images (loadable by SDL_image) to cut
+sections from. The resulting tileset contains graphics
+with a masking colour defined (the colour that doesn't
+get copied in blits). It does not define WHAT each
+tile is for (sprites, terrain, icons).
+
+<P>
+<h2>Definition file format</h2>
+The file is divided into sections. Descriptions follow here.
+
+<P><b>[tileset]</b>: The first section, normally. It can be anywhere
+in the file, but it must be unique.
+
+<P><h3>Variables in the [tileset] section</h3>
+
+<P>Variables are set in the usual way of INI-style files,
+with "name = definition" at most once per line.
+
+<P><ul>
+<li>name</li> A string; the name to refer to this set by.
+
+<P><li>filename</li> This is a string containing the name you
+want to use for the output tileset. Usually ends in .iff or .tiles
+or some other vaguely descriptive surname.
+
+<P><li>size</li> Size in pixels of each tile in this tileset.
+A tileset must have all its tiles the same size. Format: Either
+width followed by a space, then height, or WIDTHxHEIGHT.
+<br>For example:<br>size = 32x32
+
+<P><li>maskcol</li> The transparent colour. The format is hexadecimal:
+<br>maskcol = 0xnnnnnn
+<br> The 0x prefix is optional.
+
+<P><li>author</li> You may specify the name of the artist/packager
+with this variable. Not required, but the artists will thank you
+for it if they're any good, and hate your guts otherwise.
+
+<P><li>comment</li> Another optional variable. Any string can go here.
+</ul>
+
+<P>The next type of section can appear multiple times. It specifies
+files to grab images from. The section name is <b>[source]</b>.
+
+<P><h3>Variables in [source] sections</h3>
+
+<P><ul>
+<li>image</li> Name of an image file in any format known to
+SDL_image. Suggested formats: XPM, PNG or TGA.
+Non-lossy compression is preferred, as JPEG and similar will
+probably mess up the pixels  in transparent colours.
+Proper transparency support from PNG is planned, though.
+
+<P><li>count</li> The number of tiles that the image holds.
+The program starts in the upper left corner, then moves right
+until reaching the rightmost edge, then proceeds to the next
+line of tiles until <b>count</b> tiles have been grabbed.
+This variable can be left out if there is only one tile in
+the source image.
+</ul>
+
+<P><h3>Variables usable in all sections</h3>
+<ul>
+<li>xborder, yborder</li> These variables make it possible to set
+the width/height of any borders between blocks in the source image.
+Borders to the right and below are accounted for with this. First
+tile will be grabbed from position 0,0 in the image.
+
+<P><li>xoffset, yoffset</li> Like above, except the border is
+considered left/above each tile. With these variables, and some
+experimentation, you can grab tilesets off the net easily.
+</ul>
+
+<P><h3>IFF chunk types</h3>
+Here is a list of the different chunks that a tileset contains.
+The FORM type is <b>TILS</b>.
+
+<P><ul>
+<li>NAME</li> A name to use when referring to this tileset.
+<li>AUTH</li> Name of the author.
+<li>ANNO</li> File comment.
+<li>Mask</li> The mask colour (24-bit RGB colour, big-endian).
+<li>Size</li> Two Uint16 integers with width and height of the
+tiles in the tileset. Big-endian format.
+<li>Tile</li>A zlib-compressed tile in 24-bit RGB mode.
+The first ulong (big-endian) in the data is the uncompressed size.
+</ul>
+
+<P><b>Note:</b> If image names are not specified by full paths,
+the program will attempt to load them relative to the definition
+file. In other words, the working directory is set to
+wherever the definitions are.
+</BLOCKQUOTE>
+<DL><DT><DT><B>Author:</B><DD>Ronny Bangsund
+<DD></DL><P> </body>
+</html>
+<HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

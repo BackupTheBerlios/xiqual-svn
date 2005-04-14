@@ -1,0 +1,71 @@
+				Xiqual
+(Game/utility library for bunches of platforms)
+
+This collection of statically linkable libraries are an evolving
+"game design toolkit" for my own use. There might be code
+of interest to other people (configuration file handling, IFF access,
+generic List/Node functions, SDL-based graphics routines,
+networking tools), so I've made it available to the world.
+
+It will eventually evolve into a 2D game/graphics application
+framework of sorts, but the priorities change every day.
+(Focus: Tilebased, primarily turn-based games at first.
+It is, however, evolving into a C program porting API.)
+
+The most developed sub-libraries are xitools and xigfx. The former
+is being used by all my miniscule projects (linked lists, tags
+and configuration files), while xigfx makes it a tad easier to start
+new SDL projects. The automatic mousepointer creation and input
+handling is also good for some game types.
+
+Least developed of them all would be the networking sub-library;
+it has barely been tested yet. It also has trouble compiling on Win32,
+as there are functions missing from the API.
+
+
+The components:
+
+libxitools: Filehandling (plain, IFF and INI-style preferences).
+String-utilities, taglists and MD5-summing are also components
+in this. Taglists are pretty fundamental to a lot of Xiqual, MD5
+routines are useful for login servers (verifying files on the user's
+system against the server's most recent files, for instance).
+XML reading/parsing is also in here; this part of the library is a
+small, simple alternative for those who don't want a multi-megabyte DOM
+installation or similar.
+
+The preferences system has been completely re-designed as of 21st of
+July 2002. Smaller, easier, better.
+
+libxigfx: SDL-based functions to make many tasks easier.
+A GUI-system is planned as part of it (currently existing in a
+crude form somewhere; signals are still being worked on).
+Sprite-handling, colourful mousepointers etc. are handled by
+one of the basic components here.
+
+Recent additions:
+*Semi-automatic handling of input/cursors in the mainloop
+ Remember: Short, controlled bursts!
+*Tileset loader/blitter - create compressed tilesets from any
+ number of images with one or more tiles
+
+liblui: GUI toolkit.
+This is a very small GUI library which has been integrated with
+Xiqual. Only a few gadgets are available. Supports using tilesets
+for buttons, or any SDL_image supported graphics. SDL_ttf is required
+for some of the functionality, so you really must have that.
+
+libxicgi: Stuff for webpages. Includes a more complete form
+of cookie access. Based on taglists, has some date-conversion
+functions. Current state of the code is "fairly useful".
+(It's there because I can, not because it is directly related to games.)
+
+libxinet: Utility functions to make select()-servers more easily go
+here, and some minor client-side functions. Has some functions to read and
+write data on sockets.
+
+Documentation:
+HTML documentatin is generated from sources and headers with DOC++.
+Look for a directory named 'html'. In Win32 environment, you can
+either grab the source or the Xiqual_dev.exe setup program with
+library files already compiled, and API documentation is included.

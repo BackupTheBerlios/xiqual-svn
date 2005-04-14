@@ -1,0 +1,92 @@
+*extras in CVS: example programs, small utilities, put some of the
+ crap in the Xiqual sourcetree there
+*Proper tutorials, finish template generator
+*Nodepools: Allocating nodes grabs from previously used and freed
+ nodes when possible. Whenever a node_free() function is called,
+ only its data are cleared, and the node is put into a global list
+ till next time a node is allocated.
+
+ A pool init function would allocate a certain number of nodes.
+ (xi_init() etc. would be required for these functions to handle
+ cleanup at program exit)
+
+*Streamline returnvalues & tidy up errno usage!
+(Partial: an error code variable exists, pointing to an appropriate
+ string from either a Xiqual subsystem, or SDL)
+* More ports
+
+Per-app preferences:
+*Partially implemented; loads $HOME/.xiqual/xiqualrc when nothing
+ else has been found. Falls back to ./xiqualrc. Need to actually
+ use the values.
+
+*Hash tables: Custom compare and node freeing hooks.
+
+----
+md5.c:
+Complete replacement of md5sum(1)? Just for testing, anyway..
+So far, it does everything on the calculating side; only lacks reading
+a file to compare sums from.
+----
+
+libxitools:
+*configuration system: Add a tag to enable multi-value variables?
+*IFF_* routines could be extracted to a libxiiff library when the
+ IFFP_* routines (less clunky parsing, hooks to read from memory or
+ file) are made.
+
+----
+libxicgi:
+Finish header-functions to allow all sorts of HTML headers.
+Test cookies thoroughly.
+Finish validator-specification convenience functions.
+
+----
+libxigfx:
+
+fonts.c: Ditch the friggin' thing and go with TTF
+
+views.c:Views can work for message boxes and sprites, but need an
+AmigaLayers-like mechanism to handle depth-sorting. As part of the
+planned "scenes" subsection of Xiqual, functions to use the node info in a
+view for depth should be enough. Updating only covered->uncovered regions
+is the only "tricky" algorithm, and we might get away with a simple update
+of entire views.
+
+Animated sprites:
+Think more about this. Much more.
+
+setup/main loop:
+Xiqual now has xi_init() to easily get all the SDL bits initialised
+(at least the ones normal for games). Specify more hooks for the
+main loop, responding to certain keys/movement etc.
+*Tie the GUI elements into this (three parallel lists? Gadgets, views
+ and inputareas handled by Xiqual if GUI is requested).
+*Add support for SDL_OPENGL and SDL_OPENGLBLIT, and set some useful
+ defaults for projection matrix etc. when it's used.
+*A tag should exist to specify whether we want xi_init() to fail if
+ ANY operation failed, or allow non-critical things to fail silently
+ (like loading preferences)
+
+----
+
+LUI:
+Needs more gadgets. Menus, cross-menus and pie menus.
+A few requesters. Make an XML GUI loader for fast testing
+of interfaces.
+
+----
+libxinet:
+Needs more hooks for error conditions, and possibly some ordinary cases.
+Alternate processing with automatic handling of packets, storage etc.?
+Also add a threaded variant? Finishing iffp_* functions would allow a
+hook from libxinet to do reading on the network, as IFF structures are
+very good for network data. Also, read/write endian data convenience
+functions are needed.
+
+----
+XML:
+The XML functions need hooks for validation (install before loading
+any documents) and context-specific functions (applied after loading).
+Also an xml_parse() function with optional tags is necessary.
+It's otherwise ready to handle XHTML if need be.

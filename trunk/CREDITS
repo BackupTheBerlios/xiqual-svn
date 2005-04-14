@@ -1,0 +1,33 @@
+Vital programs/libraries used (the brief list):
+ManEdit from Wolfpack Entertainment
+LyX by Matthias Ettrich
+OpenOffice by heaps of people
+Glimmer by Chris Phelps and cohorts
+KDevelop by an awful lot of people
+rxvt
+xmms
+SDL by Sam Lantinga and others
+DOC++ (lacks manpage support..might have to add it myself..)
+
+--
+
+People/organisations:
+
+Thanks to Electronic Arts for coming up with a decent,
+generic format for all sorts of files.
+
+--
+
+Stepan Rutz showed me his nice little daemonkit library one day on IRC,
+and that got me thinking about select()-servers. I ended up writing my
+own code, but getting the idea served was a good thing :)
+(http://daemonkit.sourceforge.net, I think was the URL)
+
+Spencer Low's tutorial on the same subject was also helpful.
+(http://www.lowtek.com/sockets/)
+
+--
+
+Thanks to the wxWindows guys for a neat cross-platform GUI toolkit.
+I use it for many tools nowadays (http://www.wxwindows.org), and
+the license is probably the nicest I've seen.

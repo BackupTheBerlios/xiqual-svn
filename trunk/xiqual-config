@@ -1,0 +1,77 @@
+#!/bin/sh
+
+prefix=/usr/local
+libs=0
+
+usage()
+{
+  cat <<USAGE
+Usage: xiqual-config [OPTIONS]
+Options:
+	[--prefix]  <- must be first option
+	[--libs]
+	[--gfx]
+	[--things]
+	[--cgi]
+	[--net]
+	[--lui]
+	[--cflags]
+	[--version]
+USAGE
+  exit $1
+}
+
+if test $# -eq 0; then
+        usage 1 1>&2
+fi
+
+while test $# -gt 0; do
+	case "$1" in
+	-*=*) myarg=`echo "$1" | sed 's/[-_a-zA-Z0-9]*=//'` ;;
+	*) myarg= ;;
+	esac
+
+	case $1 in
+	--prefix=*)
+		prefix=$myarg
+		;;
+	--libs)
+		echo -n "-L$prefix/lib "
+		let libs=1
+		;;
+
+	--cflags)
+		echo -n "-I$prefix/include/xiqual `sdl-config --cflags` "
+		;;
+
+	--gfx)
+		echo -n "-lxigfx `sdl-config --libs` -lSDL_image "
+		;;
+
+	--cgi)
+		echo -n "-lxicgi "
+		;;
+
+	--tools)
+		;;
+
+	--lui)
+		echo -n "-llui -lSDL_ttf "
+		;;
+	--things)
+		echo -n "-lxithings "
+		;;
+
+	--net)
+		echo -n "-lxinet "
+		;;
+	--version)
+		echo VERSION
+		;;
+	esac
+	shift
+
+	if test $libs -gt 0 ; then
+		echo -n "-lxitools "
+	fi
+done

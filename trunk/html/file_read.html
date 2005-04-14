@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>size_t file_read</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file xitools/files.c:<H2>size_t <A HREF="#DOC.DOCU">file_read</A></H2><H2>(<!1><A HREF="autofile.html">autofile</A>* af,  size_t <!1><A HREF="strtoken.html#DOC.123.1">s</A>)</H2><BLOCKQUOTE> Read a number of bytes into the buffer from an autofile.</BLOCKQUOTE>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Read a number of bytes into the buffer from an autofile.
+If the read operation works fine, the read hook will be
+called, if one exists. It will not read more than af->bufsize per read.
+</BLOCKQUOTE>
+<DL><DT><DT><B>Parameters:</B><DD><B>af</B> -  An <!1><A HREF="autofile.html">autofile</A> structure. The file will be opened if not already open.
+<BR><B></B> - <!1><A HREF="strtoken.html#DOC.123.1">s</A> Number of bytes to read.
+<BR><DT><B>Returns:</B><DD>  Number of bytes actually read. This is also passed to the hook.
+<BR><DT><B>Author:</B><DD>Ronny Bangsund
+
+<DT><B>See Also:</B><DD><!1><A HREF="autofile.html">autofile</A>, <!1><A HREF="file_new.html">file_new</A>(), <!1><A HREF="file_readhook.html">file_readhook</A>()<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

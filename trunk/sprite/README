@@ -1,0 +1,16 @@
+Here are sprites/tiles used to test the tileset program included with
+Xiqual 0.7.0+. The PNGs have been through pngcrush to squeeze out any
+unnecessary bits, but will grow a bit when converted to tilesets, since
+each image is compressed individually then.
+
+To create the IFF, run tileset with the definition file as its sole argument:
+	tileset narya.t
+
+Look through the .t file if you want to learn the format. It's pretty
+simple and straight forward.
+
+(I've tried bzip2, but it performs VERY badly on such small files!
+Xiqual will stick to zlib for this purpose.)
+
+(NOTE: This utility will probably remain, but I hope to get a tileset
+editor finished sometime)

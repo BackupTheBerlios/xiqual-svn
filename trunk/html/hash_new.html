@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>HashTable* hash_new</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file xitools/hash.c:<H2><!1><A HREF="HashTable.html">HashTable</A>* <A HREF="#DOC.DOCU">hash_new</A></H2><H2>(ulong tag1,<BR>&nbsp; ... )</H2><BLOCKQUOTE> Create a fixed-size hash table.</BLOCKQUOTE>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Create a fixed-size hash table.
+<h2>Tags</h2>
+<p>Like many other Xiqual functions, hash_new() requires a set of
+tags as its parameters. See the hashtest.c source for an example.
+The recognised tags are as follows:</p>
+
+<P><ul>
+<li>HASH_SIZE</li>
+<p>Number of buckets in the hash table. Multiply by load to find
+the maximum number of elements normally allowed.</p>
+
+<P><li>HASH_LOAD</li>
+<p>Number of elements per bucket. This is only an average, as some
+buckets might only get one elements, and others get three or more.
+Load multiplied by size is the hard limit.</p>
+
+<P><li>HASH_NODESIZE</li>
+<p>If you require more space in each node, you can extend the
+existing node structure and specify the new size here. Your new
+node must start with exactly the same fields as struct HashNode.</p>
+</ul>
+</BLOCKQUOTE>
+<DL><DT><DT><B>Parameters:</B><DD><B>tag1</B> -  First tag.
+<BR><DT><B>Returns:</B><DD>  A blank hash table of the specified size, or NULL on failure.
+<BR><DT><B>Author:</B><DD>Ronny Bangsund
+
+<DT><B>See Also:</B><DD><!1><A HREF="hash_free.html">hash_free</A>(), <!1><A HREF="hash_find.html">hash_find</A>(), <!1><A HREF="hash_add.html">hash_add</A>(), <!1><A HREF="hash_newnode.html">hash_newnode</A>(),
+<!1><A HREF="HashTable.html">HashTable</A>, <!1><A HREF="HashNode.html">HashNode</A><BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

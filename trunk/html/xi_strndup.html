@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>char* xi_strndup</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file xitools/ftr.c:<H2>char* <A HREF="#DOC.DOCU">xi_strndup</A></H2><H2>(const char* <!1><A HREF="strtoken.html#DOC.123.1">s</A>,  size_t n)</H2><BLOCKQUOTE> Duplicate a string and return a safe buffer.</BLOCKQUOTE>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Duplicate a string and return a safe buffer.
+The Linux strndup() function uses a memory allocation function
+that its own documentation warns against. Win32, and possibly
+other systems, don't have strndup() at all (and I'm not going
+to research the names on every platform). This function is a
+working, hopefully safe, implementation of it.
+
+<P>The old strndup() is undefined by Xiqual, and by including
+xios.h, you'll get strndup defined as xi_strndup. This applies
+to all platforms. The function itself resides in the core
+xitools library.
+
+<P>(Linux strndup() uses alloca(), which allocates memory in such
+a way that the memory is no longer safe to use once the calling
+function returns. This is clearly not good enough for a library
+where lots of nodes might be created and passed around like bongs
+at Woodstock.)
+</BLOCKQUOTE>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="strtoken.html#DOC.123.1">s</A> The <!1><A HREF="variable.html#DOC.113.5">string</A> to duplicate
+<BR><B>n</B> -  Number of characters to copy
+<BR><DT><B>Returns:</B><DD>  A copy of the string with terminating NULL byte.
+<BR><DT><B>Author:</B><DD>Ronny Bangsund
+
+<DT><B>See Also:</B><DD>calloc()<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

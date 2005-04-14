@@ -1,0 +1,26 @@
+Required functions:
+Buttons: Image-based ones are done; make a subset that draws shadowed 
+gadgets like gadtools? Using images from tilesets is also a bit flaky.
+Think leper colony.
+
+Lists: Left-right orientation next
+
+Message boxes: Still unwritten
+
+Text entry: Field with or without image for typing in text (alternately 
+shown as asterisks)
+
+Tabbed pages: "Magic" pages that select contents in a large area, 
+changing the inputs list to match the displayed gadgets in the current 
+page
+
+Sliders: Separate gadget+combo gadget (proper listview) made from 
+slider+view
+
+Popup-menus: Menus should be defined as popping up over certain objects 
+only, anywhere onscreen or near the menubar. The anywhere menu shouldn't 
+show if the mouse is over an object at all. Maybe gadgets should have an 
+entry in its structure that contains a menu gadget.
+
+Radio-buttons: Composite gadget made from two toggle buttons and some 
+text. Should be fairly easy to make.

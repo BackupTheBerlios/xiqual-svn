@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>typedef struct  autofile</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file include/files.h:<H2>typedef struct  <A HREF="#DOC.DOCU">autofile</A></H2></H2><BLOCKQUOTE> Autofile structure.</BLOCKQUOTE>
+
+<HR>
+<P><DL>
+ <DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>size_t <B><A HREF="#DOC.94.1">size</A></B>
+<DD><I> Size of file.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>size_t <B><A HREF="#DOC.94.2">pos</A></B>
+<DD><I> Current position in an open file.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>size_t <B><A HREF="#DOC.94.3">read</A></B>
+<DD><I> Number of bytes read in last read operation.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>char* <B><A HREF="#DOC.94.4">name</A></B>
+<DD><I> Name of file.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>char* <B><A HREF="#DOC.94.5">buf</A></B>
+<DD><I> A buffer used in file_read() operations.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>size_t <B><A HREF="#DOC.94.6">bufsize</A></B>
+<DD><I> Size of buf element.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>FILE* <B><A HREF="#DOC.94.7">f</A></B>
+<DD><I> The actual FILE pointer.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.94.8">(*readhook)</A></B>(char* <!1><A HREF="autofile.html#DOC.94.5">buf</A>, size_t <!1><A HREF="strtoken.html#DOC.123.2">len</A>)
+<DD><I> Hook called when reading.</I>
+</DL></P>
+
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Autofile structure.
+Use file_new() to create a structure with a filename.
+The other file_* operations can be used to read, write
+and seek in the file.
+</BLOCKQUOTE>
+<DL>
+
+<A NAME="size"></A>
+<A NAME="DOC.94.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>size_t size</B></TT>
+<DD>
+Size of file.
+Writing operations will add the number of bytes written from
+each call.
+<DL><DT><DD></DL><P>
+<A NAME="pos"></A>
+<A NAME="DOC.94.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>size_t pos</B></TT>
+<DD>
+Current position in an open file.
+This usually equals size with a file being written to.
+<DL><DT><DD></DL><P>
+<A NAME="read"></A>
+<A NAME="DOC.94.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>size_t read</B></TT>
+<DD>
+Number of bytes read in last read operation.
+The pos element will point to the point after last byte read.
+Start point of the last read chunk of data is pos - read.
+<DL><DT><DD></DL><P>
+<A NAME="name"></A>
+<A NAME="DOC.94.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>char* name</B></TT>
+<DD>
+Name of file.
+No special checking is made on this name to ensure it is valid
+for the OS to create.
+<DL><DT><DD></DL><P>
+<A NAME="buf"></A>
+<A NAME="DOC.94.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>char* buf</B></TT>
+<DD>
+A buffer used in file_read() operations.
+You must create this buffer with file_initbuf(). The buffersize
+shouldn't need to be larger than the size of a file.
+<DL><DT><DD></DL><P>
+<A NAME="bufsize"></A>
+<A NAME="DOC.94.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>size_t bufsize</B></TT>
+<DD>
+Size of buf element.
+file_read() will not read more than this much per call.
+The previous buffer contents are of course lost. No special
+care is made to clear the contents before reading, so do not
+expect everything to be nicely NULL-terminated.
+<DL><DT><DD></DL><P>
+<A NAME="f"></A>
+<A NAME="DOC.94.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>FILE* f</B></TT>
+<DD>
+The actual FILE pointer.
+For internal use.
+<DL><DT><DD></DL><P>
+<A NAME="(*readhook)"></A>
+<A NAME="DOC.94.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void (*readhook)(char* <!1><A HREF="autofile.html#DOC.94.5">buf</A>, size_t <!1><A HREF="strtoken.html#DOC.123.2">len</A>)</B></TT>
+<DD>
+Hook called when reading.
+This is called right after reading in all data and ensuring anything
+was read. See md5.c in the base Xiqual directory for an example of
+simple usage of a hook.
+<DL><DT><DD></DL><P></DL>
+<DL><DT><DT><B>Author:</B><DD>Ronny Bangsund
+
+<DT><B>See Also:</B><DD><!1><A HREF="file_new.html">file_new</A>(), <!1><A HREF="file_free.html">file_free</A>(), <!1><A HREF="file_getsize.html">file_getsize</A>(), <!1><A HREF="file_initbuf.html">file_initbuf</A>(), <!1><A HREF="file_load.html">file_load</A>(),
+<!1><A HREF="file_seek.html">file_seek</A>(), <!1><A HREF="file_scan.html">file_scan</A>(), <!1><A HREF="file_read.html">file_read</A>(), file_write(), <!1><A HREF="file_readhook.html">file_readhook</A>(),
+file_writehook()<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

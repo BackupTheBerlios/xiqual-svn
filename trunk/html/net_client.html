@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>NetClient* net_client</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file xinet/net_client.c:<H2>NetClient* <A HREF="#DOC.DOCU">net_client</A></H2><H2>(ulong tag1,  ... )</H2><BLOCKQUOTE> Allocate a NetClient structure and connect to a server.</BLOCKQUOTE>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Allocate a NetClient structure and connect to a server.
+Creates a simple TCP connection to the server and port
+specified in its tags.
+
+<P>Supported tags:
+
+<P><b>XN_PORT</b>: Port number in the range 1-65535.
+
+<P><b>XN_ADDRESS</b>: Address string in dot notation format,
+for example "10.0.0.1".
+
+<P><b>XN_HOSTNAME</b>: Server hostname to resolve and connect
+to, for example "example.net".
+
+<P>A typical call would look like this:
+
+<P>NetClient *client;
+client = net_client(XN_PORT, 1042, XN_ADDRESS, "10.0.0.1", 
+TAG_END);
+</BLOCKQUOTE>
+<DL><DT><DT><B>Author:</B><DD>Ronny Bangsund
+
+<DT><B>See Also:</B><DD>xipacket, <!1><A HREF="net_client_free.html">net_client_free</A>()<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

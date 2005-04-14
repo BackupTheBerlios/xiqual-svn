@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>typedef struct  strtoken</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file include/xistr.h:<H2>typedef struct  <A HREF="#DOC.DOCU">strtoken</A></H2></H2><BLOCKQUOTE> The token structure.</BLOCKQUOTE>
+
+<HR>
+<P><DL>
+ <DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>char* <B><A HREF="#DOC.123.1">s</A></B>
+<DD><I> A copy of the original string.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>size_t <B><A HREF="#DOC.123.2">len</A></B>
+<DD><I> The length of the string memory.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>char* <B><A HREF="#DOC.123.3">d</A></B>
+<DD><I> The delimiter string</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>size_t <B><A HREF="#DOC.123.4">dlen</A></B>
+<DD><I> Length of the delimiter string.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="List.html">List</A> <B><A HREF="#DOC.123.5">tokens</A></B>
+<DD><I> The individual tokens or words.</I>
+</DL></P>
+
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+The token structure.
+</BLOCKQUOTE>
+<DL>
+
+<A NAME="s"></A>
+<A NAME="DOC.123.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>char* s</B></TT>
+<DD>
+A copy of the original string.
+There will be "holes" where the delimiters were,
+so use the tokens list to access.
+<DL><DT><DD></DL><P>
+<A NAME="len"></A>
+<A NAME="DOC.123.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>size_t len</B></TT>
+<DD>
+The length of the string memory.
+Used internally, but might be useful to users.
+<DL><DT><DD></DL><P>
+<A NAME="d"></A>
+<A NAME="DOC.123.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>char* d</B></TT>
+<DD>
+The delimiter string
+<DL><DT><DD></DL><P>
+<A NAME="dlen"></A>
+<A NAME="DOC.123.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>size_t dlen</B></TT>
+<DD>
+Length of the delimiter string.
+Maybe not the most useful element.
+<DL><DT><DD></DL><P>
+<A NAME="tokens"></A>
+<A NAME="DOC.123.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="List.html">List</A> tokens</B></TT>
+<DD>
+The individual tokens or words.
+The size element in the list will contain
+the number of tokens. Each token is a plain
+Node structure with its data pointer being
+a pointer to a string (the token).
+<DL><DT><DD></DL><P></DL>
+<DL><DT><DT><B>See Also:</B><DD>strtokenise(), <!1><A HREF="List.html">List</A><BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

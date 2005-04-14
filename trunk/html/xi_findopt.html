@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>ulong xi_findopt</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file xitools/opts.c:<H2>ulong <A HREF="#DOC.DOCU">xi_findopt</A></H2><H2>(<!1><A HREF="xiopts.html">xiopts</A>* <!1><A HREF="xiargs.html#DOC.115.1">opts</A>,  char* <!1><A HREF="xmltag.2.html#DOC.129.1">name</A>)</H2><BLOCKQUOTE> Find option and return flags.</BLOCKQUOTE>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Find option and return flags.
+Looks for an option in a user-specified struct xiopts.
+The returned ulong will be set to LOT_FLAG, LOT_KEYWORD,
+LOT_VALUE or LOT_FLOAT.
+</BLOCKQUOTE>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="xiargs.html#DOC.115.1">opts</A> User-supplied xiopts.
+<BR><B></B> - <!1><A HREF="xmltag.2.html#DOC.129.1">name</A> String containing a word or character used as option.
+<BR><DT><B>Returns:</B><DD>  ulong containing type of option, NULL if not found.
+<BR><DT><B>Author:</B><DD>Ronny Bangsund
+
+<DT><B>See Also:</B><DD><!1><A HREF="xi_getopts.html">xi_getopts</A>()<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>struct  xmldoc * xml_loaddoc</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file ../xitools/xmlread.c:<H2>struct  <!1><A HREF="xmldoc.2.html">xmldoc</A> * <A HREF="#DOC.DOCU">xml_loaddoc</A></H2><H2>(char* <!1><A HREF="xmltag.2.html#DOC.129.1">name</A>)</H2><BLOCKQUOTE> Load an XML document and allocate an xmldoc structure.</BLOCKQUOTE>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Load an XML document and allocate an xmldoc structure.
+This is the most convenient way to load a document if
+you already have it on disk somewhere.
+
+<P>NOTE: This reader is very rough, and won't do much beyond
+reading XML 1.0 documents and splitting into a shrubbery
+of nodes. Hook functions will be added as I develop it
+further.
+
+<P>The current release is guaranteed to work for well-formed
+documents. Validation hooks may come later.
+
+<P>It's only going to be sufficient for loading of
+simple datafiles for games (mostly configuration files,
+but I see no reason why a bit of Lua code shouldn't be
+possible).
+
+<P>XML defines all text between opening and closing tags as
+sacred. In other words, every bit of formatting is preserved.
+Hook functions here will allow you to sanitise any data that
+shouldn't be full of newlines and such, for example names.
+</BLOCKQUOTE>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="xmltag.2.html#DOC.129.1">name</A> Filename to load.
+<BR><DT><B>Author:</B><DD>Ronny Bangsund
+
+<DT><B>See Also:</B><DD><!1><A HREF="xml_newdoc.html">xml_newdoc</A>(), <!1><A HREF="xml_freedoc.html">xml_freedoc</A>(), <!1><A HREF="xmldoc.2.html">xmldoc</A>, <!1><A HREF="variable.html">variable</A><BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

@@ -1,0 +1,39 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+configure:565: checking host system type
+configure:586: checking target system type
+configure:617: checking for a BSD compatible install
+configure:670: checking whether build environment is sane
+configure:727: checking whether make sets ${MAKE}
+configure:773: checking for working aclocal-1.4
+configure:786: checking for working autoconf
+configure:799: checking for working automake-1.4
+configure:812: checking for working autoheader
+configure:825: checking for working makeinfo
+configure:844: checking for gcc
+configure:957: checking whether the C compiler (gcc  ) works
+configure:973: gcc -o conftest    conftest.c  1>&5
+configure:999: checking whether the C compiler (gcc  ) is a cross-compiler
+configure:1004: checking whether we are using GNU C
+configure:1013: gcc -E conftest.c
+configure:1032: checking whether gcc accepts -g
+configure:1075: checking for a BSD compatible install
+configure:1130: checking for ranlib
+configure:1159: checking how to run the C preprocessor
+configure:1180: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1239: checking for ANSI C header files
+configure:1252: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1319: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:1343: checking for inline
+configure:1357: gcc -c -g -O2  conftest.c 1>&5
+configure:1383: checking for working const
+configure:1437: gcc -c -g -O2  conftest.c 1>&5
+configure:1461: checking for SDL/SDL.h
+configure:1471: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1502: checking for SDL/SDL_image.h
+configure:1512: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1544: checking for SDL/SDL_mixer.h
+configure:1554: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1584: checking for SDL/SDL_ttf.h
+configure:1594: gcc -E  conftest.c >/dev/null 2>conftest.out

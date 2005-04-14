@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>xiargs* xi_getopts</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file xitools/opts.c:<H2><!1><A HREF="xiargs.html">xiargs</A>* <A HREF="#DOC.DOCU">xi_getopts</A></H2><H2>(int argc,<BR>&nbsp; char* argv[],<BR>&nbsp; char* <!1><A HREF="xiopts.html#DOC.116.3">description</A>,<BR>&nbsp; char* usage,<BR>&nbsp; <!1><A HREF="xiopts.html">xiopts</A>* <!1><A HREF="xiargs.html#DOC.115.1">opts</A>)</H2><BLOCKQUOTE> Parse command args.</BLOCKQUOTE>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Parse command args.
+This function takes the arguments passed to a program and
+sorts them according to a user-supplied xiopts structure.
+
+<P>The different types of options supported are LOT_FLAG,
+LOT_KEYWORD, LOT_VALUE and LOT_FLOAT. The OptNode structures
+in the xiargs returned will have this type set, and the
+appropriate data field will contain the argument to the option.
+
+<P>An option that wasn't specified by the user will not be present
+in the list. Non-option arguments are in the leftovers List.
+
+<P>See the testopts.c sourcecode for example usage. Note that you
+won't need to supply your own usage display function.
+</BLOCKQUOTE>
+<DL><DT><DT><B>Parameters:</B><DD><B>argc</B> -  Argument <!1><A HREF="HashTable.html#DOC.98.3">count</A> from the calling program.
+<BR><B>argv</B> -  Actual argument list from the caller.
+<BR><B></B> - <!1><A HREF="xiopts.html#DOC.116.3">description</A> Brief <!1><A HREF="xiopts.html#DOC.116.3">description</A> of the program.
+<BR><B>usage</B> -  One-line usage string. See any manpage for an example.
+<BR><B></B> - <!1><A HREF="xiopts.html">xiopts</A> A structure with option names, types and descriptions.
+<BR><DT><B>Returns:</B><DD>  A structure containing lists of options with arguments,
+plus leftover arguments. If no arguments were supplied, NULL is
+supplied after displaying program and option descriptions.
+<BR><DT><B>Author:</B><DD>Ronny Bangsund
+
+<DT><B>See Also:</B><DD><!1><A HREF="xi_freeopts.html">xi_freeopts</A>(), <!1><A HREF="xiargs.html">xiargs</A>, <!1><A HREF="OptNode.html">OptNode</A>, testopts.c<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

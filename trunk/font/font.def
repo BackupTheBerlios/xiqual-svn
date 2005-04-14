@@ -1,0 +1,13 @@
+[font]
+name = Gnat's droppings
+filename = gnat.iff
+comment = A miniscule font for use in legalese writings
+size = 4x5
+spacing = 1
+# Maximum blue is our default mask colour
+maskcol = 0xff
+author = Ronny Bangsund
+
+[source]
+image = gnat.png
+glyphs = abcdefghijklmnopqrstuvwxyz1234567890

@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>typedef struct  List</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file include/lists.h:<H2>typedef struct  <A HREF="#DOC.DOCU">List</A></H2></H2><BLOCKQUOTE> Linked list structure.</BLOCKQUOTE>
+
+<HR>
+<P><DL>
+ <DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="Node.html">Node</A>* <B><A HREF="#DOC.103.1">head</A></B>
+<DD><I> First Node in List</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="Node.html">Node</A>* <B><A HREF="#DOC.103.2">tail</A></B>
+<DD><I> Last Node in List</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>ulong <B><A HREF="#DOC.103.3">size</A></B>
+<DD><I> Number of items in List</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.103.4">(*destructor)</A></B>(void* )
+<DD><I> A destructor callback for items (optional)</I>
+</DL></P>
+
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Linked list structure.
+The first Node will not have a previous Node pointer,
+and the last will have no next Node pointer. Use the
+list_makecircular() function to make it loop.
+</BLOCKQUOTE>
+<DL>
+
+<A NAME="head"></A>
+<A NAME="DOC.103.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="Node.html">Node</A>* head</B></TT>
+<DD>
+First Node in List
+<DL><DT><DD></DL><P>
+<A NAME="tail"></A>
+<A NAME="DOC.103.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="Node.html">Node</A>* tail</B></TT>
+<DD>
+Last Node in List
+<DL><DT><DD></DL><P>
+<A NAME="size"></A>
+<A NAME="DOC.103.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>ulong size</B></TT>
+<DD>
+Number of items in List
+<DL><DT><DD></DL><P>
+<A NAME="(*destructor)"></A>
+<A NAME="DOC.103.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void (*destructor)(void* )</B></TT>
+<DD>
+A destructor callback for items (optional)
+<DL><DT><DD></DL><P></DL>
+<DL><DT><DT><B>Author:</B><DD>Ronny Bangsund
+
+<DT><B>See Also:</B><DD><!1><A HREF="Node.html">Node</A>, <!1><A HREF="list_new.html">list_new</A>(), <!1><A HREF="list_add.html">list_add</A>(),  <!1><A HREF="list_insert.html">list_insert</A>()<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

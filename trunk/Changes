@@ -1,0 +1,574 @@
+$Author: nny $
+$Date: 2003/12/11 08:36:36 $
+$Id: Changes,v 1.6 2003/12/11 08:36:36 nny Exp $
+
+
+---- Version 0.9.1: I want my..I want my C.V.S.. ----
+	general:
+	- Changed names of some makefile targets, added Debian package
+	  target (workaround, as my packaging skills are nil). The HTML
+	  documentation target is now named 'html'.
+	- Started de-uglifying the HTML documentation by adding CSS. My head
+	  bounces off the DOC++ brick wall.
+	- Built .debs that seem to work; DOC++ is a requirement here.
+	  Note: There is a doc-check target available, but the docs look
+	  worse after going through Tidy. Two @include of the CSS, two </html>
+	  tags..
+	- More workarounds for functions/definitions missing from Win32
+	  (mostly non-POSIX; strangely, BSD definitions related to sockets
+	  are also absent at times)
+
+	restructuring:
+	- CVS will be rearranged soon (the yearly cleanup). Library and examples
+	  will be separated, and bigger examples will get their own entry.
+
+	xigfx:
+	- Map routines almost here. Very, very delayed.
+
+	xitools:
+	- Added CRC32 calculation and dynamic hashing
+	- Made a replacement strndup() - it really replaces regular
+	  strndup() on systems that have it, and breathes new life into
+	  Win32 programming.
+	- Removed write functions from autofiles; I didn't really use that
+	  complicated mess fully, anyway.
+	- Made the XML reader actually work according to core 1.0 specs;
+	  0.9.0 was skipped because of this. It can now handle XHTML. Try xmltest
+	  with hello.xhtml.
+	- xi_lasterror should now contain new errors when XML functions fail.
+	- strfind() returns the haystack when needle is a NULL string.
+	- Hash table implementation #1: Plain hashes. Allocate one size, and it
+	  is stuck there. A sorta dynamic method, based on this, will be added
+	  at a later date.
+
+---- Version 0.9.0: There is no 7+1 ----
+	policy: Eh?
+	- Should I discover that no useful example uses a function anylonger,
+	  I remove the example and function. No, this isn't a very stable
+	  codebase.
+
+	general: Mistakes are often the stepping stone to utter failure
+	- Typos. Lots of them. Some were fixed, some were added.
+	- Investigated recent GCC 3.x; it produces 10% smaller code on
+	  libxitools, and nothing seems broken.
+	  'CC=gcc-3.3 ./configure' might work for you.
+	- API: New file listing how stable I think the various sub-libraries are.
+	- minimalgui: Example program for LUI.
+	- tileset: Fixed minor bugs in the display of error messages.
+	- tilefont: Replacement for makefont. The new internal fontsystem
+	  is more like tilesets, with each glyph in compressed form.
+	  Fonts can now be made with a specified spacing between each glyph.
+	  Proper TTF is recommended, though.
+	- Changed more names (PREFS_* variable types to V_* and moved to separate
+	  files because of more parts using it)
+	- Dropped PDF documentation; the conversion of the HTML docs to PDF would
+	  look prettier than what DOC++ creates :/
+
+	xitools:
+	- Tag handling: Added another test in tagtest.c; the functions for tag-
+	  handling mimic the old Amiga functions exactly, so it's important to
+	  pass references.
+
+	xigfx: Slow step forward, two steps back
+	- xi_init(): XI_LUI and XI_TTF tags are now boolean. Less daft, eh?
+	- The xifont system wasn't any good, so I redesigned it,
+	  See the new tilefont utility for information. The API is still
+	  the same old.
+	- Setting width and height of destination rectangles is unnecessary,
+	  so most of those cases were optimised.
+	- If no preferences filename is supplied to xi_init(), the default
+	  file $HOME/.xiqual/xiqualrc will be loaded. For Win32, this may
+	  be a slight problem, so xiqualrc is loaded from the current dir.
+	  Normally, the filename will first be tried in $HOME/.xiqual.
+	  This may be contrary to other applications, but seems more correct
+	  to me. Enforce home directory use wherever possible ;)
+	  (Will fix the use of home directory things for WinNT/Win2k sometime)
+
+	lui: Bugfixing stubs
+	- button.c: Fixed highlighting of pressed toggle buttons
+	- lui.c: Added lui_newgadget() function wrapper. Calling this
+	  makes gadgets display on the default screen, and saves one or
+	  two tags with some gadgets. It's also the first time ever that
+	  I use the TAG_MORE tag :)
+	- This time I actually include the message box code!
+	- Two images are part of the distribution: A default pointer and a
+	  mesh for use in making gadgets look disabled. Both are possible to
+	  replace with your own, either through new images or replacing
+	  the functions.
+
+	xinet: Client+server
+	- Started making a utility that actually tests the select() server
+	  creation system. Surprisingly, it worked. It also gave me some
+	  pointers about what other utility functions are needed.
+	- Touched up the server creation, simplified names of calls.
+	- Added client-side functions.
+	- Renamed the XN_ONREAD_FUNC tag to XN_READ_FUNC.
+
+	xixml: Patience is my benchmark
+	- Rudimentary XML 1.0 reading is here. Should make it possible to make
+	  more structured configfiles when the need arises. Supports deep nesting,
+	  and at least doesn't choke on O'Reilly examples or non-XML.
+	  Very close to core XML 1.0 in things supported; mostly stylesheets and
+	  certain special elements/declarations that aren't added. These have no
+	  place in the library as of yet; I included XML reading 1)for fun, 2)
+	  to simply read data and not layout.
+	- Unicode: I've tried UTF-8 encoded tags and attributes - they work.
+	  If I change the strcmp() to a multibyte version, I'd also have to change
+	  the strlen() function I use. I'm not sure if I want to be 100% compliant;
+	  if anyone actually uses this library (other than the co-developer) and
+	  shows me Chinese/Japanese/Korean XML it chokes on, I'll add widechar
+	  support to the parser so people can use UTF-16. Those two are the only
+	  encodings I'm required to support, so I'll never add anything else.
+	- The other preferences system is good enough for just variables and such,
+	  but this could be used for so much more. Game-specific, structured data
+	  like unit stats, for instance. Another use would be to hold multiple scripts,
+	  along with their names. The preferences system is very line-based, and I
+	  intend to keep it that way. Also, XML tag attributes can have spaces in
+	  their values, which isn't supported for multiple arguments in prefs.
+	- Crude XML writing function included. Spits out data to a named file,
+	  or stdout if you specify "*" as the name.
+	- Two example XML documents included: library.xml and sink.xml. Yes, this
+	  release really DOES have the kitchen sink included.
+	- Memory consumption of the current parser is around 2.4 times the
+	  size of the document. Hooks would add minimally to that.
+
+---- Version 0.8.0: Codename "Kitchen Sink" ----
+	general:
+	- Added the cursor image I use in my test programs as a part
+	  of the base distribution. It will end up in /usr/local/share/Xiqual
+	  if using the defaults for the configure script.
+	- Added an example xiqualrc - not much in it yet, but at least I'm
+	  moving towards some sort of standard way of defining where to get
+	  Xiqual's core data.
+
+	lui: (NEW!)
+	- The Xiqual GUI system. Currently an extremely sparse collection
+	  of gadgets, but I prefer to build them as I need them, and not
+	  before. Heck, messageboxes are the last addition so far ;)
+	- Various features that can be called "object oriented":
+	  All gadgets share some methods (function hooks) that call further
+	  user-defined hooks to do the actual work. A simple button could
+	  easily be replaced with a list of images without harm. Some of
+	  the gadgets may seem slightly incomplete, but in the case of
+	  the list gadget, it's meant to be. It supplies a container and
+	  up/down buttons, while you supply the actual "filler".
+
+	xisnd:
+	- Err..still delayed :/
+	  Enjoy LUI in the meantime.
+
+	xigfx:
+	- Slight optimisation in views (removed a rectangle from blits)
+	- xi_init.c: Disabled mouse input events, as we're just grabbing
+	  state in the event loop. I may make this configurable later on.
+	- Changed defaults to software surfaces in all xigfx functions
+	  (Not many places, fortunately - some were already software,
+	   so I expect a slight speed bost from having it uniform ;)
+	- xisetup.h is gaining more flags for its subsystems; XIF_USE_TTF
+	  and XIF_USE_LUI are set if SDL_ttf and Xiqual's GUI system are
+	  initialised properly, respectively.
+	- xi_main.c: Added some small changes to handle the GUI elements,
+	  including bits related to highlighting gadgets on mouseover.
+
+---- Version 0.7.3: Codename "Territorial" ----
+	general:
+	- Still working on map-related stuff; some xigfx functions will be
+	  included in the next unleashing of Xiqual.
+	- Reorganised the documentation. Considered and spat on Doxygen.
+	  (It's no good for generating C API documentation, as the output
+	   is listed by source filename, C++ class/namespace or some
+	   other concept that doesn't fit in my world.)
+	- Still adding more documentation.
+	- Started using Patcher, a Conectiva-related utility that works
+	  like a very simple, local-only CVS. Very useful.
+	- The tileset utility is now able to handle borders and offsets in
+	  images - if you have a tileset with a line between each block in
+	  the set, it can be ignored. See the x/yoffset and x/yborder
+	  settings in the definition file.
+	- Discovered that those people doing "extreme programming" aren't
+	  really doing things much differently from what a sane programmer
+	  would do, anyway. Refactor mercilessly? Been there,
+	  done that, T-shirts available soon at CafePress.
+
+---- Version 0.7.2: Win32 + tweaks ----
+	general:
+	- Made all sublibraries compile with VC++ 5.0 (and then probably
+	  all later ones). Some features are not present in 5.0 that exist
+	  in 6.x and later, so I had to massage some code a little extra.
+	  The utilities seem to compile without error, and very few
+	  warnings. See separate sections for each.
+	- Minor shuffling of headers (as usual)
+	- Slightly improved xi_init() documentation
+	- Fixed errors in documentation, missing O'Neills, cases of @deprecated
+	  mysteriously appearing instead of @doc and more.
+
+	xitools:
+	- Ported to Win32 - tested and working.
+	- Removed redundant function call: cfg_truth(). Used cfg_isbool()
+	  where the former was before.
+
+	xigfx:
+	- Ported to Win32 - tested and working.
+	  Tested against a semi-minimal example which opened a screen
+	  with a custom mousepointer (PNG), a button and tiles blitted
+	  to parts of the screen. Didn't get Ogg/Vorbis loading to work,
+	  so will try statically compiled SDL_mixer later.
+
+	xinet:
+	- Ported to Win32 - untested. Can't be arsed.
+
+	xicgi:
+	- Ditto. No warnings.
+
+	xithings:
+	- Ported to Win32 - works as well as in Linux. That means no
+	  compile warnings or link errors.
+
+	tileset.c:
+	- After much browsing of Win32 docs, and a desperate search
+	  for a *working* zlib for Windows, this compiles and creates
+	  perfectly good tilesets.
+
+	prefs.c:
+	- This test-program works for Win32.
+
+	iffwrite:
+	- Works for Win32, and creates a compliant IFF.
+
+	ifftest:
+	- Works for Win32. Can be used to test the output from iffwrite
+	  and tileset.
+
+	md5:
+	- Works for Win32. This could actually be useful.
+
+---- Version 0.7.1: It's those .0 releases.. ----
+	general:
+	- Not a single warning anymore :)
+
+	xigfx:
+	- Dropped the source rectangle from tile blits
+	- Made xit_setdefaults() a macro
+	- Tilesets no longer keep a List in addition to the array
+	- Forgot to check for HAVE_SDL_SDL_MIXER_H in xi_init() before
+	  initialising audio - fixed. Similar for the header files.
+	- Added SDL_ttf support to xi_init() - if it exists, the initialiser
+	  is called. Some sort of font loading will be added so that you can
+	  have several fonts ready with just the call to xi_init().
+
+	xisnd:
+	- Coming next release..Vorbis loading of samples and simple
+	  memory management of samples. An own format for Vorbis streams
+	  will be used, unless Ogg headers can tell me the size of the
+	  Vorbis stream in advance. This is for sound mixing of compressed
+	  audio, not streaming.
+
+---- Version 0.7.0: Better IFF, tiles ----
+	general:
+	- A tileset tool has been added - use it to paste together bunches
+	  of previously created images. The GIMP is not a good tool to use
+	  for drawing tiles/sprites. Try KDE's icon editor. Examples in:
+	  tools/sprite (a few images and the definition file to create an
+	  IFF from them)
+	- Found loads of places where no memset() was called, even though
+	  it would be necessary. Mysteriously, nothing broke until I started
+	  writing the tileset tool. list_free() started failing on a free()
+	  whenever IFF saving had been used earlier. Heisenbugs are NOT fun.
+	- Tweaked the packaging/installation. When using CheckInstall, all
+	  files required to just start developing are bundled together.
+	  The binary packages should have headers, static libraries, all
+	  documentation and README/TODO etc.
+
+	xigfx:
+	- Minor tweaks in the xi_init() function (Maybe I'll add GL support)
+	- A tileset loader/display engine has been added to this neglected
+	  section of Xiqual. The tileset tool mentioned above will create
+	  the files necessary for this. Two blitter functions are available;
+	  one with heaps of args, and one which relies on a default screen
+	  and tileset being set. New fields have been added to the globals.
+
+	xitools:
+	- IFF handling has improved, plus returncode bugs have been fixed.
+	  Writing nested chunks is now a lot easier. Detailed description:
+	  When creating a new IFF chunk, a node is added to the IFFHandle
+	  list called "chunks". This node contains id, size and position of
+	  each chunk. iff_endchunk() and iff_newchunk() uses this information
+	  to correct odd-sized chunks. This means writing a file will use a
+	  bit of extra memory (although not a huge amount). Reading the file
+	  is still pretty much a sequential operation.
+	- Documentation added/rewritten for IFF handling
+	- Temporarily disabled sub-forms in IFFs while pondering a better
+	  way to do recursive reading/writing without rewriting the IFF-
+	  handling entirely.
+	- Fixed some memory oversteps and missing checks for NULL
+	- Fixed yet more bugs in the preferences system, and removed the
+	  old system from the list of compiled files
+	- Ensured that comments were not made into variables
+	  (saves lots of memory, considering the size of my own comments)
+	- Some documentation was added to xi_seterror(). It is merely a
+	  function to set the global error string pointer, but could possibly
+	  do more in the future. For example, a flag could be passed to the
+	  Xiqual initialiser to point to a function that immediately displays
+	  an error prominently on the screen when it occurs.
+
+---- Version 0.6.3: Bloody tokenisers ----
+	general:
+	- Looking for retarded functions in libc to replace..str_tokenise() is
+	  a replacement for both strtok() and strtok_r(), for instance.
+	  More functions found inadequate will go in xitools (or other suitable
+	  sublibrary).
+
+	xitools:
+	- Added a string tokeniser (str_tokenise() and str_freetoken()).
+	  strtok()/strtok_r() are both missing from MingW32, so with this
+	  addition I am able to try compiling for Win32..unless I need to
+	  code yet another replacement ;)
+	- Made cfg_loadprefs() use the new tokeniser - old clunky code now
+	  replaced with new clunky code!
+	- Slight modification to files.c (moved a memset() call around)
+
+---- Version 0.6.2: Bleh ----
+	general:
+	- KDE 2 is finally usable and FAST on my system. Woohoo! KDevelop found
+	  a lot stabler than before, and not at all messing up my configure.in anymore.
+
+	xitools:
+	- Added a couple of new functions (cfg_findsection() and cfg_findnext()),
+	  which wrap around node_findbyname() to find preferences sections.
+	- Fixed a minor oops in the (outdated, deprecated) prefs_findsection()
+	  call, so be quiet, O'Neill!
+
+---- Version 0.6.1: Oops ----
+	general:
+	- Fixed things which I seemed to have broken in the autofile implementations.
+	- Minor tweaks to (hopefully) make things compile on other people's MingW32.
+	  Still having a problem because of the lack of strtok_r() in the libc from that
+	  compiler. Going to have to make my own.
+	- Shane is complaining about missing functions. Bah. prefs_findsection_next()
+	  is still in there, but a macro named prefs_findnext() is also present now.
+	  Not documented, never will be. It's just a wrapper.
+	- Minor improvement in xiqual-config: xitools is always linked last in
+	  the chain when --libs is specified. Specifying --tools does nothing,
+	  and is harmless. Every other sub-library depends on libxitools.a.
+
+---- Version 0.6.0: I fucking broke the interface! ----
+	tools:
+	- md5.c: Improved to handle any size of files. See autofiles.
+	- statuscleaner.c: For Debian users with bloated dpkg status files.
+	  Halved the size of mine, from 1.2MB to about 600kB. I can't feel
+	  any bad effects yet. First in a line of user-hostile utilities.
+	  No commandline options, no guarantees.
+
+	general:
+	- Libraries no longer build without warning. Phew.
+	- Screw the VC++ porting plans.
+	- Changed iarea.c so that there is one hook for passing over, and one
+	  for clicking. The parameters were switched around, too, just to see
+	  if anyone is paying attention.
+	- Views will have view_hide() called upon them as they are freed by
+	  view_free(). Do not free the SDL surface it is tied to until then.
+	- Many other little bits of behavioural changes have happened.
+	- Ready to use with C++, for anyone who cares (Shane obviously does,
+	  since he sent me the diffs ;)
+	- Earlier releases of Xiqual found to be made and released in a drug-
+	  induced haze.
+	- All the core functions (libxitools) are getting additional checks
+	  for zero value parameters where it shouldn'n. List functions should
+	  now be safe to call without checking what you give them, for instance.
+	- Memory leak checking is slowly happening; cfg_* and list_* have been
+	  deemed safe so far. I use 'debauch' to check, as it doesn't require
+	  any recompilation. NOTE: If running a bare-minimum Xiqual program that
+	  calls xi_init() and xi_quit(), you'll see lots of memleaks reported
+	  with debauch. It seems that putting a call to SDL_SetVideoMode() in a
+	  library makes it lose track of where the screen data etc. goes.
+
+	libxitools:
+	- Slight rearrangement while adding documentation. New function in
+	  libxitools: list_makecircular() - deprecates list_nodemakecircular().
+	- A whole new interface for preferences; the old one will vanish one day.
+	  The new one is tag-based, therefore requiring less functions and less
+	  memorisation. The old one is just too messy. Functions have names
+	  starting with cfg_. It should now be a matter of calling cfg_loadprefs()
+	  with a few tags to load, and cfg_freeprefs() to release data. If you
+	  want to create from scratch, make a List and call cfg_newsection().
+	  Likewise, cfg_freesection() releases a section and its variables.
+	  cfg_find* functions are possible to use for searching for next instance
+	  of something. Particularly useful for variables which can be specified
+	  multiple times to spread settings over several lines.
+	- files.c: Autofiles now have an optional hook for reading and writing.
+	  You could use these to reverse byte order, check data for validity
+	  or whatever. See md5.c for an example.
+	- files.c: Fixed a potentially narsty bug due to reversal of two
+	  parameters in fread(). You can guess which easily. All return values
+	  from file_read() and file_write() should now be correct. Only one
+	  was correct before (in some cases).
+	- List/Node functions have been divided into list_* and node_*.
+	  A few extra calls have been added, too. Check the HTML documentation.
+
+---- Version 0.5.1 (not released) ----
+	general:
+	- Doc++ has been found a Good Thing. HTML and PDF documentation is
+	  made with each distribution. All documentation will have the
+	  current Xiqual version number in the headers.
+
+	libxigfx:
+	- Bloody colourkeys. Fixed in fonts, too.
+	- Main loop hooks are sorta working, and the input handling with a
+	  rudimentary GUI system is being transferred from a few test-projects
+	  to Xiqual. Seems like the Amiga Layers-way with elements of BOOPSI
+	  will be the method of execution here.
+
+---- Version 0.5.0 ----
+	general:
+	- Major change: Autoconf scripts. 7-8 hours spent on this and porting
+	  issues.
+	- More pruning of CVS tags in various files (CVS won't be active for
+	  a while).
+	- Removed XIulong/XIushort; not quite sure where ulong and ushort is
+	  defined in every OS, and I can't quite get the scripts to work with
+	  mingw32 yet. If you need a Win32 port fast, it sucks to be you.
+	- About a thousand lines of header/source vanished. Haven't a clue
+	  where, as the library has more functionality than when it bypassed
+	  7500 lines.
+	- 'make dist' will create a tarball of the source with configure
+	  scripts, as per the Autoconf/Automake defaults
+	  (Xiqual-<version>.tar.gz>. A Bzip2 target will be added soon-ish.
+	- New header: xios.h - various attempts at cross-platform work will
+	  start here. Include in every file, before other Xiqual headers,
+	  and you should be OK for the most part. string.h/strings.h issues
+	  will hopefully be resolved through this.
+	- All libraries build without a warning. Must investigate.
+
+	libxigfx:
+	- Fixed inconsistencies (view->flags not being used, for instance)
+	- Reduced views back to storing only one surface+backbuffer
+	- Colourkey problems with the font system have been fixed (hopefully)
+	- xi_textwidth() is now a simple macro, since fonts are fixed-width
+
+---- Version 0.4.2 ----
+	general:
+	- Tiny tweaks in various places to make things compile smoothly,
+	  follow ANSI guidelines even more strictly etc.
+
+	libxitools:
+	- Nasty bug(missing feature discovered in list_remove():
+	  It did not clear the pointers to next and previous node. Fixed.
+
+	libxinet:
+	- It basically works. More sorts of hook functions will be added later.
+	- Library split into one file per function, with destructors inside
+	  same file as the creator.
+
+---- Version 0.4.1 ----
+	general:
+	- Makefile tidied up a lot - a full compile went from 26 seconds to 20
+	  seconds.
+	- Makefiles use a common include file, plus an exported TOPDIR variable.
+	  Some MS-DOS variants might have trouble with ../ as a path
+	  specification, therefore this fix.
+	- Only GNU Make will work now (VC++ 5+ projectfile planned)
+
+	libxitools:
+	- New function: prefs_findsection_next()
+	- Searching for preferences sections is now done case-insensitively
+
+	The hunt for inconsistencies continues..
+
+	libxinet:
+	- Functions to create a SelectServer structure and pass it hooks/
+	  settings now exist. Call net_process() to have it wait for incoming
+	  calls, call hooks and do any other magic it requires. Use internal
+	  Xiqual routines to read packets for convenience, or just handle the
+	  socket yourself. Raw calls to just read data also exist. This is the
+	  only part of the tools that isn't really cross-platform ready yet.
+
+---- Version 0.4.0 Official ----
+Added:
+	libxithings
+	- Here go things related to things and critters (NPCs/players).
+	  Currently only structures for inanimates, living things and
+	  attributes. The attribute system may seem a bit peculiar,
+	  but it should work.
+
+	libxinet:
+	- Server/client networking code goes here. It will be a fairly
+	  complete toolkit for select()-servers. Not too big and advanced,
+	  and not encumbered by threading/fork() issues. Scalability is
+	  uncertain, but the first 5 planned projects on my list (yeah, I'm
+	  busy) don't require MMORPG-like server scalability (which, by the
+	  way, I can tell you that MMORPGs don't have, either).
+
+----------------- Version 0.3.6-son -----------------
+
+Fixed:
+	list_getnode()
+	-	If a non existing index value was specified it would segfault.
+		Now if an out of bounds index is specified it will either return
+		the first or the last node in the list, depending on which end of the
+		list the value is violating.
+
+Changed: 
+	list_getnode()
+	-	Changed the index value offset.
+		A zero now represents the start of a list and not 'one', as with
+		version 0.3.5-son
+
+	list_new()
+	-	Removed lines initialising head and tail pointers to NULL. Not Required.
+
+Added: 
+	str_getvalue()
+	-	This is used to convert values in a string to 'int'.
+		It returns an offset, so that can be used to get the next value.
+		E.G. Suppose a string of "$1 2 3 4", the first call to this function
+		would place the value of '1' in a supplied variable, and an offset
+		to the next white space character returned. This offset can then be
+		fed into a second call to str_getvalue, and the value placed in the
+		supplied variable will be '2'.. etc.
+		An offset of '0' is returned if there are no more values in the string.
+
+	additions.txt 
+	-	This is in the doc directory, and covers new functions added.
+
+SON.
+----------------- Version 0.3.5-son -----------------
+
+Added:
+	List_getnode()
+	-	Returns a pointer to node specified by index value.
+	
+	list_nodemakecircular()
+	-	Converts a standard list into a circular list.
+
+	list_nodestart()
+	-	Finds the first node in a list.
+
+	list_nodeend()
+	-	Finds the last node in a list.
+
+	prefs_findvar_next()
+	-	Finds the next occurrence of a variable name within a list.
+
+Fixed:
+	N/A
+
+Changed:
+	list_add()
+	-	This required modification for the support of circular lists.
+
+	list_new()
+	-	Added lines to initialise head & tail pointers to NULL.
+
+	list_newitem()
+	-	An items 'prev' pointer is now also initialised to NULL.
+
+	strsplit()
+	-	This function now supports strings with underscores.
+
+	prefs_free()
+	-	Function modified to support circular lists.
+
+	prefs_findvar()
+	-	Function modified to support circular lists.
+
+SON.

@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> statuscleaner</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+<H2> <A HREF="#DOC.DOCU">statuscleaner</A></H2></H2><A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE>
+Clean Debian dpkg status files from purged/not-installed entries.
+I've had no joy finding a tool to do just this. Here's one that not only removes
+"purged" and "deinstalled ok not-installed" entries from those files, but also
+illustrates some use of Xiqual's basic functions. There are no known side-effects
+yet. If you get to know any of them, let me know, too.
+
+<P>To use the program, find your megabyte-sized status file (or whatever the bloated
+size is), which usually resides in /var/lib/dpkg/ under the name "status". Become
+the superuser and make a copy of it. Don't skip this step; if this program mangles
+your file, I can laugh at your stupidity.
+
+<P>Next, run the program on the file, redirecting the standard output to where you want
+your clean status file to go. Example:
+
+<P>statuscleaner status.backup > status
+
+<P>Now, if this isn't a week-fresh or younger Debian system, you're going to see an
+awful lot of text printed on the console. This is stderr, which you may also
+redirect to a file, if need be. Last in the output is the number of entries that
+were deemed unnecessary.
+
+<P>If you go through the status file manually after this, you might still find some
+entries with status "deinstall" (among other things). These probably have a few
+configuration files lying around. It would be wise to check these, if it's anything
+imporant like a highscore list for some game, or you can just dpkg --purge that, too,
+if it's just some server configuration file.
+
+<P>Tip: Take everything written in any computer documentation with a grain of salt.
+
+<P>Statuscleaner was written in a matter of minutes without time, motivation or reason
+to read any Debian documents. If you end up screwing your system up beyond the
+healing powers of even dpkg -i, I want the details for my list of dastardly deeds.
+</BLOCKQUOTE>
+<DL><DT><DT><B>Returns:</B><DD>  The program returns non-zero if no file was processed.
+<BR><DT><B>Author:</B><DD>Ronny Bangsund
+<DD></DL><P> </body>
+</html>
+<HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

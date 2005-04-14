@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>int* xml_addentityhook</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file xitools/xmlhooks.c:<H2>int* <A HREF="#DOC.DOCU">xml_addentityhook</A></H2><H2>(<!1><A HREF="xmldoc.2.html">xmldoc</A>* doc,  char* entity,  int* func)</H2><BLOCKQUOTE> Add a hook function to handle an escaped character entity.</BLOCKQUOTE>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Add a hook function to handle an escaped character entity.
+When an entity definition isn't one of the five supported types
+(&gt;, &lt;, &amp;, &apos;, &quot;), the appropriate function you install
+will be called to handle the translation. You will need to add one functions
+for each entity encoding you want to support.
+
+<P>The function must return a pointer to the string to be output instead
+of the encoded entity. This should preferably be a static buffer.
+Your function will have a pointer to the first character after the
+ampersand as its first and only argument.
+</BLOCKQUOTE>
+<DL><DT><DT><B>Parameters:</B><DD><B>entity</B> -  Name of entity without the beginning ampersand and ending colon.
+<BR><B>func</B> -  Your hook function.
+<BR><DT><B>Returns:</B><DD>  0 if no error occurred allocating a node to hold your function
+<BR><DT><B>Author:</B><DD>Ronny Bangsund
+
+<DT><B>See Also:</B><DD><!1><A HREF="xml_addgenentityhook.html">xml_addgenentityhook</A>()<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

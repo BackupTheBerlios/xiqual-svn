@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>void iff_endchunk</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file xitools/iff_endchunk.c:<H2>void <A HREF="#DOC.DOCU">iff_endchunk</A></H2><H2>(<!1><A HREF="IFFHandle.html">IFFHandle</A>* handle)</H2><BLOCKQUOTE> Finishes writing a chunk.</BLOCKQUOTE>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Finishes writing a chunk.
+This should be called when you are done with your
+iff_writechunkdata() calls. If the resulting chunksize
+is odd, an extra null-byte will be added at the end
+of the chunk, and the header will have its size set
+to the new value.
+</BLOCKQUOTE>
+<DL><DT><DT><B>Author:</B><DD>Ronny Bangsund
+
+<DT><B>See Also:</B><DD><!1><A HREF="iff_new.html">iff_new</A>(), <!1><A HREF="iff_writechunkdata.html">iff_writechunkdata</A>()<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

@@ -1,0 +1,16 @@
+Supported:
+* Linux, any endianness.
+* Win32 (Win95, Win98, WinNT, Win2000, compiled with VC++ 5 and 6)
+  Currently some minor problems compiling xitools and xinet.
+Yes, that's all for now.
+
+Occasionally tested (next cycle long overdue):
+* Irix with GCC
+* Solaris (Sparc) with GCC
+* FreeBSD (GCC, x86)
+
+Wanted:
+* Mac (any flavours, any toolkit - project files needed,
+ and diffs to configure scripts wanted)
+* Other free UNIX variants
+* QNX
