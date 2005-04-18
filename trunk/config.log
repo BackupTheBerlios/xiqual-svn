@@ -31,8 +31,10 @@ configure:1383: checking for working const
 configure:1437: gcc -c -g -O2  conftest.c 1>&5
 configure:1461: checking for SDL/SDL.h
 configure:1471: gcc -E  conftest.c >/dev/null 2>conftest.out
-configure:1467:21: SDL/SDL.h: No such file or directory
+configure:1502: checking for SDL/SDL_image.h
+configure:1512: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1508:27: SDL/SDL_image.h: No such file or directory
 configure: failed program was:
-#line 1466 "configure"
+#line 1507 "configure"
 #include "confdefs.h"
-#include <SDL/SDL.h>
+#include <SDL/SDL_image.h>
