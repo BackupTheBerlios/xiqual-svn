@@ -45,6 +45,17 @@ void Scanlist(unsigned long tag1,  ... )
 int main()
 {
 //	Scanlist(1000, 1, 2000, 2, 3000, 3, 4000, 4, TAG_END);
-	tagitem
+	tagitem	nt[5];
+
+	nt[0].tag = 1000;
+	nt[0].data = 1;
+	nt[1].tag = 2000;
+	nt[1].data = 2;
+	nt[2].tag = 3000;
+	nt[2].data = 3;
+	nt[3].tag = 4000;
+	nt[3].data = 4;
+	nt[4].tag = 0;
+	ScanlistA(&nt);
 	return 0;
 }
