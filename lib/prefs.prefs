@@ -1,0 +1,8 @@
+[main]
+test = no
+this = 8
+that = nothing else
+blank
+
+[section 2]
+rand = 73573
