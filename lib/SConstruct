@@ -1,0 +1,5 @@
+env = Environment(CPPPATH='../include')
+Export('env')
+SConscript(['xitools/SConscript', 'xisnd/SConscript', 'xinet/SConscript', 'lui/SConscript'])
+
+

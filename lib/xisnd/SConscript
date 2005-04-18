@@ -1,0 +1,5 @@
+Import('env')
+env.Library('libxisnd', Split("""
+			play.c
+			load.c	
+			"""))

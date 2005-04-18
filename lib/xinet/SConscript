@@ -1,0 +1,16 @@
+Import('env')
+env.Library('libxinet', Split("""
+			net_addnodes.c
+			net_server.c
+			net_server_free.c
+			net_handle.c
+			net_accept.c
+			net_process.c
+			net_setnonblock.c
+			net_tag_server.c
+			net_remove_client.c
+			net_client.c
+			net_client_free.c
+			net_read.c
+			net_write.c
+			"""))

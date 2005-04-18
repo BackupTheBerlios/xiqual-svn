@@ -1,0 +1,7 @@
+Import('env')
+env.Library('liblui', Split("""
+			lui.c
+			button.c
+			list.c
+			msgbox.c
+			"""))

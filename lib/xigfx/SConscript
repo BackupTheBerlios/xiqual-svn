@@ -1,0 +1,9 @@
+Import('env')
+env.Library('libxigfx', Split("""
+			fonts.c
+			iarea.c
+			tiles.c
+			views.c
+			xi_init.c
+			xi_main.c
+			"""))
