@@ -11,7 +11,7 @@
 #	include "SDL_ttf.h"
 #endif
 
-#include "SDL.h"
+#include <SDL/SDL.h>
 
 #include "fonts.h"
 #include "iarea.h"

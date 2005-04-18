@@ -36,7 +36,7 @@
 #if !defined(_XIQUAL_VIEWS_H)
 #define _XIQUAL_VIEWS_H
 
-#include "SDL.h"
+#include <SDL/SDL.h>
 
 #include "lists.h"
 #include "xiendian.h"

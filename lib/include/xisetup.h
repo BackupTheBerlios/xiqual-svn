@@ -6,8 +6,8 @@
 #if !defined(_XIQUAL_SETUP_H)
 #define _XIQUAL_SETUP_H
 
-#include "SDL.h"
-#include "SDL_image.h"
+#include <SDL/SDL.h>
+#include <SDL/SDL_image.h>
 
 #include "xios.h"
 #include "fonts.h"

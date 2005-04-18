@@ -5,7 +5,7 @@
 #if !defined(_XIQUAL_TILES_H)
 #define _XIQUAL_TILES_H
 
-#include "SDL.h"
+#include <SDL/SDL.h>
 
 #include "lists.h"
 #include "xiendian.h"

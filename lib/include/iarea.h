@@ -22,7 +22,7 @@
 #if !defined( _XIQUAL_IAREA_H)
 #define _XIQUAL_IAREA_H
 
-#include "SDL.h"
+#include <SDL/SDL.h>
 
 #include "xitags.h"
 #include "views.h"

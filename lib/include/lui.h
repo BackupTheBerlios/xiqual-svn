@@ -7,7 +7,7 @@
 #if !defined(_LUI_H)
 #define _LUI_H
 
-#include "SDL.h"
+#include <SDL/SDL.h>
 
 #include "iarea.h"
 #include "views.h"

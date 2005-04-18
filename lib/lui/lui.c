@@ -3,7 +3,7 @@
  * Core functions.
  */
 
-#include "SDL_image.h"
+#include <SDL/SDL_image.h>
 
 #include "lui_button.h"
 #include "lui_list.h"

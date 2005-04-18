@@ -7,7 +7,7 @@
 #if !defined(_XIQUAL_FONTS)
 #define _XIQUAL_FONTS
 
-#include "SDL.h"
+#include <SDL/SDL.h>
 
 #include "xiendian.h"
 
