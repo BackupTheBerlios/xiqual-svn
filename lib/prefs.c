@@ -18,8 +18,10 @@ int main()
 	List	*list;
 	preferences	*section;
 	variable	*var;
+	struct tagitem	*preftags[] = {
+		PREFS_FILENAME, "prefs.prefs", TAG_END};
 
-	list = cfg_loadprefs(PREFS_FILENAME, "prefs.prefs", TAG_END);
+	list = cfg_loadprefsA(&preftags);
 	if(!list)
 		return 1;
 
