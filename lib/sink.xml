@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sink placement="kitchen" style="modern white">
+ <description>A lovely kitchen sink in stylish gold</description>
+ <faucet type="warm"/>
+ <faucet type="cold"/>
+</sink>

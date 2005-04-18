@@ -1,0 +1,155 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>xiglob* xi_init</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file xigfx/xi_init.c:<H2><!1><A HREF="xiglob.html">xiglob</A>* <A HREF="#DOC.DOCU">xi_init</A></H2><H2>(ulong tag1,  ... )</H2><BLOCKQUOTE> Initialise Xiqual and all SDL subsystems.</BLOCKQUOTE>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Initialise Xiqual and all SDL subsystems.
+The tags supplied allow you to selectively initialise some SDL subsystems,
+create a mousepointer from an SDL_image supported file and more.
+
+<P>To intialise all supported SDL libraries and create the xiglob structure,
+with an 800x600x16 display:
+
+<P>xi_init(XI_WIDTH, 800, <BR>XI_HEIGHT, 600, <BR>XI_DEPTH, 16, TAG_END);
+
+<P>This creates a mouse cursor, and tells Xiqual to also handle the cursor,
+in addition to opening a typical display:
+
+<P>xi_init(XI_WIDTH, 800,<BR>XI_HEIGHT, 600,<BR>XI_DEPTH, 16,
+<BR>XI_CURSORFILE, "cursor.png",<BR>TAG_END);
+
+<P><h2>Supported tags</h2>
+
+<P><h3>Xiqual settings and hooks<h3>
+<ul>
+<li>XI_MAINHOOK</li>
+A pointer to a function to be called at each input poll.
+See xisetup.h/xi_main() for information on the arguments passed.
+
+<P><li>XI_PREFS</li>
+Load this configuration file. This is currently only for convenience,
+but Xiqual may start looking for a section of its own for various
+settings in the future (type of SDL audio/video drivers to use etc.).
+
+<P>It will first look for $HOME/.xiqual/<filename>, then it
+will look in the current directory. Win32 will just look
+in the current directory.
+
+<P>If this file isn't found, Xiqual attempts to load
+$HOME/.xiqual/xiqualrc, followed by xiqualrc in the
+current directory. Win32 once again gets the short
+end of the path.
+</ul>
+
+<P><h3>SDL settings</h3>
+<ul>
+<li>XI_WIDTH, XI_HEIGHT</li>
+Screensize. Will be emulated if using an odd resolution, or if
+it's not available according to the XF86Config (for example, 320x240
+is usually not defined as available for 16-bit resolutions).
+This WILL LOOK CRUDDY.
+
+<P><li>XI_DEPTH</li>
+Bitplane depth (note that SDL may emulate this).
+
+<P><li>XI_SDLFLAGS</li>
+If you need to initialise threading, or only a few SDL subsystems,
+pass the replacement flags here. These will be used instead of
+the defaults, which is SDL_INIT_EVERYTHING.
+
+<P><li>XI_SCRFLAGS</li>
+Xiqual will default to opening the screen with flags
+SDL_SWSURFACE | SDL_DOUBLEBUF, so pass a different set of flags
+here if that isn't what you want. Note that many other Xiqual
+functions also rely on software buffers for blits, and these
+can't be changed (yet). NVidia cards blit faster on software, too.
+
+<P><li>XI_CURSOR</li>
+You may pass a pointer to an xiview with this tag.
+Xiqual frees this structure on exit.
+
+<P><li>XI_CURSORFILE</li>
+This tag is for those who prefer to create a mouse
+cursor image with more colours. A view is created, and will
+be freed on exit, like XI_CURSOR.
+
+<P><li>XI_CURSORKEY</li>
+Pass a colourkey (as returned from SDL_MapRGB()) here if you also
+specified a filename to load a cursor from. If specifying a cursor
+directly, that view's key will be used.
+
+<P><li>XI_CURSOR_HOTX, XI_CURSOR_HOTY</li>
+This is the location of the "hotspot", the point on the
+cursor image that is considered the active (selecting) part.
+The image will be drawn at mouse coordinates minus these coordinates.
+</ul>
+
+<P><h3>SDL_mixer settings</h3>
+<ul>
+<li>XI_MIXCHAN</li>
+Maximum number of total mixing channels. Defaults to eight.
+
+<P><li>XI_AUDIORATE</li>
+Bitrate (frequency) to use for mixed audio, if SDL_mixer is available.
+Defaults to 22050Hz.
+
+<P><li>XI_AUDIOCHAN</li>
+Defines type of audio for music - 1 for mono, 2 for stereo.
+See XI_MAXCHAN, if you're confused.
+
+<P><li>XI_AUDIOBUFSIZE</li>
+Size of audio buffers - too small or too big may cause stuttering or
+unexpected pauses on older systems and bad sound hardware.
+Note: Must be a multiple of 16.
+
+<P><li>XI_AUDIO_FMT</li>
+Audio format to use for audio mixing. May be one of:
+<ul>
+<li>AUDIO_U8</li> Unsigned 8-bit.
+<li>AUDIO_S8</li> Signed 8-bit.
+<li>AUDIO_U16LSB</li> 16-bit unsigned (Intel format).
+<li>AUDIO_S16LSB</li> 16-bit signed (Intel format). This is the default for WAV.
+<li>AUDIO_U16, AUDIO_S16</li> Shorthand for the two Intel formats.
+<li>AUDIO_U16MSB</li> Big-endian unsigned 16-bit.
+<li>AUDIO_S16MSB</li> Big-endian signed 16-bit.
+<li>AUDIO_U16SYS</li> 16-bit audio of whatever is the native byte-order.
+<li>AUDIO_S16SYS</li> 16-bit signed audio of native byte-order.
+</ul>
+</ul>
+
+<P><h3>SDL TTF settings</h3>
+<ul>
+<li>XI_TTF</li>
+Set data to non-zero to enable SDL_ttf initialisation.
+</ul>
+
+<P><h3>LUI settings</h3>
+<ul>
+<li>XI_LUI</li>
+Set data to non-zero to enable LUI initialisation.
+</ul>
+
+<P></BLOCKQUOTE>
+<DL><DT><DT><B>Author:</B><DD>Ronny Bangsund
+
+<DT><B>See Also:</B><DD><!1><A HREF="xi_inittag.html">xi_inittag</A>(), <!1><A HREF="xi_main.html">xi_main</A>(), <!1><A HREF="xi_quit.html">xi_quit</A>(), SDL_Init(), Mix_OpenAudio(),
+<!1><A HREF="lui_init.html">lui_init</A>(), <!1><A HREF="xiglob.html">xiglob</A><BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

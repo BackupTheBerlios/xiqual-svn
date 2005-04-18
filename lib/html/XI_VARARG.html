@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>#define XI_VARARG</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file include/xitags.h:<H2>#define <A HREF="#DOC.DOCU">XI_VARARG</A></H2><H2>(call,  ret)</H2><BLOCKQUOTE> Macro for vararg taghandling.</BLOCKQUOTE>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Macro for vararg taghandling.
+This macro is used internally in Xiqual to process the taglists passed
+to many of its functions. It may also be of use if anyone else wants to
+make use of tags in their functions.
+
+<P>Examples of its use can be found in the Xiqual sources. Basically, the
+calling method in Xiqual has the function taking arguments (ulong tag1, ...),
+then calling XI_VARARG(function_nameA((tagitem *)&tag1), argtype).
+Not much easier, but less typing.
+</BLOCKQUOTE>
+<DL><DT><DT><B>Parameters:</B><DD><B>call</B> -  A function call, passing (<!1><A HREF="tagitem.html">tagitem</A> *)&tag1 as one of its parameters.
+You take all the parameters not automatically handled by this macro in this.
+<BR><B>ret</B> -  A typedef for the returnvalue. Note: this must be a pointer.
+Not very flexible, but these macros are for special purposes, anyway.
+<BR><DT><B>Returns:</B><DD>  Whatever you pass as parameter ret.
+<BR><DT><B>See Also:</B><DD><!1><A HREF="XI_VOIDARG.html">XI_VOIDARG</A>(), va_start(), va_arg(), va_end()<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

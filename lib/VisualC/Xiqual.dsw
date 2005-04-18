@@ -1,0 +1,221 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "Xiqual_all"=".\Xiqual_all.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ifftest
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name iffwrite
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name lui
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name md5
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name minimalgui
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name prefs
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name tileset
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name xicgi
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name xigfx
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name xinet
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name xitools
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "ifftest"=".\ifftest.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name xitools
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "iffwrite"=".\iffwrite.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name xitools
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "lui"=".\lui.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "md5"=".\md5.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name xitools
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "minimalgui"=".\minimalgui.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name lui
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name xigfx
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name xitools
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "prefs"=".\prefs.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name xitools
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "tileset"=".\tileset.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name xigfx
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name xitools
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "xicgi"=".\xicgi.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "xigfx"=".\xigfx.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "xinet"=".\xinet.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "xitools"=".\xitools.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

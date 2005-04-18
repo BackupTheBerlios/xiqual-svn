@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> tilefont</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+<H2> <A HREF="#DOC.DOCU">tilefont</A></H2></H2><A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE>Create a font from a definiion file and images.
+
+<P>Usage:
+
+<P><em>tilefont</em> name.def
+
+<P>Any name is acceptable for the definition file.
+The definition file consists of two types of
+sections, described below.
+
+<P><h2>Definition file format</h2>
+Sections are names in square brackets on their own lines.
+The [font] section must appear once, no more or less,
+while the [source] section can appear once or more.
+
+<P><b>{font]</b>: The unique section that defines fontsize,
+name of output file and author/comment strings.
+
+<P><h3>Variables in section [font]</h3>
+<ul>
+<li>name</li>
+Unique name to use for this font. This is used while
+search a font list, for instance.
+
+<P><li>filename</li>
+This is the name of the created font IFF.
+No special name is required.
+
+<P><li>size</li>
+Size in pixels of each glyph (letter/symbol) in the font.
+This is in WxH format, like tilesets.
+
+<P><li>spacing</li>
+The number of blank pixels to the right of each font.
+If a font is drawn in a very blocky mode, you might want
+to use this to make it slightly more readable.
+
+<P><li>maskcol</li> The transparent colour. Hexadecimal format:
+<br>maskcol = 0xnnnnnn
+<br> The 0x prefix is optional.
+
+<P><li>author</li>
+Put the name of the culprit here.
+
+<P><li>comment</li>
+Other comments go here. Only one comment section will be made,
+from the first comment= definition found.
+</ul>
+
+<P><h3>Variables in [source] sections</h3>
+<ul>
+<li>image</li> Name of an image file in any format known to
+SDL_image. Suggested formats: XPM, PNG or TGA.
+Non-lossy compression is preferred, as JPEG and similar will
+probably mess up the pixels  in transparent colours.
+
+<P><li>glyphs</li>
+This is a string of symbols in the exact order they appear
+in the image file. It starts in the upper left corner of
+the specified image. The images can stretch over several
+lines in the image, but there should be glyphs filling the
+width.
+</ul>
+</BLOCKQUOTE>
+<DL><DT><DD></DL><P> </body>
+</html>
+<HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

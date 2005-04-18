@@ -1,0 +1,164 @@
+ <html><head>
+<title>Xiqual 0.9.1</title>
+<style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+<div id="buttons">
+
+<H1>Table of Contents</H1>
+<H2>General stuff</H2>
+<UL>
+<LI><A HREF="divclasskeywordAutofilesspanSomewhatsimplerloadingoffilesspandiv.html"><div class="keyword">Autofiles<span>Somewhat simpler loading of files</span></div></A>
+<LI><A HREF="divclasskeywordHashtablefunctionsspanFastlookupspandiv.html"><div class="keyword">Hash table functions<span>Fast lookup</span></div></A>
+<LI><A HREF="divclasskeywordXiqualtoolsspanToolsusedtocreatedatafilesspandiv.html"><div class="keyword">Xiqual tools<span>Tools used to create datafiles</span></div> </A>
+<LI><A HREF="Inputhandling.html">Input handling</A>
+<LI><A HREF="LUICorefunctions.html">LUI: Core functions</A>
+<LI><A HREF="Loadingandhandlingtilesets.html">Loading and handling tilesets</A>
+<LI><A HREF="MD5checksumming.html">MD5 checksumming</A>
+<LI><A HREF="Optargs.html">Optargs</A>
+<LI><A HREF="Questionsandanswers..html">Questions and answers.</A> <I> </I>
+<LI><A HREF="Settingupgraphics.html">Setting up graphics</A>
+<LI><A HREF="Stringtokeniser.html">String tokeniser</A>
+<LI><A HREF="Views.html">Views</A>
+<LI><A HREF="XMLfunctions.html">XML functions</A>
+<LI><A HREF="Xiqualexampleprograms.html">Xiqual example programs</A>
+</UL>
+<H2>Functions</H2>
+<UL>
+<LI><A HREF="bt_new.html">bt_new</A> <I> Create a new LUI button.</I>
+<LI><A HREF="cfg_findnext.html">cfg_findnext</A> <I> Find a named section starting at a specific section.</I>
+<LI><A HREF="cfg_findsection.html">cfg_findsection</A> <I> Find a named section in a list.</I>
+<LI><A HREF="cfg_findvar.html">cfg_findvar</A> <I> Find a variable in a prefs section.</I>
+<LI><A HREF="cfg_freesection.html">cfg_freesection</A> <I> Free a preferences section and its variables.</I>
+<LI><A HREF="cfg_freevar.html">cfg_freevar</A> <I> Free a variable and its strings.</I>
+<LI><A HREF="cfg_isbool.html">cfg_isbool</A> <I> Internal function for cfg_loadprefs().</I>
+<LI><A HREF="cfg_loadprefs.html">cfg_loadprefs</A> <I> Load preferences from an INI-style file.</I>
+<LI><A HREF="cfg_newsection.html">cfg_newsection</A> <I> Allocate a new preferences section.</I>
+<LI><A HREF="cfg_saveprefs.html">cfg_saveprefs</A> <I> Save a List of preferences sections to file.</I>
+<LI><A HREF="crc32_calc.html">crc32_calc</A> <I> Checksum a buffer of 8-byte characters.</I>
+<LI><A HREF="crc32_update.html">crc32_update</A> <I> Update a CRC32 checksum.</I>
+<LI><A HREF="file_getsize.html">file_getsize</A> <I> Stand-alone routine to get a file's size.</I>
+<LI><A HREF="hash_merge.html">hash_merge</A> <I> Merge any number of hash tables.</I>
+<LI><A HREF="hash_newfromlist.html">hash_newfromlist</A> <I> Turn a struct List into a struct HashTable.</I>
+<LI><A HREF="iarea_check.html">iarea_check</A> <I> Checks an inputarea against cursor position and controller buttons.</I>
+<LI><A HREF="iarea_free.html">iarea_free</A> <I> Free an inputarea.</I>
+<LI><A HREF="iarea_new.html">iarea_new</A> <I> Create a new inputarea.</I>
+<LI><A HREF="iff_close.html">iff_close</A> <I> Closes an IFF.</I>
+<LI><A HREF="iff_correctchunk.html">iff_correctchunk</A> <I> Correct and pad odd-sized IFF chunks.</I>
+<LI><A HREF="iff_endchunk.html">iff_endchunk</A> <I> Finishes writing a chunk.</I>
+<LI><A HREF="iff_new.html">iff_new</A> <I> Creates a new IFF.</I>
+<LI><A HREF="iff_newchunk.html">iff_newchunk</A> <I> Start on a new chunk in an IFF.</I>
+<LI><A HREF="iff_writechunkdata.html">iff_writechunkdata</A> <I> Write data to an IFF where you have just started a chunk.</I>
+<LI><A HREF="list_add.html">list_add</A> <I> Add a Node to a List.</I>
+<LI><A HREF="list_addhead.html">list_addhead</A> <I> Add a Node to the top of a List.</I>
+<LI><A HREF="list_delete.html">list_delete</A> <I> Remove a Node from a List and free data.</I>
+<LI><A HREF="list_free.html">list_free</A> <I> Free a List and all its attached Node structures.</I>
+<LI><A HREF="list_getnode.html">list_getnode</A> <I> Return a Node at a specific index position.</I>
+<LI><A HREF="list_insert.html">list_insert</A> <I> Insert one Node after another given Node.</I>
+<LI><A HREF="list_makecircular.html">list_makecircular</A> <I> Make a List circular (first and last nodes point to eachother).</I>
+<LI><A HREF="list_new.html">list_new</A> <I> Create a new List and set the destructor.</I>
+<LI><A HREF="list_newitem.html">list_newitem</A> <I> Allocates a new Node structure.</I>
+<LI><A HREF="list_remove.html">list_remove</A> <I> Remove a Node from a List without freeing any data.</I>
+<LI><A HREF="lst_new.html">lst_new</A> <I> Create a new LUI list gadget.</I>
+<LI><A HREF="mem_arrayget.html">mem_arrayget</A> <I> Access memory as a 1-, 2- or 3-dimensional array.</I>
+<LI><A HREF="mem_arrayset.html">mem_arrayset</A> <I> Access memory as a 1-, 2- or 3-dimensional array.</I>
+<LI><A HREF="msg_show.html">msg_show</A> <I> Show or hide a message box.</I>
+<LI><A HREF="net_addnodes.html">net_addnodes</A> <I> Increase the maximum allowed number of clients in a SelectServer.</I>
+<LI><A HREF="net_client.html">net_client</A> <I> Allocate a NetClient structure and connect to a server.</I>
+<LI><A HREF="net_client_free.html">net_client_free</A> <I> Close and free a client structure.</I>
+<LI><A HREF="net_create_server.html">net_create_server</A> <I> Create a new select() server.</I>
+<LI><A HREF="net_free_server.html">net_free_server</A> <I> Release all resources related to a Xiqual select() server.</I>
+<LI><A HREF="net_process.html">net_process</A> <I> Handle a select() server's incoming and outgoing data.</I>
+<LI><A HREF="net_read.html">net_read</A> <I> Read an incoming xinet package.</I>
+<LI><A HREF="net_server.html">net_server</A> <I> Create a new select() server.</I>
+<LI><A HREF="net_server_free.html">net_server_free</A> <I> Release all resources related to a Xiqual select() server.</I>
+<LI><A HREF="net_writeh.html">net_writeh</A> <I> Write an xinet packet header.</I>
+<LI><A HREF="node_end.html">node_end</A> <I> Return the last Node in a circular List.</I>
+<LI><A HREF="node_findbycontents.html">node_findbycontents</A> <I> Return a Node with data <em>partially</em> containing the entire specified string.</I>
+<LI><A HREF="node_findbyname.html">node_findbyname</A> <I> Return a Node with data containing the specified string.</I>
+<LI><A HREF="node_makecircular.html">node_makecircular</A> <I> Make a chain of nodes circular (first and last Node points to eachother).</I>
+<LI><A HREF="node_start.html">node_start</A> <I> Return the first Node in a circular List.</I>
+<LI><A HREF="str_getvalue.html">str_getvalue</A> <I> Converts a string to an integer.</I>
+<LI><A HREF="strfind.html">strfind</A> <I> Looks for a string within another string.</I>
+<LI><A HREF="strisnum.html">strisnum</A> <I> Check if a string is all numbers and whitespace.</I>
+<LI><A HREF="strlower.html">strlower</A> <I> Turn a string into all-lowercase characters.</I>
+<LI><A HREF="strsplit.html">strsplit</A> <I> Split a variable-setting string.</I>
+<LI><A HREF="strupper.html">strupper</A> <I> Turn a string into all-uppercase characters.</I>
+<LI><A HREF="tag_alloclist.html">tag_alloclist</A> <I> Allocate a tag array big enough for numtags items.</I>
+<LI><A HREF="tag_finditem.html">tag_finditem</A> <I> Look for a tag identifier in a taglist, and return a pointer to the tagitem.</I>
+<LI><A HREF="tag_freelist.html">tag_freelist</A> <I> Free a tagarray previously created with tag_alloclist().</I>
+<LI><A HREF="tag_getdata.html">tag_getdata</A> <I> Find a tagitem's data by tag ID.</I>
+<LI><A HREF="tag_next.html">tag_next</A> <I> Get next tagitem in the array.</I>
+<LI><A HREF="xi_findopt.html">xi_findopt</A> <I> Find option and return flags.</I>
+<LI><A HREF="xi_freefont.html">xi_freefont</A> <I> Free a font when done with it.</I>
+<LI><A HREF="xi_freeopts.html">xi_freeopts</A> <I> Free xiargs structure.</I>
+<LI><A HREF="xi_getopts.html">xi_getopts</A> <I> Parse command args.</I>
+<LI><A HREF="xi_loadfont.html">xi_loadfont</A> <I> Load a Xiqual free-form IFF font.</I>
+<LI><A HREF="xi_puttext.html">xi_puttext</A> <I> Print text using an xifont.</I>
+<LI><A HREF="xi_seterror.html">xi_seterror</A> <I> A generic way of setting error strings.</I>
+<LI><A HREF="xi_strndup.html">xi_strndup</A> <I> Duplicate a string and return a safe buffer.</I>
+<LI><A HREF="xml_addentityhook.html">xml_addentityhook</A> <I> Add a hook function to handle an escaped character entity.</I>
+<LI><A HREF="xml_addgenentityhook.html">xml_addgenentityhook</A> <I> Add a generic hook function for all escaped entities.</I>
+<LI><A HREF="xml_addgentaghook.html">xml_addgentaghook</A> <I> Add a hook that catches all unspecified tags.</I>
+<LI><A HREF="xml_addprocessinghook.html">xml_addprocessinghook</A> <I> Add a hook for a processing instruction.</I>
+<LI><A HREF="xml_addtaghook.html">xml_addtaghook</A> <I> Add a hook to handle a specific tag.</I>
+<LI><A HREF="xml_freedoc.html">xml_freedoc</A> <I> Free an XML document.</I>
+<LI><A HREF="xml_loaddoc.html">xml_loaddoc</A> <I> Load an XML document and allocate an xmldoc structure.</I>
+<LI><A HREF="xml_newdoc.html">xml_newdoc</A> <I> Creates an xmldoc structure from a string buffer.</I>
+<LI><A HREF="xml_parse.html">xml_parse</A> <I> Walk through an XML document and call user-specified hooks.</I>
+<LI><A HREF="xml_printesc.html">xml_printesc</A> <I> Print escaped entities.</I>
+<LI><A HREF="xml_prune.html">xml_prune</A> <I> Walk through an XML document and remove unnecessary nodes.</I>
+<LI><A HREF="xml_savedoc.html">xml_savedoc</A> <I> Save an XML document to a file.</I>
+</UL>
+<H2>Macros</H2>
+<UL>
+<LI><A HREF="MAKE_ID.html">MAKE_ID</A> <I> Quick macro to make a ulong of four characters.</I>
+<LI><A HREF="XI_VARARG.html">XI_VARARG</A> <I> Macro for vararg taghandling.</I>
+<LI><A HREF="XI_VOIDARG.html">XI_VOIDARG</A> <I> Macro for vararg taghandling.</I>
+<LI><A HREF="list_nodeend.html">list_nodeend</A> <I> Wrapper for node_end().</I>
+<LI><A HREF="list_nodemakecircular.html">list_nodemakecircular</A> <I> Wrapper for node_makecircular().</I>
+<LI><A HREF="list_nodestart.html">list_nodestart</A> <I> Wrapper for node_start().</I>
+<LI><A HREF="xi_textwidth.html">xi_textwidth</A> <I> Calculate how many pixels wide a string printed with a fixed-width xifont will be.</I>
+<LI><A HREF="xit_setdefaults.html">xit_setdefaults</A> <I> Set default screen and tileset </I>
+</UL>
+<H2>Enums, Unions, Structs</H2>
+<UL>
+<LI><A HREF="MD5Context.html">MD5Context</A> <I> MD5 context for the Rivest/Plumb MD5 checksumming routines.</I>
+</UL>
+<H2>Typedefs</H2>
+<UL>
+<LI><A HREF="HashNode.html">HashNode</A> <I> Basic hash node.</I>
+<LI><A HREF="HashTable.html">HashTable</A> <I> Non-resizing hash table.</I>
+<LI><A HREF="IFFHandle.html">IFFHandle</A> <I> Handle returned by iff_new() and iff_open() calls.</I>
+<LI><A HREF="List.html">List</A> <I> Linked list structure.</I>
+<LI><A HREF="Node.html">Node</A> <I> A simple Node.</I>
+<LI><A HREF="OptNode.html">OptNode</A> <I> Option node.</I>
+<LI><A HREF="aspec.html">aspec</A> <I> Array specification structure </I>
+<LI><A HREF="autofile.html">autofile</A> <I> Autofile structure.</I>
+<LI><A HREF="gadget.html">gadget</A> <I> Generic gadget.</I>
+<LI><A HREF="inputarea.html">inputarea</A> <I> An inputarea for testing mouse and other controllers in specific screen coordinates.</I>
+<LI><A HREF="lui_msg.html">lui_msg</A> <I> Message box.</I>
+<LI><A HREF="preferences.html">preferences</A> <I> A preferences section.</I>
+<LI><A HREF="strtoken.html">strtoken</A> <I> The token structure.</I>
+<LI><A HREF="tagitem.html">tagitem</A> <I> A tagitem.</I>
+<LI><A HREF="variable.html">variable</A> <I> A variable.</I>
+<LI><A HREF="xiargs.html">xiargs</A> <I> The argument structure.</I>
+<LI><A HREF="xifont.html">xifont</A> <I> Xiqual font structure.</I>
+<LI><A HREF="xiglob.html">xiglob</A> <I> Global structure for Xiqual's automatic handling of miscellaneous data</I>
+<LI><A HREF="xiopts.html">xiopts</A> <I> User-supplied structure for xi_getopts().</I>
+<LI><A HREF="xitiles.html">xitiles</A> <I> A tileset in-memory representation.</I>
+<LI><A HREF="xiview.html">xiview</A> <I> This is a view, for use as sprites, message boxes, or anything else that might need to store the rectangle it is blitted over.</I>
+<LI><A HREF="xmldoc.2.html">xmldoc</A> <I> The XML document structure.</I>
+<LI><A HREF="xmltag.2.html">xmltag</A> <I> An XML tag.</I>
+</UL>
+ </div>
+</body>
+</html>
+<HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

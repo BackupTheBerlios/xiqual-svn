@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> md5</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+<H2> <A HREF="#DOC.DOCU">md5</A></H2></H2><A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE>Simple MD5-summing program.
+<h3>Usage</h3>
+<em>md5</em> [-b] [-v] [-c] | [file...]
+
+<P>md5 generates MD5 checksums, like md5sum(1), but no wildcards are
+properly supported in the program itself. This should not be a problem
+if using Bash or similar shells. On Win32, getting Unix Utilities is
+recommended for developers, anyway.
+
+<P>The -v flag prints each filename and status regardless of whether it
+has a checksum or not. Use alongside the -c option.
+
+<P>If -c appears on the command line, the files specified are expected to
+be md5sum output as generated with normal operation. The filenames to
+verify are gathered from these files, and each invalid sum is printed
+to the standard output. Use -v if you want everything printed.
+
+<P>The -b flag does nothing but print an asterisk before the filename.
+
+<P><h3>TODO</h3>
+Implement -c and -v, plus wildcards.</BLOCKQUOTE>
+<DL><DT><DD></DL><P> </body>
+</html>
+<HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

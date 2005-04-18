@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>typedef struct  IFFHandle</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file include/iffparse.h:<H2>typedef struct  <A HREF="#DOC.DOCU">IFFHandle</A></H2></H2><BLOCKQUOTE> Handle returned by iff_new() and iff_open() calls.</BLOCKQUOTE>
+
+<HR>
+<P><DL>
+ <DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>FILE* <B><A HREF="#DOC.101.1">iff</A></B>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>ulong <B><A HREF="#DOC.101.2">type</A></B>
+<DD><I> FORM type.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>ulong <B><A HREF="#DOC.101.3">id</A></B>
+<DD><I> Identifier, somewhat less strict.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>ulong <B><A HREF="#DOC.101.4">chunksize</A></B>
+<DD><I> Size of current chunk.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>ulong <B><A HREF="#DOC.101.5">prevchunksize</A></B>
+<DD><I> Makes the reader able to scan backwards.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>ulong <B><A HREF="#DOC.101.6">size</A></B>
+<DD><I> Size of the IFF</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>ulong <B><A HREF="#DOC.101.7">pos</A></B>
+<DD><I> Position in file.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="List.html">List</A> <B><A HREF="#DOC.101.8">chunks</A></B>
+<DD><I> Linked list of chunk context nodes.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>char <B><A HREF="#DOC.101.9">write</A></B>
+<DD><I> Are we in write mode?</I>
+</DL></P>
+
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Handle returned by iff_new() and iff_open() calls.
+All reading/writing functions need this to see
+where they are, and to store temporary nodes
+while building an IFF.
+</BLOCKQUOTE>
+<DL>
+
+<A NAME="iff"></A>
+<A NAME="DOC.101.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>FILE* iff</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="type"></A>
+<A NAME="DOC.101.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>ulong type</B></TT>
+<DD>
+FORM type.
+See the IFF85 text for a thorough introduction.
+<DL><DT><DD></DL><P>
+<A NAME="id"></A>
+<A NAME="DOC.101.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>ulong id</B></TT>
+<DD>
+Identifier, somewhat less strict.
+Used by the reading functions. Soon to be replaced.
+<DL><DT><DD></DL><P>
+<A NAME="chunksize"></A>
+<A NAME="DOC.101.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>ulong chunksize</B></TT>
+<DD>
+Size of current chunk.
+Used by the reading functions. Soon to be replaced.
+<DL><DT><DD></DL><P>
+<A NAME="prevchunksize"></A>
+<A NAME="DOC.101.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>ulong prevchunksize</B></TT>
+<DD>
+Makes the reader able to scan backwards.
+Used by the reading functions. Soon to be replaced.
+<DL><DT><DD></DL><P>
+<A NAME="size"></A>
+<A NAME="DOC.101.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>ulong size</B></TT>
+<DD>
+Size of the IFF
+<DL><DT><DD></DL><P>
+<A NAME="pos"></A>
+<A NAME="DOC.101.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>ulong pos</B></TT>
+<DD>
+Position in file.
+Usually the result of an ftell().
+<DL><DT><DD></DL><P>
+<A NAME="chunks"></A>
+<A NAME="DOC.101.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="List.html">List</A> chunks</B></TT>
+<DD>
+Linked list of chunk context nodes.
+Not used by the reader functions yet. The API is more or less
+locked down, but behind the scenes, there is some inconsistency
+between reading and writing of IFF. Fixing it soon.
+<DL><DT><DD></DL><P>
+<A NAME="write"></A>
+<A NAME="DOC.101.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>char write</B></TT>
+<DD>
+Are we in write mode?
+iff_close() checks this to see if the final filesize needs
+to be corrected, and if chunks are to be finalised.
+<DL><DT><DD></DL><P></DL>
+<DL><DT><DT><B>Author:</B><DD>Ronny Bangsund
+
+<DT><B>See Also:</B><DD><!1><A HREF="iff_new.html">iff_new</A>(),  iff_open()<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

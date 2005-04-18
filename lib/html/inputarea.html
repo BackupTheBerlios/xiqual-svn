@@ -1,0 +1,222 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>typedef struct  inputarea</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file include/iarea.h:<H2>typedef struct  <A HREF="#DOC.DOCU">inputarea</A></H2></H2><BLOCKQUOTE> An inputarea for testing mouse and other controllers in specific screen coordinates.</BLOCKQUOTE>
+
+<HR>
+<P><DL>
+ <DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>struct  <!1><A HREF="inputarea.html">inputarea</A> <B><A HREF="#DOC.99.1">*next</A></B>
+<DD><I> Next area if in a list-</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>struct  <!1><A HREF="inputarea.html">inputarea</A> <B><A HREF="#DOC.99.2">*prev</A></B>
+<DD><I> Previous area if in a list</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>char* <B><A HREF="#DOC.99.3">name</A></B>
+<DD><I> The optional name.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void* <B><A HREF="#DOC.99.4">data</A></B>
+<DD><I> User-definable data.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.99.5">x</A></B>
+<DD><I> X coordinate of upper left corner</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.99.6">y</A></B>
+<DD><I> Y coordinate of upper left corner</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.99.7">w</A></B>
+<DD><I> Width of rectangle</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.99.8">h</A></B>
+<DD><I> Height of rectangle</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.99.9">(*lmbfunc)</A></B>(void* )
+<DD><I> Left mousebutton activation</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.99.10">(*mmbfunc)</A></B>(void* )
+<DD><I> Middle mousebutton activation</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.99.11">(*rmbfunc)</A></B>(void* )
+<DD><I> Right mousebutton activation</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.99.12">(*pfunc)</A></B>(void* )
+<DD><I> Mouse passing over without buttons pressed</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>ulong <B><A HREF="#DOC.99.13">inputs</A></B>
+<DD><I> Mask of controllers to respond to.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>ulong <B><A HREF="#DOC.99.14">id</A></B>
+<DD><I> Mandatory ID.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>Uint8 <B><A HREF="#DOC.99.15">mb</A></B>
+<DD><I> Mousebutton mask.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>Uint8 <B><A HREF="#DOC.99.16">jb</A></B>
+<DD><I> Mask of joybuttons.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>Uint32 <B><A HREF="#DOC.99.17">tick</A></B>
+<DD><I> Point when this inputarea was last activated.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>Uint32 <B><A HREF="#DOC.99.18">delay</A></B>
+<DD><I> Delay in milliseconds before allowing another activation.</I>
+</DL></P>
+
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+An inputarea for testing mouse and other
+controllers in specific screen coordinates.
+The inputarea gets its function hooks filled from
+the tags supplied by iarea_new().
+</BLOCKQUOTE>
+<DL>
+
+<A NAME="*next"></A>
+<A NAME="DOC.99.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>struct  <!1><A HREF="inputarea.html">inputarea</A> *next</B></TT>
+<DD>
+Next area if in a list-
+<DL><DT><DD></DL><P>
+<A NAME="*prev"></A>
+<A NAME="DOC.99.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>struct  <!1><A HREF="inputarea.html">inputarea</A> *prev</B></TT>
+<DD>
+Previous area if in a list
+<DL><DT><DD></DL><P>
+<A NAME="name"></A>
+<A NAME="DOC.99.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>char* name</B></TT>
+<DD>
+The optional name.
+Little used, but could allow associating areas
+by name if they're all part of a complex gadget.
+<DL><DT><DD></DL><P>
+<A NAME="data"></A>
+<A NAME="DOC.99.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void* data</B></TT>
+<DD>
+User-definable data.
+Passed on to all the activation hooks.
+<DL><DT><DD></DL><P>
+<A NAME="x"></A>
+<A NAME="DOC.99.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int x</B></TT>
+<DD>
+X coordinate of upper left corner
+<DL><DT><DD></DL><P>
+<A NAME="y"></A>
+<A NAME="DOC.99.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int y</B></TT>
+<DD>
+Y coordinate of upper left corner
+<DL><DT><DD></DL><P>
+<A NAME="w"></A>
+<A NAME="DOC.99.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int w</B></TT>
+<DD>
+Width of rectangle
+<DL><DT><DD></DL><P>
+<A NAME="h"></A>
+<A NAME="DOC.99.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int h</B></TT>
+<DD>
+Height of rectangle
+<DL><DT><DD></DL><P>
+<A NAME="(*lmbfunc)"></A>
+<A NAME="DOC.99.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void (*lmbfunc)(void* )</B></TT>
+<DD>
+Left mousebutton activation
+<DL><DT><DD></DL><P>
+<A NAME="(*mmbfunc)"></A>
+<A NAME="DOC.99.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void (*mmbfunc)(void* )</B></TT>
+<DD>
+Middle mousebutton activation
+<DL><DT><DD></DL><P>
+<A NAME="(*rmbfunc)"></A>
+<A NAME="DOC.99.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void (*rmbfunc)(void* )</B></TT>
+<DD>
+Right mousebutton activation
+<DL><DT><DD></DL><P>
+<A NAME="(*pfunc)"></A>
+<A NAME="DOC.99.12"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void (*pfunc)(void* )</B></TT>
+<DD>
+Mouse passing over without buttons pressed
+<DL><DT><DD></DL><P>
+<A NAME="inputs"></A>
+<A NAME="DOC.99.13"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>ulong inputs</B></TT>
+<DD>
+Mask of controllers to respond to.
+IA_CTL_MOUSE and/or IA_CTL_JOY.
+<DL><DT><DD></DL><P>
+<A NAME="id"></A>
+<A NAME="DOC.99.14"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>ulong id</B></TT>
+<DD>
+Mandatory ID.
+iarea_check() returns this when a check is positive.
+It would be daft to supply a zero value.
+Zero means failure.
+<DL><DT><DD></DL><P>
+<A NAME="mb"></A>
+<A NAME="DOC.99.15"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>Uint8 mb</B></TT>
+<DD>
+Mousebutton mask.
+IA_LMBMASK, IA_MMB_MASK and/or IA_RMB_MASK.
+These are all aliases for SDL flags with slightly
+longer names, because I am terminally lazy.
+<DL><DT><DD></DL><P>
+<A NAME="jb"></A>
+<A NAME="DOC.99.16"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>Uint8 jb</B></TT>
+<DD>
+Mask of joybuttons.
+These have no presets, as which button is
+the first and which is the last depends
+on the joystick/pad in question. Bit #0
+will most likely be near one of your thumbs, though.
+<DL><DT><DD></DL><P>
+<A NAME="tick"></A>
+<A NAME="DOC.99.17"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>Uint32 tick</B></TT>
+<DD>
+Point when this inputarea was last activated.
+This is the point at which this inputarea was last activated.
+It uses SDL_GetTicks() to get its value, but the way delays
+are calculated shouldn't be affected by the 49-day limit.
+
+<P>Note, however, that there is something else you are doing
+wrong if you have a game running for 49 days.
+<DL><DT><DD></DL><P>
+<A NAME="delay"></A>
+<A NAME="DOC.99.18"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>Uint32 delay</B></TT>
+<DD>
+Delay in milliseconds before allowing another activation.
+Use the IA_DELAY tag when creating to set this.
+<DL><DT><DD></DL><P></DL>
+<DL><DT><DT><B>Author:</B><DD>Ronny Bangsund
+
+<DT><B>See Also:</B><DD><!1><A HREF="iarea_new.html">iarea_new</A>(), <!1><A HREF="iarea_free.html">iarea_free</A>()<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

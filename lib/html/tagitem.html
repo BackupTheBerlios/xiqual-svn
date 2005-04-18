@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>typedef struct  tagitem</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file include/xitags.h:<H2>typedef struct  <A HREF="#DOC.DOCU">tagitem</A></H2></H2><BLOCKQUOTE> A tagitem.</BLOCKQUOTE>
+
+<HR>
+<P><DL>
+ <DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>ulong <B><A HREF="#DOC.124.1">tag</A></B>
+<DD><I> A program/library-specific ID.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>ulong <B><A HREF="#DOC.124.2">data</A></B>
+<DD><I> The tagitem's data.</I>
+</DL></P>
+
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+A tagitem.
+Many Xiqual function calls accept an array of these as its
+sole parameter.
+</BLOCKQUOTE>
+<DL>
+
+<A NAME="tag"></A>
+<A NAME="DOC.124.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>ulong tag</B></TT>
+<DD>
+A program/library-specific ID.
+Should be fairly unique within the program or library, and not equal to one
+of TAG_DONE, TAG_IGNORE, TAG_MORE or TAG_SKIP.
+<DL><DT><DD></DL><P>
+<A NAME="data"></A>
+<A NAME="DOC.124.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>ulong data</B></TT>
+<DD>
+The tagitem's data.
+Can be just about anything that fits in a pointer-sized integer. Common uses are flags, pointers
+to further data/strings or simply integers.
+<DL><DT><DD></DL><P></DL>
+<DL><DT><DT><B>Author:</B><DD>Ronny Bangsund
+
+<DT><B>See Also:</B><DD><!1><A HREF="tag_alloclist.html">tag_alloclist</A>(), <!1><A HREF="tag_freelist.html">tag_freelist</A>(), <!1><A HREF="tag_finditem.html">tag_finditem</A>(), <!1><A HREF="tag_getdata.html">tag_getdata</A>(), <!1><A HREF="tag_next.html">tag_next</A>()<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

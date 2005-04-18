@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>typedef struct  HashTable</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file include/hash.h:<H2>typedef struct  <A HREF="#DOC.DOCU">HashTable</A></H2></H2><BLOCKQUOTE> Non-resizing hash table.</BLOCKQUOTE>
+
+<HR>
+<P><DL>
+ <DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>ulong <B><A HREF="#DOC.98.1">size</A></B>
+<DD><I> Number of buckets.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>ulong <B><A HREF="#DOC.98.2">load</A></B>
+<DD><I> Maximum number of elements per bucket.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>ulong <B><A HREF="#DOC.98.3">count</A></B>
+<DD><I> Number of elements right now</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>ulong <B><A HREF="#DOC.98.4">nodesize</A></B>
+<DD><I> Size of nodes.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>struct  <!1><A HREF="HashNode.html">HashNode</A> <B><A HREF="#DOC.98.5">**buckets</A></B>
+<DD><I> The actual hash array </I>
+</DL></P>
+
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Non-resizing hash table.
+Better make sure you allocate enough space for all
+the data you need, or use the forthcoming extension
+called "hash carousels".
+</BLOCKQUOTE>
+<DL>
+
+<A NAME="size"></A>
+<A NAME="DOC.98.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>ulong size</B></TT>
+<DD>
+Number of buckets.
+A bucket holds approximately the number of nodes
+specified by load on creation. This is not a real
+guarantee, though, as the hashing algorithm can't
+guarantee complete useless in hashes.
+<DL><DT><DD></DL><P>
+<A NAME="load"></A>
+<A NAME="DOC.98.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>ulong load</B></TT>
+<DD>
+Maximum number of elements per bucket.
+When the average elements per bucket reaches
+this number, the hash table is definitely full.
+
+<P>The current implementation refuses to add nodes
+beyond this point.
+<DL><DT><DD></DL><P>
+<A NAME="count"></A>
+<A NAME="DOC.98.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>ulong count</B></TT>
+<DD>
+Number of elements right now
+<DL><DT><DD></DL><P>
+<A NAME="nodesize"></A>
+<A NAME="DOC.98.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>ulong nodesize</B></TT>
+<DD>
+Size of nodes.
+This allows you to have custom nodes - the only
+requirement is that the first fields are the same
+as the HashNode structure.
+<DL><DT><DD></DL><P>
+<A NAME="**buckets"></A>
+<A NAME="DOC.98.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>struct  <!1><A HREF="HashNode.html">HashNode</A> **buckets</B></TT>
+<DD>
+The actual hash array
+Each bucket is a pointer to one or more hash nodes.
+Specify load to set an approximate maximum.
+<DL><DT><DD></DL><P></DL>
+<DL><DT><DT><B>See Also:</B><DD><!1><A HREF="hash_new.html">hash_new</A>(), <!1><A HREF="HashNode.html">HashNode</A><BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

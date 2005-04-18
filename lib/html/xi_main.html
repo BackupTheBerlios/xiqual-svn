@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>int xi_main</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file xigfx/xi_main.c:<H2>int <A HREF="#DOC.DOCU">xi_main</A></H2><H2>()</H2><BLOCKQUOTE> Handle input and GUI.</BLOCKQUOTE>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Handle input and GUI.
+Update mouse cursor (if you supplied a new one), pump the input
+queue to get key/mouse/joystate and update the LUI subsystem's
+gadgets. If a gadget is activated, all those things are handled.
+
+<P>Use xi_init() or xi_inittag() to set an
+XI_MAINHOOK tag pointing to your input handler.
+
+<P>The hook will be called with a pointer to a keystate, a modstate and a
+mousestate (Uint8 *, SDLMod and Uint8, respectively), and two integers
+(int) with the current mouse coordinates.
+
+<P>Note: You'll have to use SDL's joystick functions yourself in this main loop
+to read any joysticks, as Xiqual currently has no code relating to joysticks.
+This might change if anyone ever wants even easier handling.
+
+<P>Warning: Do not run this function if you haven't initialised
+Xiqual with xi_init() yet.
+</BLOCKQUOTE>
+<DL><DT><DT><B>Author:</B><DD>Ronny Bangsund
+
+<DT><B>See Also:</B><DD><!1><A HREF="xi_init.html">xi_init</A>(), <!1><A HREF="xi_inittag.html">xi_inittag</A>(), <!1><A HREF="xi_quit.html">xi_quit</A>()<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

@@ -1,0 +1,72 @@
+dnl Basic configure script, with networking bits stolen from SDL_net
+AC_INIT(iffwrite.c)
+AM_CONFIG_HEADER(config.h)
+
+MAJOR_VERSION=0
+MINOR_VERSION=10
+MICRO_VERSION=0
+VERSION=$MAJOR_VERSION.$MINOR_VERSION.$MICRO_VERSION
+AC_SUBST(MAJOR_VERSION)
+AC_SUBST(MINOR_VERSION)
+AC_SUBST(MICRO_VERSION)
+AC_SUBST(VERSION)
+AC_SUBST(DATADIR)
+
+AC_CANONICAL_HOST
+AC_CANONICAL_TARGET
+
+AM_INIT_AUTOMAKE(Xiqual, $VERSION)
+
+echo Configuring $PACKAGE $VERSION
+
+dnl Check for tools
+AC_PROG_CC
+AC_PROG_INSTALL
+AC_PROG_RANLIB
+
+dnl Check for headers/compiler options
+dnl FIXME: Actually do something with these..
+AC_HEADER_STDC
+AC_C_INLINE
+AC_C_CONST
+AC_CHECK_HEADERS(SDL/SDL.h, echo "SDL.h found - proceeding normally", echo "SDL.h not found! Exiting.";exit 2)
+AC_CHECK_HEADERS(SDL/SDL_image.h, echo "SDL_image.h exists - final requirement satisfied", \
+	echo "SDL_image.h is not available! libxigfx requires it to compile!"; exit 2)
+AC_CHECK_HEADERS(SDL/SDL_mixer.h, echo "SDL_mixer found - initialisation available from xi_init()")
+AC_CHECK_HEADERS(SDL/SDL_ttf.h, echo "SDL_ttf found - initialisation available from xi_init()")
+
+dnl Figure out which networking libraries to use
+dnl Not actually used anywhere until I
+dnl 1)add a networking example, and 2)make mingw32 compile Xiqual
+case "$target" in
+	*-*-cygwin* | *-*-mingw32*)
+		INETLIB="-lwsock32"
+		if test "$build" != "$target"; then # cross-compiling
+			ac_default_prefix=/usr/local/cross-tools/i386-mingw32msvc
+		fi
+        ;;
+	sparc*-*-solaris*)
+		INETLIB="-lsocket -lnsl"	
+		;;
+	*-*-qnx*)
+		INETLIB="-lsocket"
+		;;
+	*)
+		INETLIB=""
+		;;
+esac
+AC_SUBST(INETLIB)
+
+AC_OUTPUT([Makefile
+include/Makefile
+xitools/Makefile
+xigfx/Makefile
+xisnd/Makefile
+xinet/Makefile
+lui/Makefile
+xiqual-config
+indexHeader.inc
+classHeader.inc
+indexFooter.inc
+classFooter.inc
+],[chmod +x xiqual-config])

@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>int str_getvalue</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file xitools/str_getvalue.c:<H2>int <A HREF="#DOC.DOCU">str_getvalue</A></H2><H2>(int* <!1><A HREF="OptNode.2.html#DOC.120.4.4">val</A>,  char* str,  int offset)</H2><BLOCKQUOTE> Converts a string to an integer.</BLOCKQUOTE>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Converts a string to an integer.
+The string value '*string' ia converted into an integer,
+and stored '*var'.<br>
+This function is capable of returning multiple values within
+one string if they are separated by white spaces. Example:<br>
+
+<P>offset = str_getvalue(&val, "1 2 3 4", offset);
+</BLOCKQUOTE>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="OptNode.2.html#DOC.120.4.4">val</A> Pointer to an integer <!1><A HREF="variable.html">variable</A> to <!1><A HREF="xiview.html#DOC.111.4">store</A> the next
+converted value.
+<BR><B>str</B> -  Pointer to the NULL-terminated <!1><A HREF="variable.html#DOC.113.5">string</A> to <!1><A HREF="autofile.html#DOC.94.3">read</A> from.
+<BR><B>offset</B> -  Offset into the <!1><A HREF="variable.html#DOC.113.5">string</A> to <!1><A HREF="autofile.html#DOC.94.3">read</A> from next.
+It should be zero on first call.
+<BR><DT><B>Returns:</B><DD>  Offset to next value within the string. This can be used
+on the next call to convert the next value. Returns zero when it
+reaches the end of the string.
+<BR><DT><B>Author:</B><DD>Shane O'Neill
+
+<DT><B>See Also:</B><DD><!1><A HREF="cfg_loadprefs.html">cfg_loadprefs</A>()<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

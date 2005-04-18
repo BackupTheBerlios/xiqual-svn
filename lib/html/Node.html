@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>typedef struct  Node</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file include/lists.h:<H2>typedef struct  <A HREF="#DOC.DOCU">Node</A></H2></H2><BLOCKQUOTE> A simple Node.</BLOCKQUOTE>
+
+<HR>
+<P><DL>
+ <DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>struct  <!1><A HREF="Node.html">Node</A> <B><A HREF="#DOC.102.1">*next</A></B>
+<DD><I> Next node in List.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>struct  <!1><A HREF="Node.html">Node</A> <B><A HREF="#DOC.102.2">*prev</A></B>
+<DD><I> Previous Node in List.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void* <B><A HREF="#DOC.102.3">data</A></B>
+<DD><I> Node-specific data.</I>
+</DL></P>
+
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+A simple Node.
+Every programmer probably knows about lists and nodes, so I won't elaborate.
+
+<P>Xiqual List functions make no assumptions about the contents and size of a
+Node structure passed to them. If you have larger structures with data to be
+freed, the destructor callback is useful.
+</BLOCKQUOTE>
+<DL>
+
+<A NAME="*next"></A>
+<A NAME="DOC.102.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>struct  <!1><A HREF="Node.html">Node</A> *next</B></TT>
+<DD>
+Next node in List.
+It can be any structure starting with a Node structure, as Xiqual does not
+assume anything about data beyond the Node header.
+<DL><DT><DD></DL><P>
+<A NAME="*prev"></A>
+<A NAME="DOC.102.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>struct  <!1><A HREF="Node.html">Node</A> *prev</B></TT>
+<DD>
+Previous Node in List.
+It can be any structure starting with a Node structure, as Xiqual does not
+assume anything about data beyond the Node header.
+<DL><DT><DD></DL><P>
+<A NAME="data"></A>
+<A NAME="DOC.102.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void* data</B></TT>
+<DD>
+Node-specific data.
+Xiqual routines use this pointer as a string pointer to a name,
+or a pointer to sound/graphics data.
+<DL><DT><DD></DL><P></DL>
+<DL><DT><DT><B>Author:</B><DD>Ronny Bangsund
+
+<DT><B>See Also:</B><DD><!1><A HREF="List.html">List</A><BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

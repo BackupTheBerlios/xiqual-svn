@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>typedef struct  variable</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file include/xicommon.h:<H2>typedef struct  <A HREF="#DOC.DOCU">variable</A></H2></H2><BLOCKQUOTE> A variable.</BLOCKQUOTE>
+
+<HR>
+<P><DL>
+ <DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>struct  <!1><A HREF="variable.html">variable</A> <B><A HREF="#DOC.113.1">*next</A></B>
+<DD><I> Next variable in List</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>struct  <!1><A HREF="variable.html">variable</A> <B><A HREF="#DOC.113.2">*prev</A></B>
+<DD><I> Previous variable in List</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>char* <B><A HREF="#DOC.113.3">name</A></B>
+<DD><I> The mandatory name of the variable.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>ulong <B><A HREF="#DOC.113.4">type</A></B>
+<DD><I> Type of variable, as listed in prefsh</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>char* <B><A HREF="#DOC.113.5">string</A></B>
+<DD><I> A string, if type is <b>PREFS_STRING</b></I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.113.6">value</A></B>
+<DD><I> An integer (signed) if type is <b>V_VALUE</b> or <b>V_BOOL</b>.</I>
+</DL></P>
+
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+A variable.
+This extended node contains the type of variable, currently one of
+<b>V_STRING</b>, <b>V_VALUE</b> and <b>V_BOOL</b> and
+the related data.
+</BLOCKQUOTE>
+<DL>
+
+<A NAME="*next"></A>
+<A NAME="DOC.113.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>struct  <!1><A HREF="variable.html">variable</A> *next</B></TT>
+<DD>
+Next variable in List
+<DL><DT><DD></DL><P>
+<A NAME="*prev"></A>
+<A NAME="DOC.113.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>struct  <!1><A HREF="variable.html">variable</A> *prev</B></TT>
+<DD>
+Previous variable in List
+<DL><DT><DD></DL><P>
+<A NAME="name"></A>
+<A NAME="DOC.113.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>char* name</B></TT>
+<DD>
+The mandatory name of the variable.
+cfg_* functions will search by this only. Anything recognised by isalpha() is
+legal as a variable name. Locale settings may affect what is considered an
+alphabetical character.
+<DL><DT><DD></DL><P>
+<A NAME="type"></A>
+<A NAME="DOC.113.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>ulong type</B></TT>
+<DD>
+Type of variable, as listed in prefsh
+<DL><DT><DD></DL><P>
+<A NAME="string"></A>
+<A NAME="DOC.113.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>char* string</B></TT>
+<DD>
+A string, if type is <b>PREFS_STRING</b>
+<DL><DT><DD></DL><P>
+<A NAME="value"></A>
+<A NAME="DOC.113.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int value</B></TT>
+<DD>
+An integer (signed) if type is <b>V_VALUE</b> or <b>V_BOOL</b>.
+If a lone word without an equals sign is encountered in a
+configuration file, it is turned into a boolean variable.
+<DL><DT><DD></DL><P></DL>
+<DL><DT><DT><B>Author:</B><DD>Ronny Bangsund
+
+<DT><B>See Also:</B><DD><!1><A HREF="preferences.html">preferences</A>, cfg_newvar(), <!1><A HREF="xml_newdoc.html">xml_newdoc</A>(), <!1><A HREF="xmltag.2.html">xmltag</A><BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

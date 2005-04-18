@@ -1,0 +1,9 @@
+#!/bin/bash
+
+let n=10000
+
+while [ $n != 0 ]; do
+  $1 $2 >/dev/null
+  let n=n-1
+done
+

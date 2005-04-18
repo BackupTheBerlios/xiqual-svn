@@ -1,0 +1,58 @@
+Listed here are the different categories of Xiqual's API
+and how stable I currently think they are..
+Anything not listed as stable might be slightly modified or
+completely torn out (and not necessarily replaced) at my whim.
+
+O-RB
+
+
+Stable: #define Stable
+*Tags (it already was before I made my first implementation -
+ Xiqual is probably my third or so. Only bugfixes from now on.)
+*Tilesets (I like this implementation - more functions and rework
+ of the internal workings can be expected, but it won't affect the
+ current API. More functions may be added, but it seems good enough.)
+*Fonts (Bitmapped fonts have already been reworked once without the
+ API changing. The tools were modified slightly, though. What's there
+ is all I care about getting in. TTF is normally the way to go.)
+*MD5 (Not originally my code, and I'm satisfied with what little
+ I added to it. A SHA1 set of functions may be added when I find a
+ nice and clean one. Possibly some crypto-routines for the xinet
+ system, too.)
+*Views (Even though it has two functions for showing/hiding, unlike
+ LUI, I think it's OK this way - macros can fix this minor issue)
+*Linked lists (can't even think of any functions to add - a hashing
+ toolkit is planned. Hashes will be built from these lists)
+*Configuration parser (it works, so I won't try to "fix" it again)
+*Strings (the few string functions so far won't be removed)
+*SDL setup (xi_init() will get more tags, but the call will remain
+ the same forever..)
+*xi_main() (an alternative mainloop which uses event-driven input
+ may be added)
+
+Unstable:
+*Autofiles (I want to do more here, possibly make it adaptable to
+ filetypes and memory regions without the user having to worry
+ too much about the implementation - hooks are the real interface
+ to sections of data then)
+*LUI (HIGHLY unstable..what functions there are might remain, but
+ methods change on a daily basis, or nearly)
+*inputareas (The interface is not entirely complete - parts relating
+ to joysticks are not at all implemented! It may take some reworking
+ in the future)
+*IFF (the current API may well be deprecated, but remain in the
+ library, while a proper parser is added)
+*Network interfaces (the server-side code is still somewhat undefined,
+ some client helper functions have been added. Some rewrites are
+ might expected.)
+*Things (more server-side stuff that will see some use after I've
+ actually started on a game - and it will probably see great changes..
+ Most likely candidate for hash routines testing.)
+*cgi (I've just made the bare minimum to do some things I needed;
+ more of the automation functions are needed)
+*xinet (I find new crap to stuff in this all the time, but the basic
+ API hopefully won't change anymore. More functions for both servers
+ and clients will probably be added.)
+*xml (This unholy mess is something I added just for "fun"; expect changes
+ breaking things here and there. Loading and reading of XML now works as I
+ want it to. Parsing hooks and saving will be unstable for a while.)

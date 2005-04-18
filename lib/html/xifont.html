@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>typedef struct  xifont</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file include/fonts.h:<H2>typedef struct  <A HREF="#DOC.DOCU">xifont</A></H2></H2><BLOCKQUOTE> Xiqual font structure.</BLOCKQUOTE>
+
+<HR>
+<P><DL>
+ <DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>struct  <!1><A HREF="xifont.html">xifont</A> <B><A HREF="#DOC.95.1">*next</A></B>
+<DD><I> Next font pointer for putting this in a List</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>struct  <!1><A HREF="xifont.html">xifont</A> <B><A HREF="#DOC.95.2">*prev</A></B>
+<DD><I> Previous font pointer for putting this in a List</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>char* <B><A HREF="#DOC.95.3">name</A></B>
+<DD><I> Optional name for searching in lists</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>char* <B><A HREF="#DOC.95.4">author</A></B>
+<DD><I> Optional author string</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>ulong <B><A HREF="#DOC.95.5">maskcol</A></B>
+<DD><I> Transparent colour</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>SDL_Rect <B><A HREF="#DOC.95.6">dst</A></B>
+<DD><I> Destination rectangle for slightly faster operation</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>Uint16 <B><A HREF="#DOC.95.7">w</A></B>
+<DD><I> Width of each symbol</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>Uint16 <B><A HREF="#DOC.95.8">h</A></B>
+<DD><I> Height of each symbol</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>Uint16 <B><A HREF="#DOC.95.9">spacing</A></B>
+<DD><I> Extra space to the right of each glyph when printed</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>SDL_Surface* <B><A HREF="#DOC.95.10">glyph</A></B>[256]
+<DD><I> The table of glyphs.</I>
+</DL></P>
+
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Xiqual font structure.
+Xiqual fonts are very simple fonts built from
+one or more equal-sized images. It's possible
+to have from one to 256 different symbols in
+a font, as it's based on the ASCII table.
+
+<P>For more advanced options, wide character
+support and more than 256 symbols, use a
+Truetype font.
+</BLOCKQUOTE>
+<DL>
+
+<A NAME="*next"></A>
+<A NAME="DOC.95.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>struct  <!1><A HREF="xifont.html">xifont</A> *next</B></TT>
+<DD>
+Next font pointer for putting this in a List
+<DL><DT><DD></DL><P>
+<A NAME="*prev"></A>
+<A NAME="DOC.95.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>struct  <!1><A HREF="xifont.html">xifont</A> *prev</B></TT>
+<DD>
+Previous font pointer for putting this in a List
+<DL><DT><DD></DL><P>
+<A NAME="name"></A>
+<A NAME="DOC.95.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>char* name</B></TT>
+<DD>
+Optional name for searching in lists
+<DL><DT><DD></DL><P>
+<A NAME="author"></A>
+<A NAME="DOC.95.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>char* author</B></TT>
+<DD>
+Optional author string
+<DL><DT><DD></DL><P>
+<A NAME="maskcol"></A>
+<A NAME="DOC.95.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>ulong maskcol</B></TT>
+<DD>
+Transparent colour
+<DL><DT><DD></DL><P>
+<A NAME="dst"></A>
+<A NAME="DOC.95.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>SDL_Rect dst</B></TT>
+<DD>
+Destination rectangle for slightly faster operation
+<DL><DT><DD></DL><P>
+<A NAME="w"></A>
+<A NAME="DOC.95.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>Uint16 w</B></TT>
+<DD>
+Width of each symbol
+<DL><DT><DD></DL><P>
+<A NAME="h"></A>
+<A NAME="DOC.95.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>Uint16 h</B></TT>
+<DD>
+Height of each symbol
+<DL><DT><DD></DL><P>
+<A NAME="spacing"></A>
+<A NAME="DOC.95.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>Uint16 spacing</B></TT>
+<DD>
+Extra space to the right of each glyph when printed
+<DL><DT><DD></DL><P>
+<A NAME="glyph"></A>
+<A NAME="DOC.95.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>SDL_Surface* glyph[256]</B></TT>
+<DD>
+The table of glyphs.
+Theoretically, this could be expanded to handle
+wide characters. In practice, I don't think anyone
+could be arsed to actually use it.
+<DL><DT><DD></DL><P></DL>
+<DL><DT><DT><B>Author:</B><DD>Ronny Bangsund
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

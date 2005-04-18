@@ -1,0 +1,252 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>typedef struct  xiglob</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file include/xisetup.h:<H2>typedef struct  <A HREF="#DOC.DOCU">xiglob</A></H2></H2><BLOCKQUOTE> Global structure for Xiqual's automatic handling of miscellaneous data</BLOCKQUOTE>
+
+<HR>
+<P><DL>
+ <DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>SDL_Surface* <B><A HREF="#DOC.122.1">screen</A></B>
+<DD><I> This is the SDL surface returned by SDL_SetVideoMode()</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="xiview.html">xiview</A>* <B><A HREF="#DOC.122.2">cursor</A></B>
+<DD><I> An xiview for the main cursor</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.122.3">hotx</A></B>
+<DD><I> Cursor X offset</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.122.4">hoty</A></B>
+<DD><I> Cursor Y offset</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>SDL_Surface* <B><A HREF="#DOC.122.5">tscreen</A></B>
+<DD><I> Default surface for tile blits.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>struct  <!1><A HREF="xitiles.html">xitiles</A> <B><A HREF="#DOC.122.6">*tileset</A></B>
+<DD><I> Default tileset to blit from</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.122.7">audio_rate</A></B>
+<DD><I> Sample rate.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.122.8">audio_chan</A></B>
+<DD><I> Number of channels to use.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.122.9">numchans</A></B>
+<DD><I> Maximum number of channels to mix.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.122.10">audio_bufsize</A></B>
+<DD><I> Size of audio buffers.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>Uint16 <B><A HREF="#DOC.122.11">audio_fmt</A></B>
+<DD><I> Audio format.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="List.html">List</A> <B><A HREF="#DOC.122.12">sounds</A></B>
+<DD><I> Sound nodes.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="List.html">List</A> <B><A HREF="#DOC.122.13">music</A></B>
+<DD><I> Music nodes.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="List.html">List</A> <B><A HREF="#DOC.122.14">images</A></B>
+<DD><I> Image nodes.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="List.html">List</A> <B><A HREF="#DOC.122.15">sprites</A></B>
+<DD><I> Sprite nodes.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.122.16">(*mainloop)</A></B>(Uint8* keystate, SDLMod modstate, Uint8 mousestate, int mx, int my)
+<DD><I> User-definable hook, called once each time xi_main() is called.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>SDL_Surface* <B><A HREF="#DOC.122.17">mesh</A></B>
+<DD><I> Mesh overlay for disabled gadgets.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="gadget.html">gadget</A>* <B><A HREF="#DOC.122.18">hl</A></B>
+<DD><I> Pointer to the currently highlighted gadget.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="List.html">List</A> <B><A HREF="#DOC.122.19">gadgets</A></B>
+<DD><I> List of LUI gadgets.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="List.html">List</A> <B><A HREF="#DOC.122.20">inputs</A></B>
+<DD><I> List of input areas.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="lui_msg.html">lui_msg</A>* <B><A HREF="#DOC.122.21">msg</A></B>
+<DD><I> Currently shown message box</I>
+</DL></P>
+
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Global structure for Xiqual's automatic handling of miscellaneous data</BLOCKQUOTE>
+<DL>
+
+<A NAME="screen"></A>
+<A NAME="DOC.122.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>SDL_Surface* screen</B></TT>
+<DD>
+This is the SDL surface returned by SDL_SetVideoMode()
+<DL><DT><DD></DL><P>
+<A NAME="cursor"></A>
+<A NAME="DOC.122.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="xiview.html">xiview</A>* cursor</B></TT>
+<DD>
+An xiview for the main cursor
+<DL><DT><DD></DL><P>
+<A NAME="hotx"></A>
+<A NAME="DOC.122.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int hotx</B></TT>
+<DD>
+Cursor X offset
+<DL><DT><DD></DL><P>
+<A NAME="hoty"></A>
+<A NAME="DOC.122.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int hoty</B></TT>
+<DD>
+Cursor Y offset
+<DL><DT><DD></DL><P>
+<A NAME="tscreen"></A>
+<A NAME="DOC.122.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>SDL_Surface* tscreen</B></TT>
+<DD>
+Default surface for tile blits.
+
+<DL><DT><DT><B>See Also:</B><DD><!1><A HREF="xit_setdefaults.html">xit_setdefaults</A>(), <!1><A HREF="xit_qdraw.html">xit_qdraw</A>()<BR><DD></DL><P>
+<A NAME="*tileset"></A>
+<A NAME="DOC.122.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>struct  <!1><A HREF="xitiles.html">xitiles</A> *tileset</B></TT>
+<DD>
+Default tileset to blit from
+<DL><DT><DD></DL><P>
+<A NAME="audio_rate"></A>
+<A NAME="DOC.122.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int audio_rate</B></TT>
+<DD>
+Sample rate.
+Measured in samples per second. Default is 44100 Hz.
+<DL><DT><DD></DL><P>
+<A NAME="audio_chan"></A>
+<A NAME="DOC.122.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int audio_chan</B></TT>
+<DD>
+Number of channels to use.
+Use 1 for mono and 2 for stereo.
+<DL><DT><DD></DL><P>
+<A NAME="numchans"></A>
+<A NAME="DOC.122.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int numchans</B></TT>
+<DD>
+Maximum number of channels to mix.
+Default is eight.
+<DL><DT><DD></DL><P>
+<A NAME="audio_bufsize"></A>
+<A NAME="DOC.122.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int audio_bufsize</B></TT>
+<DD>
+Size of audio buffers.
+This doesn't have to be a particularly large number, but must be
+a factor of two. Defaults to 4096 bytes.
+<DL><DT><DD></DL><P>
+<A NAME="audio_fmt"></A>
+<A NAME="DOC.122.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>Uint16 audio_fmt</B></TT>
+<DD>
+Audio format.
+The format definitions are in SDL_mixer.h.
+<DL><DT><DD></DL><P>
+<A NAME="sounds"></A>
+<A NAME="DOC.122.12"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="List.html">List</A> sounds</B></TT>
+<DD>
+Sound nodes.
+Contents TBA.
+<DL><DT><DD></DL><P>
+<A NAME="music"></A>
+<A NAME="DOC.122.13"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="List.html">List</A> music</B></TT>
+<DD>
+Music nodes.
+Contents TBA.
+<DL><DT><DD></DL><P>
+<A NAME="images"></A>
+<A NAME="DOC.122.14"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="List.html">List</A> images</B></TT>
+<DD>
+Image nodes.
+Contents TBA.
+<DL><DT><DD></DL><P>
+<A NAME="sprites"></A>
+<A NAME="DOC.122.15"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="List.html">List</A> sprites</B></TT>
+<DD>
+Sprite nodes.
+Contents TBA.
+<DL><DT><DD></DL><P>
+<A NAME="(*mainloop)"></A>
+<A NAME="DOC.122.16"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void (*mainloop)(Uint8* keystate, SDLMod modstate, Uint8 mousestate, int mx, int my)</B></TT>
+<DD>
+User-definable hook, called once each time xi_main() is called.
+
+<DL><DT><DT><B>Parameters:</B><DD><B>keystate</B> -  A pointer to an array of Uint8. Currently pressed keys are non-zero.
+<BR><B>modstate</B> -  State of modifier keys
+<BR><B>mousestate</B> -  Flags for current mouse state (buttons).
+<BR><B>mx</B> -  Current X position of mouse <!1><A HREF="xiglob.html#DOC.122.2">cursor</A> within the main SDL surface
+<BR><B>my</B> -  Current Y position of mouse <!1><A HREF="xiglob.html#DOC.122.2">cursor</A> within the main SDL surface
+<BR><DT><B>Author:</B><DD>Ronny Bangsund
+
+<DT><B>See Also:</B><DD><!1><A HREF="xi_main.html">xi_main</A>(), SDL_input.h<BR><DD></DL><P>
+<A NAME="mesh"></A>
+<A NAME="DOC.122.17"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>SDL_Surface* mesh</B></TT>
+<DD>
+Mesh overlay for disabled gadgets.
+When a gadget is "ghosted", this surface is copied over it.
+
+<DL><DT><DT><B>See Also:</B><DD><!1><A HREF="lui_ghost.html">lui_ghost</A>()<BR><DD></DL><P>
+<A NAME="hl"></A>
+<A NAME="DOC.122.18"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="gadget.html">gadget</A>* hl</B></TT>
+<DD>
+Pointer to the currently highlighted gadget.
+NULL if the cursor is not hovering above a gadget
+that can be highlighted. You are free to abuse the
+highlight method of a gadget for just knowing when
+the cursor is above it.
+
+<DL><DT><DT><B>See Also:</B><DD>lui_highlight(), <!1><A HREF="gadget.html">gadget</A><BR><DD></DL><P>
+<A NAME="gadgets"></A>
+<A NAME="DOC.122.19"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="List.html">List</A> gadgets</B></TT>
+<DD>
+List of LUI gadgets.
+Any gadgets in this list are automatically freed
+when xi_quit()/lui_quit() is called.
+<DL><DT><DD></DL><P>
+<A NAME="inputs"></A>
+<A NAME="DOC.122.20"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="List.html">List</A> inputs</B></TT>
+<DD>
+List of input areas.
+Any inputs in this list are automatically freed
+when xi_quit()/lui_quit() is called.
+<DL><DT><DD></DL><P>
+<A NAME="msg"></A>
+<A NAME="DOC.122.21"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="lui_msg.html">lui_msg</A>* msg</B></TT>
+<DD>
+Currently shown message box
+<DL><DT><DD></DL><P></DL>
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

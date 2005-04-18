@@ -1,0 +1,19 @@
+Visual C++:
+To compile Xiqual programs without SDL (only relying on xitools, xinet,
+and/or xicgi), add the .lib files to your project, then specify the
+full path to the Xiqual include directory in Settings->C/C++->Preprocessor.
+
+If using SDL, you will (by default) require SDL.lib, SDLmain.lib,
+SDL_mixer.lib and SDL_image.lib. If your mixer library isn't statically
+compiled against Vorbis libraries, you also need ogg.lib, vorbis.lib
+and vorbisfile.lib, or _static versions of those. Header directories for
+each set of libraries should be added, too. zlib is usually required by
+some of the SDL libraries.
+
+(Anyone want to write a wizard?)
+
+Grab the installer packages with pre-compiled SDL libraries if you're
+not in the mood to compile all of the dependencies yourself.
+
+MingW32:
+Unsupported. I don't care.

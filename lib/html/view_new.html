@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>xiview* view_new</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file xigfx/views.c:<H2><!1><A HREF="xiview.html">xiview</A>* <A HREF="#DOC.DOCU">view_new</A></H2><H2>(ulong tag1,<BR>&nbsp; ... )</H2><BLOCKQUOTE> Allocate a small chunk of display memory with back store.</BLOCKQUOTE>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Allocate a small chunk of display memory with back store.
+This structure can be used for sprites, cursors, message boxes or anything
+else that might need to display and keep its background for re-blitting later.
+
+<P>Accepted tags:
+
+<P><B>XIVT_FLAGS</B>: The flags are <B>XIV_FILLBACK</B> to fill the created rectangle
+in view->image  with the specified background colour, <B>XIV_NOSTORE</B> to not create
+any storage for the background area and <B>XIV_NOKEY</B> to avoid colourkey blitting with
+the background colour as key (entire surface is copied instead of background showing
+through).
+
+<P><B>XIVT_SCREEN</B>: SDL surface to blit onto (need not be main screen).
+
+<P><B>XIVT_XPOS</B>, <B>XIVT_YPOS</B>: Position in suface to be blitted to.
+
+<P><B>XIVT_WIDTH</B>, <B>XIVT_HEIGHT</B>: Size of view and background storage, unless
+an image to be loaded is specified.
+
+<P><B>XIVT_BGCOL</B>: It's recommended that you use SDL_MapRGB() from the
+destination surface's format to set this, if you need it.
+
+<P><B>XIVT_IMAGE</B>: An SDL_image supported file to load and use as view->image.
+
+<P></BLOCKQUOTE>
+<DL><DT><DT><B>Author:</B><DD>Ronny Bangsund
+
+<DT><B>See Also:</B><DD><!1><A HREF="view_free.html">view_free</A>(), <!1><A HREF="view_show.html">view_show</A>(), <!1><A HREF="view_hide.html">view_hide</A>()<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>inputarea* iarea_new</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file xigfx/iarea.c:<H2><!1><A HREF="inputarea.html">inputarea</A>* <A HREF="#DOC.DOCU">iarea_new</A></H2><H2>(ulong tag1,<BR>&nbsp; ... )</H2><BLOCKQUOTE> Create a new inputarea.</BLOCKQUOTE>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Create a new inputarea.
+An inputarea is a spot on the screen that will respond
+to mouse/joystick buttons when the cursor is within its
+borders. The LUI system uses this for its gadgets.
+
+<P>Freeing an inputarea is a simple matter of removing it
+from its list and calling iarea_free().
+
+<P><h2>Supported tags</h2>
+
+<P><ul>
+<li>IA_DATA</li>
+Data to pass on to the hook functions.
+
+<P><li>IA_CLICK_HOOK</li>
+Left mousebutton hook.
+
+<P><li>IA_MCLICK_HOOK</li>
+Middle mousebutton hook.
+
+<P><li>IA_RCLICK_HOOK</li>
+Right mousebutton hook.
+
+<P><li>IA_PASS_HOOK</li>
+Pass-over hook. Called when no mousebuttons are pressed.
+
+<P><li>IA_INPUT</li>
+A mask of controllers to respond to. The choices are:
+<ul>
+<li>IA_CTL_MOUSE</li>
+Ordinary mouse, two or three buttons (unless you suffer from a Mac).
+<li>IA_CTL_JOY</li>
+Sticks and pads may break my code. Not implemented yet.
+</ul>
+
+<P><li>IA_MBUTTONS</li>
+Mask of mousebuttons to respond to.
+
+<P><li>IA_JBUTTONS</li>
+Mask of joybuttons to respond to. Note that only eight bits
+are available. Since joystick support hasn't been written
+yet, this will probably be expanded to include hats, too.
+And we could always hope that Z axis and
+throttle makes its way into the code..
+
+<P><li>IA_XPOS, IA_YPOS</li>
+Position of upper left corner of this inputarea.
+
+<P><li>IA_WIDTH, IA_HEIGHT</li>
+Size of this inputarea. Clicks/pass-over functions are
+not called outside its limits. Beware of overlapping
+regions. No effort will be made to handle overlaps.
+
+<P><li>IA_NAME</li>
+Optional name.
+
+<P><li>IA_ID</li>
+Identifier returned by iarea_check() when
+the inputarea matches.
+
+<P><li>IA_DELAY</li>
+Milliseconds to delay before allowing an inputarea
+to be clicked again. If less than this number of
+milliseconds have passed since clicking a button,
+iarea_check() returns zero. SDL_GetTicks() is called
+to get current ticks iff this tag has been specified.
+</ul>
+
+<P></BLOCKQUOTE>
+<DL><DT><DT><B>Parameters:</B><DD><B>tag1</B> -  First of a list of tags to specify settings.
+<BR><DT><B>Returns:</B><DD>  A new inputarea with all flags set according to
+the input tags.
+<BR><DT><B>See Also:</B><DD><!1><A HREF="iarea_check.html">iarea_check</A>(), <!1><A HREF="iarea_free.html">iarea_free</A>()<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>long mem_arrayset</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file xitools/mem_arrayset.c:<H2>long <A HREF="#DOC.DOCU">mem_arrayset</A></H2><H2>(int <!1><A HREF="xiview.html#DOC.111.11">x</A>,  int <!1><A HREF="xiview.html#DOC.111.12">y</A>,  int z,  ASpec* a,  long <!1><A HREF="OptNode.2.html#DOC.120.4.4">val</A>)</H2><BLOCKQUOTE> Access memory as a 1-, 2- or 3-dimensional array.</BLOCKQUOTE>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Access memory as a 1-, 2- or 3-dimensional array.
+This sets an element within dynamically allocated memory. <br>
+The memory can be accessed as a 1, 2 or 3 dimensional array,
+depending in the settings of ASpec. <br>
+The data pointer in the ASpec structure is of type 'long', 
+which means that the value may have to be 'type cast'. <br>
+Setting data will be more complex if a finer resolution is
+required. For the moment this will be up to the user to 
+sort out.
+</BLOCKQUOTE>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="xiview.html#DOC.111.11">x</A> The <!1><A HREF="xiview.html#DOC.111.11">x</A> offset in the array.
+<BR><B></B> - <!1><A HREF="xiview.html#DOC.111.12">y</A> The <!1><A HREF="xiview.html#DOC.111.12">y</A> offset in the array.
+<BR><B>z</B> -  The z offset in the array.
+<BR><B>ASpec</B> -  A pointer to an ASpec structure.
+<BR><B></B> - <!1><A HREF="OptNode.2.html#DOC.120.4.4">val</A> The <!1><A HREF="variable.html#DOC.113.6">value</A> to which the array element will be set.
+<BR><DT><B>Returns:</B><DD>  Always true
+<BR><DT><B>Author:</B><DD>Shane O'Neill
+
+<DT><B>See Also:</B><DD><!1><A HREF="mem_arrayget.html">mem_arrayget</A>()<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

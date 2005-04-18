@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> String tokeniser</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+<H2> <A HREF="#DOC.DOCU">String tokeniser</A></H2></H2>
+<HR>
+<DL>
+<DT>
+
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="str_tokenise"></A>
+<A HREF=str_tokenise.html><B>str_tokenise</B></A><DD><I> Create a tokeniser object from a string.</I>
+<DT>
+
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="str_freetoken"></A>
+<A HREF=str_freetoken.html><B>str_freetoken</B></A><DD><I> Free a tokeniser object.</I>
+</DL>
+<A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE>The GNU libc functions strtok() and strok_r() seem to be
+rather unsafe to use, so I wrote this replacement. It is
+not superfast (memory allocations to hold tokens), but
+will not mess up a threaded application, give you a whole
+bunch of valid tokens immediately, and is portable.
+
+<P>MingW32 seems to be missing strtok_r(), among other things.
+And the big fat warnings put me off using the strtok-family
+too much, anyway. I quote the BUGS section: "Never use these
+functions".</BLOCKQUOTE>
+<DL><DT><DD></DL><P> </body>
+</html>
+<HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>ulong iarea_check</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file xigfx/iarea.c:<H2>ulong <A HREF="#DOC.DOCU">iarea_check</A></H2><H2>(<!1><A HREF="inputarea.html">inputarea</A>* <!1><A HREF="gadget.html#DOC.107.19">ia</A>,  int curx,  int cury,<BR>&nbsp; Uint8 mousestate,  Uint8 joystate)</H2><BLOCKQUOTE> Checks an inputarea against cursor position and controller buttons.</BLOCKQUOTE>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Checks an inputarea against cursor position and controller buttons.
+If the supplied inputarea accepts the mouse/joybuttons currently
+pressed, the corresponding hook is called. An inputarea can respond
+to left, right and middle mousebutton for now.
+
+<P>If no buttons are pressed, the IA_PASS_HOOK function
+is called instead.
+
+<P>The ID is still returned if there is a delay
+that hasn't been finished yet.
+
+<P>Big fat FIXME: Xiqual doesn't currently actually initialise other
+controllers (joypads and sticks). Furthermore, the parameters
+should be expanded to allow for the hat.
+</BLOCKQUOTE>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="gadget.html#DOC.107.19">ia</A> Inputarea to compare against <!1><A HREF="xiglob.html#DOC.122.2">cursor</A> position
+<BR><B>curx</B> -  Current <!1><A HREF="xiglob.html#DOC.122.2">cursor</A> <!1><A HREF="xiview.html#DOC.111.11">x</A> coordinate
+<BR><B>cury</B> -  Current <!1><A HREF="xiglob.html#DOC.122.2">cursor</A> <!1><A HREF="xiview.html#DOC.111.12">y</A> coordinate
+<BR><B>mousestate</B> -  Mask of currently pressed mousebuttons
+<BR><B>joystate</B> -  Mask of currently pressed stick/pad buttons
+<BR><DT><B>Returns:</B><DD>  The inputarea's ID if a match was found.
+<BR><DT><B>Author:</B><DD>Ronny Bangsund
+
+<DT><B>See Also:</B><DD><!1><A HREF="iarea_new.html">iarea_new</A>()<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

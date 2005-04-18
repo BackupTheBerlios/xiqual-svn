@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> XML functions</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+<H2> <A HREF="#DOC.DOCU">XML functions</A></H2></H2>
+<HR>
+<DL>
+<DT>
+
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="xml_freedoc"></A>
+<A HREF=xml_freedoc.2.html><B>xml_freedoc</B></A><DD><I> Free an XML document.</I>
+<DT>
+
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="xml_newdoc"></A>
+<A HREF=xml_newdoc.2.html><B>xml_newdoc</B></A><DD><I> Creates an xmldoc structure from a string buffer.</I>
+<DT>
+
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="xml_loaddoc"></A>
+<A HREF=xml_loaddoc.2.html><B>xml_loaddoc</B></A><DD><I> Load an XML document and allocate an xmldoc structure.</I>
+<DT>
+
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="xml_savedoc"></A>
+<A HREF=xml_savedoc.2.html><B>xml_savedoc</B></A><DD><I> Save an XML document to a file.</I>
+<DT>
+
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="xml_addtaghook"></A>
+<A HREF=xml_addtaghook.2.html><B>xml_addtaghook</B></A><DD><I> Add a hook to handle a specific tag.</I>
+<DT>
+
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="xml_addentityhook"></A>
+<A HREF=xml_addentityhook.2.html><B>xml_addentityhook</B></A><DD><I> Add a hook function to handle an escaped character entity.</I>
+<DT>
+
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="xml_addgenentityhook"></A>
+<A HREF=xml_addgenentityhook.2.html><B>xml_addgenentityhook</B></A><DD><I> Add a generic hook function for all escaped entities.</I>
+<DT>
+
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="xml_addprocessinghook"></A>
+<A HREF=xml_addprocessinghook.2.html><B>xml_addprocessinghook</B></A><DD><I> Add a hook for a processing instruction.</I>
+<DT>
+
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="xml_addgentaghook"></A>
+<A HREF=xml_addgentaghook.2.html><B>xml_addgentaghook</B></A><DD><I> Add a hook that catches all unspecified tags.</I>
+<DT>
+
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="xml_parse"></A>
+<A HREF=xml_parse.2.html><B>xml_parse</B></A><DD><I> Walk through an XML document and call user-specified hooks.</I>
+<DT>
+
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="xml_prune"></A>
+<A HREF=xml_prune.2.html><B>xml_prune</B></A><DD><I> Walk through an XML document and remove unnecessary nodes.</I>
+<DT>
+
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="xmltag"></A>
+<A HREF=xmltag.html><B>xmltag</B></A><DD><I> An XML tag.</I>
+<DT>
+
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="xmldoc"></A>
+<A HREF=xmldoc.html><B>xmldoc</B></A><DD><I> The XML document structure.</I>
+</DL>
+<A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE>This set of functions, known as xixml, are meant for use with
+XML as a pure data format. Stylesheets of any kind aren't
+directly supported. All function calls are geared towards
+loading a whole document and only accepting the tags an API
+user desires.
+
+<P>To parse a document, you need to specify hooks for different
+tags or categories. You may also specify contexts they're to
+be found in. Finally, you could simply list the tags and
+contexts allowed, then clean out the undesirables with xml_prune().</BLOCKQUOTE>
+<DL><DT><DD></DL><P> </body>
+</html>
+<HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

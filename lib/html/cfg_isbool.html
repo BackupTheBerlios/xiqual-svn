@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>int cfg_isbool</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file xitools/cfg_isbool.c:<H2>int <A HREF="#DOC.DOCU">cfg_isbool</A></H2><H2>(char* <!1><A HREF="variable.html#DOC.113.6">value</A>)</H2><BLOCKQUOTE> Internal function for cfg_loadprefs().</BLOCKQUOTE>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Internal function for cfg_loadprefs().
+This will return <em>TRUE</em> if a string pointed to is a boolean value.
+There is a special case, however; if there is no string, it also
+returns <em>TRUE</em>. cfg_loadprefs() will pass the value from strtok_r()
+unchecked because I couldn't be arsed to do it any other way.
+</BLOCKQUOTE>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="variable.html#DOC.113.6">value</A> A <!1><A HREF="variable.html#DOC.113.5">string</A> pointer (probably).
+<BR><DT><B>Returns:</B><DD>  <em>TRUE</em> if the string pointed to is a boolean value, or NULL.
+<BR><DT><B>Author:</B><DD>Ronny Bangsund
+
+<DT><B>See Also:</B><DD><!1><A HREF="variable.html">variable</A>, <!1><A HREF="cfg_loadprefs.html">cfg_loadprefs</A>()<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

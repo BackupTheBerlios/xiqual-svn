@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>typedef struct  xiview</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file include/views.h:<H2>typedef struct  <A HREF="#DOC.DOCU">xiview</A></H2></H2><BLOCKQUOTE> This is a view, for use as sprites, message boxes, or anything else that might need to store the rectangle it is blitted over.</BLOCKQUOTE>
+
+<HR>
+<P><DL>
+ <DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>struct  <!1><A HREF="xiview.html">xiview</A> <B><A HREF="#DOC.111.1">*next</A></B>
+<DD><I> Next view, if used in a List</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>struct  <!1><A HREF="xiview.html">xiview</A> <B><A HREF="#DOC.111.2">*prev</A></B>
+<DD><I> Previous view, if used in a List</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>char* <B><A HREF="#DOC.111.3">name</A></B>
+<DD><I> Optional name for this view</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>SDL_Surface* <B><A HREF="#DOC.111.4">store</A></B>
+<DD><I> Rectangle we blitted this view over (available by default)</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>SDL_Surface* <B><A HREF="#DOC.111.5">image</A></B>
+<DD><I> The image to blit onto screen</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>SDL_Surface* <B><A HREF="#DOC.111.6">screen</A></B>
+<DD><I> This is the SDL_Surface that this view is tied to.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>ulong <B><A HREF="#DOC.111.7">flags</A></B>
+<DD><I> Various xiview flags, as documented in view_new()</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>Uint32 <B><A HREF="#DOC.111.8">bgcol</A></B>
+<DD><I> This will be used as fill colour if XIV_FILLBACK is defined in flags, or a colourkey unless XIV_NOKEY is defined</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.111.9">w</A></B>
+<DD><I> Width of area to blit onto</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.111.10">h</A></B>
+<DD><I> Height of area to blit onto</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.111.11">x</A></B>
+<DD><I> X position in screen</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.111.12">y</A></B>
+<DD><I> Y position in screen</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>char <B><A HREF="#DOC.111.13">hidden</A></B>
+<DD><I> TRUE if hidden by view_hide()</I>
+</DL></P>
+
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+This is a view, for use as sprites, message boxes, or anything
+else that might need to store the rectangle it is blitted over.
+</BLOCKQUOTE>
+<DL>
+
+<A NAME="*next"></A>
+<A NAME="DOC.111.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>struct  <!1><A HREF="xiview.html">xiview</A> *next</B></TT>
+<DD>
+Next view, if used in a List
+<DL><DT><DD></DL><P>
+<A NAME="*prev"></A>
+<A NAME="DOC.111.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>struct  <!1><A HREF="xiview.html">xiview</A> *prev</B></TT>
+<DD>
+Previous view, if used in a List
+<DL><DT><DD></DL><P>
+<A NAME="name"></A>
+<A NAME="DOC.111.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>char* name</B></TT>
+<DD>
+Optional name for this view
+<DL><DT><DD></DL><P>
+<A NAME="store"></A>
+<A NAME="DOC.111.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>SDL_Surface* store</B></TT>
+<DD>
+Rectangle we blitted this view over (available by default)
+<DL><DT><DD></DL><P>
+<A NAME="image"></A>
+<A NAME="DOC.111.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>SDL_Surface* image</B></TT>
+<DD>
+The image to blit onto screen
+<DL><DT><DD></DL><P>
+<A NAME="screen"></A>
+<A NAME="DOC.111.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>SDL_Surface* screen</B></TT>
+<DD>
+This is the SDL_Surface that this view is tied to.
+Note that there is nothing stopping you from using any old surface
+to blit onto.
+<DL><DT><DD></DL><P>
+<A NAME="flags"></A>
+<A NAME="DOC.111.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>ulong flags</B></TT>
+<DD>
+Various xiview flags, as documented in view_new()
+<DL><DT><DD></DL><P>
+<A NAME="bgcol"></A>
+<A NAME="DOC.111.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>Uint32 bgcol</B></TT>
+<DD>
+This will be used as fill colour if XIV_FILLBACK is defined in flags,
+or a colourkey unless XIV_NOKEY is defined
+<DL><DT><DD></DL><P>
+<A NAME="w"></A>
+<A NAME="DOC.111.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int w</B></TT>
+<DD>
+Width of area to blit onto
+<DL><DT><DD></DL><P>
+<A NAME="h"></A>
+<A NAME="DOC.111.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int h</B></TT>
+<DD>
+Height of area to blit onto
+<DL><DT><DD></DL><P>
+<A NAME="x"></A>
+<A NAME="DOC.111.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int x</B></TT>
+<DD>
+X position in screen
+<DL><DT><DD></DL><P>
+<A NAME="y"></A>
+<A NAME="DOC.111.12"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int y</B></TT>
+<DD>
+Y position in screen
+<DL><DT><DD></DL><P>
+<A NAME="hidden"></A>
+<A NAME="DOC.111.13"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>char hidden</B></TT>
+<DD>
+TRUE if hidden by view_hide()
+<DL><DT><DD></DL><P></DL>
+<DL><DT><DT><B>Author:</B><DD>Ronny Bangsund
+
+<DT><B>See Also:</B><DD><!1><A HREF="view_new.html">view_new</A>(), <!1><A HREF="view_show.html">view_show</A>(), <!1><A HREF="view_hide.html">view_hide</A>()<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>SelectServer* net_create_server</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+ <style type="text/css">
+<!-- @import url(xiqual.css); //-->
+</style>
+</head>
+<body>
+<h1>Xiqual 0.9.1</h1>
+
+In file xinet/net_create_server.c:<H2>SelectServer* <A HREF="#DOC.DOCU">net_create_server</A></H2><H2>(ulong tag1,  ... )</H2><BLOCKQUOTE> Create a new select() server.</BLOCKQUOTE>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Create a new select() server.
+All parameters are passed in as a taglist. To create a simple
+server for no more than 8 connections, at port 1242, calling
+client_read() to process each incoming message:
+
+<P>SelectServer	*server;
+
+<P>server = net_create_server(XN_NUMCONNECTIONS, 16,
+XN_TIMEOUT_S, 1, XN_PORT, 1242, XN_ONREAD_FUNC, client_read,
+TAG_END);
+
+<P>The accepted tags for this function are as follows:
+
+<P><B>XN_NUMCONNECTIONS</B>: Maximum number of connection nodes to make available.
+
+<P><B>XN_TIMEOUT_S</B>: Timeout in seconds before select() returns.
+
+<P><B>XN_TIMEOUT_MS</B>: As above, but milliseconds - 10ms being the lowest you can
+safely expect to work.
+
+<P><B>XN_PORT</B>: Port to wait for connections on.
+
+<P><B>XN_LINGER</B>: Number of seconds for sockets to linger after closing. If a socket
+doesn't have the linger setting activated, it may take up to 5 minutes before
+the operating system releases all resources properly.
+
+<P><B>XN_CONNECT_FUNC</B>: Hook called right after connection.
+
+<P><B>XN_CLOSE_FUNC</B>: Hook called just before shutting down a socket.
+
+<P><B>XN_ONREAD_FUNC</B>: Hook called to read incoming messages. There is no
+default reader in libxinet yet.
+
+<P><B>XN_QUEUE</B>: Maximum listen() queue. Defaults to 5.
+
+<P></BLOCKQUOTE>
+<DL><DT><DT><B>Parameters:</B><DD><B>tags</B> -  Tags defining all server settings.
+<BR><DT><B>Returns:</B><DD>  A pointer to a valid SelectServer structure, with sockets able to listen().
+<BR><DT><B>Author:</B><DD>Ronny Bangsund
+
+<DT><B>See Also:</B><DD>SelectServer, listen(), <!1><A HREF="net_process.html">net_process</A>(), xipacket, <!1><A HREF="net_free_server.html">net_free_server</A>()<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>
