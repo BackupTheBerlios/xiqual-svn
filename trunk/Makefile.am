@@ -1,6 +1,6 @@
 # Makefile.am for the Xiqual Tools root directory
 AUTOMAKE_OPTIONS = 1.4
-SUBDIRS = xitools xinet xigfx xisnd xicgi lui include
+SUBDIRS = xitools xinet xigfx xisnd lui include
 
 bin_PROGRAMS = ifftest realpath statuscleaner tileset tilefont \
 	xiqual_template
