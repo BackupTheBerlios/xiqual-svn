@@ -29,7 +29,7 @@
 @author Ronny Bangsund
 @see tag_alloclist(), tag_freelist(), tag_finditem(), tag_next()
 */
-ulong tag_getdata(ulong tag, ulong defaultval, tagitem **taglist)
+unsigned long tag_getdata(unsigned long tag, unsigned long defaultval, tagitem **taglist)
 {
 	tagitem	*t;
 

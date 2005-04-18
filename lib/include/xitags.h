@@ -1,25 +1,6 @@
 /*
  * Tags and defines
  *
- * $Author: nny $
- * $Date: 2003/12/11 08:36:38 $
- * $Id: xitags.h,v 1.10 2003/12/11 08:36:38 nny Exp $
- *
- * $Log: xitags.h,v $
- * Revision 1.10  2003/12/11 08:36:38  nny
- *
- * Modified Files:
- * All.
- *
- * Revision 1.9  2003/05/30 08:54:29  nny
- *
- * Modified Files:
- * 	All files. Arse.
- *
- * Revision 1.6  2001/11/13 19:26:33  nny
- * Removed tag_inarray.c, as it was just a waste of space.
- * Added CVS variables to most files.
- *
  */
 #if !defined(_XIQUAL_TAGS_H)
 #define _XIQUAL_TAGS_H
@@ -45,14 +26,14 @@ typedef struct tagitem {
  Should be fairly unique within the program or library, and not equal to one
  of TAG_DONE, TAG_IGNORE, TAG_MORE or TAG_SKIP.
 */
-	ulong	tag;
+	unsigned long	tag;
 /**
  The tagitem's data.
 @doc
  Can be just about anything that fits in a pointer-sized integer. Common uses are flags, pointers
  to further data/strings or simply integers.
 */
-	ulong	data;
+	unsigned long	data;
 } tagitem;
 
 #define TAG_DONE	0	/* End taglists with this in the last tagitem's tag */
@@ -63,11 +44,11 @@ typedef struct tagitem {
 
 #define TAG_USER		0xff00
 
-extern tagitem *tag_alloclist(ulong numtags);
+extern tagitem *tag_alloclist(unsigned long numtags);
 extern void tag_freelist(tagitem **taglist);
 extern tagitem *tag_next(tagitem **taglist);
-extern tagitem *tag_finditem(ulong id, tagitem **taglist);
-extern ulong tag_getdata(ulong id, ulong defaultval, tagitem **taglist);
+extern tagitem *tag_finditem(unsigned long id, tagitem **taglist);
+extern unsigned long tag_getdata(unsigned long id, unsigned long defaultval, tagitem **taglist);
 
 /* These macros saves typing/cut & paste */
 

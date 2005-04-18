@@ -2,25 +2,6 @@
  * Go to next valid tag, or return 0 if no more tags exist.
  * NOTE: This function modifies the actual taglist pointer!
  *
- * $Author: nny $
- * $Date: 2003/12/11 08:54:55 $
- * $Id: tag_next.c,v 1.4 2003/12/11 08:54:55 nny Exp $
- *
- * $Log: tag_next.c,v $
- * Revision 1.4  2003/12/11 08:54:55  nny
- *
- * Modified Files:
- * All.
- *
- * Revision 1.2  2003/05/30 08:54:59  nny
- *
- * Modified Files:
- * 	All. Arse.
- *
- * Revision 1.8  2001/12/19 09:01:02  nny
- * Pruned logs.
- *
- *
  */
 
 #include "xitags.h"

@@ -37,7 +37,7 @@ libxitools_a_SOURCES = errors.c md5sum.c \
 	$(MISC_SRC) $(IFF_SRC) $(LIST_SRC) $(PREFS_SRC) $(STR_SRC) \
 	$(TAG_SRC) $(MEM_SRC) $(XML_SRC) $(HASH_SRC)
 
-CFLAGS = -W -Wall -I@top_srcdir@ -I@top_srcdir@/include \
+CFLAGS = -W -Wall -I@top_srcdir@ -I@top_srcdir@/include -g -ggdb \
 	`sdl-config --cflags` -Wpointer-arith -O3 -funroll-loops
 
 LDFLAGS = 

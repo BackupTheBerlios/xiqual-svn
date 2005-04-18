@@ -1,20 +1,6 @@
 /*
  * Free a (possibly chained) taglist
  *
- * $Author: nny $
- * $Date: 2003/05/30 08:54:59 $
- * $Id: tag_freelist.c,v 1.2 2003/05/30 08:54:59 nny Exp $
- *
- * $Log: tag_freelist.c,v $
- * Revision 1.2  2003/05/30 08:54:59  nny
- *
- * Modified Files:
- * 	All. Arse.
- *
- * Revision 1.7  2001/12/19 09:01:02  nny
- * Pruned logs.
- *
- *
  */
 
 #include "stdlib.h"

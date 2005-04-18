@@ -53,7 +53,7 @@ xmltest_LDADD = -L@top_srcdir@/xitools -lxitools
 
 DEFS = @DEFS@
 CFLAGS = -I@top_srcdir@/include `sdl-config --cflags` -O3 \
-	-funroll-loops -W -Wall
+	-funroll-loops -W -Wall -g -ggdb
 
 LDFLAGS =
 

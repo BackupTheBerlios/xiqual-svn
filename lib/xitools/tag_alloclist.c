@@ -1,25 +1,6 @@
 /*
  * Allocate a taglist with room for numtags items
  *
- * $Author: nny $
- * $Date: 2003/12/11 08:54:55 $
- * $Id: tag_alloclist.c,v 1.4 2003/12/11 08:54:55 nny Exp $
- *
- * $Log: tag_alloclist.c,v $
- * Revision 1.4  2003/12/11 08:54:55  nny
- *
- * Modified Files:
- * All.
- *
- * Revision 1.2  2003/05/30 08:54:59  nny
- *
- * Modified Files:
- * 	All. Arse.
- *
- * Revision 1.6  2001/12/19 09:01:02  nny
- * Pruned logs.
- *
- *
  */
 
 #include "xitags.h"
@@ -33,10 +14,10 @@
 @author Ronny Bangsund
 @see tag_finditem(), tag_freelist(), tag_getdata(), tag_next()
 */
-tagitem *tag_alloclist(ulong numtags)
+tagitem *tag_alloclist(unsigned long numtags)
 {
 	tagitem	*tag;
-	ulong	size;
+	unsigned long	size;
 
 	size = numtags * sizeof(tagitem);
 	tag = calloc(1, size);
