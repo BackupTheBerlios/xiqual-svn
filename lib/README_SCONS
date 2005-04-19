@@ -1,0 +1,35 @@
+I'm currently implementing support for SCons, a great tool for
+replacing the horrid, evil, wicked auto tools.
+
+Obviously you will need SCons installed to use this build system.
+So hopefully we can get rid of configure and make completely, which
+will depend on Evilidler, but he also has a sever dislike of the
+auto tools.
+
+----- BUILD -----
+Just type:
+
+scons
+
+
+----- INSTALL -----
+To install xiqual:
+
+scons install
+
+
+----- CLEAN -----
+For cleaning all the build files and directories, just use:
+
+scons -c
+
+
+----- UNINSTALL -----
+To clean all built files and remove installed files also:
+
+scons -c install
+
+
+
+More work still needs to be done on the SCons scripts, as no
+autoconf type library checking as yet been inplemented. -Biomechanism.

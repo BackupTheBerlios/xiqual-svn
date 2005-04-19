@@ -1,5 +1,5 @@
 Import('env')
-env.Library('libxigfx', Split("""
+libxigfx = env.Library('libxigfx', Split("""
 			fonts.c
 			iarea.c
 			tiles.c
@@ -7,3 +7,5 @@ env.Library('libxigfx', Split("""
 			xi_init.c
 			xi_main.c
 			"""))
+
+env.Install('/usr/local/lib',libxigfx)

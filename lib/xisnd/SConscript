@@ -1,5 +1,7 @@
 Import('env')
-env.Library('libxisnd', Split("""
+libxisnd = env.Library('libxisnd', Split("""
 			play.c
 			load.c	
 			"""))
+
+env.Install('/usr/local/lib', libxisnd)

@@ -1,5 +1,9 @@
 env = Environment(CPPPATH='../include')
 Export('env')
 SConscript(['xitools/SConscript', 'xisnd/SConscript', 'xinet/SConscript', 'lui/SConscript'])
+install_lib = env.Alias('install-lib', '/usr/local/lib')
+install_bin = env.Alias('install-bin', '/usr/local/bin')
+install_head = env.Alias('install-head', '/usr/local/include')
+env.Alias('install', [install_lib, install_bin, install_head])
 
 

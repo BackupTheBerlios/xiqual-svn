@@ -1,5 +1,5 @@
 Import('env')
-env.Library('libxitools', Split("""
+libxitools = env.Library('libxitools', Split("""
 			file_getsize.c
 			files.c
 			opts.c
@@ -77,3 +77,5 @@ env.Library('libxitools', Split("""
 			hash_newfromlist.c
 			hash_merge.c
 			"""))
+
+env.Install('/usr/local/lib', libxitools)

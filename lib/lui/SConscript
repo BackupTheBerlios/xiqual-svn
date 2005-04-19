@@ -1,7 +1,9 @@
 Import('env')
-env.Library('liblui', Split("""
+liblui = env.Library('liblui', Split("""
 			lui.c
 			button.c
 			list.c
 			msgbox.c
 			"""))
+
+env.Install('/usr/local/lib', liblui)

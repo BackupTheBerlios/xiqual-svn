@@ -1,5 +1,5 @@
 Import('env')
-env.Library('libxinet', Split("""
+libxinet = env.Library('libxinet', Split("""
 			net_addnodes.c
 			net_server.c
 			net_server_free.c
@@ -14,3 +14,5 @@ env.Library('libxinet', Split("""
 			net_read.c
 			net_write.c
 			"""))
+
+env.Install('/usr/local/lib', libxinet)

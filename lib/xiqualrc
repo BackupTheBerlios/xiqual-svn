@@ -4,4 +4,4 @@
 # with your program (Win32)
 
 [Xiqual]
-graphics = /home/nny/src/xiqual/xiqual-0.9.1/debian/tmp/usr/share/Xiqual/gfx
+graphics = /usr/local/share/Xiqual/gfx
