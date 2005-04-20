@@ -1,6 +1,64 @@
-env = Environment(CPPPATH='../include')
+env = Environment(CPPPATH=['../include', 'include'])
+
+if not env.GetOption('clean'):
+
+	config = env.Configure()
+
+	if not config.CheckHeader('stdio.h'):
+		print "This software requires 'stdio.h'"
+		Exit(1)
+
+	if not config.CheckHeader('stdlib.h'):
+		print "This software requires 'stdlib.h'"
+		Exit(1)
+
+	if not config.CheckHeader('zlib.h'):
+		print "This software requires 'zlib.h'"
+		Exit(1)
+
+	if not config.CheckHeader('SDL/SDL_image.h'):
+		print "This software requires 'SDL_image.h'"
+		Exit(1)
+	
+	if not config.CheckHeader('SDL/SDL_mixer.h'):
+		print "This software requires 'SDL_mixer.h'"
+		Exit(1)
+	
+	if not config.CheckHeader('SDL/SDL_ttf.h'):
+		print "This software requires 'SDL_ttf.h'"
+		Exit(1)
+
+	if not config.CheckLib('SDL'):
+		print "This software requires 'SDL'"
+		Exit(1)
+
+	if not config.CheckLib('SDL_image'):
+		print "This software requires 'SDL_image'"
+		Exit(1)
+	
+	if not config.CheckLib('SDL_mixer'):
+		print "This software requires 'SDL_mixer'"
+		Exit(1)
+	
+	if not config.CheckLib('SDL_ttf'):
+		print "This software requires 'SDL_ttf'"
+		Exit(1)
+
+	env = config.Finish()
+
+
 Export('env')
-SConscript(['xitools/SConscript', 'xisnd/SConscript', 'xinet/SConscript', 'lui/SConscript'])
+SConscript(['xitools/SConscript', 'xigfx/SConscript','xisnd/SConscript', 'xinet/SConscript', 'lui/SConscript'])
+
+env.Program('ifftest.c', LIBS = ['xitools'], LIBPATH = ['xitools'])
+env.Program('realpath.c', LIBS = ['xitools'], LIBPATH = ['xitools'])
+env.Program('statuscleaner.c', LIBS = ['xitools'], LIBPATH = ['xitools'])
+env.Program('tileset.c', LIBS = ['xitools', 'SDL_image', 'z'], LIBPATH = ['xitools'])
+env.Program('tilefont.c', LIBS = ['xitools', 'lui', 'xigfx','SDL_image', 'SDL_mixer', 
+			'SDL_ttf', 'SDL', 'z'], LIBPATH = ['xitools', 'lui', 'xigfx'])
+
+
+
 install_lib = env.Alias('install-lib', '/usr/local/lib')
 install_bin = env.Alias('install-bin', '/usr/local/bin')
 install_head = env.Alias('install-head', '/usr/local/include')

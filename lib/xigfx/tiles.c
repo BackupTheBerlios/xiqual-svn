@@ -1,6 +1,6 @@
-#include "SDL.h"
-#include "SDL_image.h"
-#include "zlib.h"
+#include <SDL/SDL.h>
+#include <SDL/SDL_image.h>
+#include <zlib.h>
 
 #include "iffparse.h"
 #include "xiqual.h"

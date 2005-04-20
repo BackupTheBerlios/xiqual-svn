@@ -106,8 +106,8 @@
 /**
 */
 
-#include "SDL_image.h"
-#include "zlib.h"
+#include <SDL/SDL_image.h>
+#include <zlib.h>
 
 #include "limits.h"
 #include "iffparse.h"

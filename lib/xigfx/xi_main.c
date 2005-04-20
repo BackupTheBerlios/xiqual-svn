@@ -2,7 +2,7 @@
  * defined by a user.
  */
 
-#include "SDL.h"
+#include <SDL/SDL.h>
 
 #include "xisetup.h"
 #include "xiqual.h"

@@ -35,9 +35,9 @@
  *
  */
 
-#include "stdlib.h"
+#include <stdlib.h>
 
-#include "SDL.h"
+#include <SDL/SDL.h>
 #include "iarea.h"
 #include "xitags.h"
 
