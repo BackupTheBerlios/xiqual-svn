@@ -1,5 +1,12 @@
 env = Environment(CPPPATH=['../include', 'include'])
 
+
+#
+# Do some config checking.
+#
+
+avail_SDL_mixer = True
+
 if not env.GetOption('clean'):
 
 	config = env.Configure()
@@ -21,8 +28,8 @@ if not env.GetOption('clean'):
 		Exit(1)
 	
 	if not config.CheckHeader('SDL/SDL_mixer.h'):
-		print "This software requires 'SDL_mixer.h'"
-		Exit(1)
+		print "'SDL_mixer.h' not found"
+		avail_SDL_mixer = False
 	
 	if not config.CheckHeader('SDL/SDL_ttf.h'):
 		print "This software requires 'SDL_ttf.h'"
@@ -37,8 +44,9 @@ if not env.GetOption('clean'):
 		Exit(1)
 	
 	if not config.CheckLib('SDL_mixer'):
-		print "This software requires 'SDL_mixer'"
-		Exit(1)
+		print "Not found: 'SDL_mixer'. This is recommended, though not a requirement"
+		avail_SDL_mixer = False
+		
 	
 	if not config.CheckLib('SDL_ttf'):
 		print "This software requires 'SDL_ttf'"
@@ -54,8 +62,10 @@ env.Program('ifftest.c', LIBS = ['xitools'], LIBPATH = ['xitools'])
 env.Program('realpath.c', LIBS = ['xitools'], LIBPATH = ['xitools'])
 env.Program('statuscleaner.c', LIBS = ['xitools'], LIBPATH = ['xitools'])
 env.Program('tileset.c', LIBS = ['xitools', 'SDL_image', 'z'], LIBPATH = ['xitools'])
-env.Program('tilefont.c', LIBS = ['xitools', 'lui', 'xigfx','SDL_image', 'SDL_mixer', 
-			'SDL_ttf', 'SDL', 'z'], LIBPATH = ['xitools', 'lui', 'xigfx'])
+
+if avail_SDL_mixer == True:
+	env.Program('tilefont.c', LIBS = ['xitools', 'lui', 'xigfx','SDL_image', 'SDL_mixer', 
+		'SDL_ttf', 'SDL', 'z'], LIBPATH = ['xitools', 'lui', 'xigfx'])
 
 
 
