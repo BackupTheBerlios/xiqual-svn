@@ -36,7 +36,7 @@ void net_accept(SelectServer *server)
 
 	/* Move an available node over to connected list */
 	node = server->available.head;
-	node->data = client;
+	node->data = (void *)client;
 	list_remove(&server->available, node);
 	list_add(&server->connectlist, node);
 	if(server->onconnect) {
